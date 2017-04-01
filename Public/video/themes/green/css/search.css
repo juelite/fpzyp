@@ -1,0 +1,5 @@
+.search-div { background-color: #fff; border-bottom: 2px #08918f solid; }
+input.search-box.placeholder { color: #aaa; }
+#searchBtn { background-color: #C61F19; }
+
+.search-box #searchBtn { background-color: #08918f; }

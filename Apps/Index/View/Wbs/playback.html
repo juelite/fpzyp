@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>视频回放</title>
+    <script>
+
+        var gxml = '{$xml}';
+        var getTokenUrl = '{:U("wbs/ajaxGetToken?tgt=".$tgt)}';
+        var getPlayBackXml = '{:U("wbs/getPlayBackXml")}';
+        var getResourceAction = '{:U("wbs/getResourceByPage?indexCode=".$indexCode)}';
+        var getCameraAction = '{:U("wbs/getCamera")}';
+    </script>
+    <!-- 基础样式 -->
+    <link href="__PUBLIC__/video/themes/default/css/reset.css" rel="stylesheet"/>
+    <link href="__PUBLIC__/video/themes/default/css/grids.css" rel="stylesheet"/>
+    <link href="__PUBLIC__/video/themes/default/css/base.css" rel="stylesheet"/>
+    <link href="__PUBLIC__/video/themes/default/css/baseV1.2.0.css" rel="stylesheet"/>
+    <!-- 时间选择器 -->
+    <link href="__PUBLIC__/video/web/assets/default/css/monitor.css" rel="stylesheet"/>
+    <link href="__PUBLIC__/video/web/assets/default/css/replay.css" rel="stylesheet"/>
+    <!-- 弹出框 -->
+    <link href="__PUBLIC__/video/js/plugins/popup/skin/default/pop.css" rel="stylesheet"/>
+    <style type="text/css">
+        .consoleDiv {
+            width: 100%;
+            height: 100px;
+        }
+
+        .div-none{
+            display: none;
+        }
+        .grid-s9m0e6 .main-wrap {
+            margin: 0 0 0 250px !important;
+            border-left: 1px solid #DCDCD7;
+        }
+        .tab-grey .treeview{
+            padding: 0px !important;
+        }
+    </style>
+    <script type="text/javascript">
+        var pt = {
+            ctx: "/PlatformKit-demo",
+            debug : false,
+            lang : 'zh_cn'
+        };
+
+
+    </script>
+</head>
+
+<body>
+<div class="wrapper grid-s9m0e6" id="col">
+    <div class="col-main">
+        <div class="main-wrap">
+            <div class="monitor-container">
+                <div class="grids">
+                    <div class="ocx-container">
+                        <div class="win_container" id="ocx_playback" style="width:100%;height:100%;">
+                            <!-- 放置控件 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sub hasPanel">
+        <div id="tabContent" style="bottom: 170px;" class="tab-container tab-grey ui-tabs ui-widget ui-widget-content ui-corner-all">
+            <ul class="tabs ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" style="display: none;">
+                <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active"><a href="#monResource">监控资源</a></li>
+            </ul>
+            <!-- ztree -->
+            <div class="treeview">
+                <ul id="zTreea" class="ztree" style="overflow-x: hidden;"></ul>
+            </div>
+        </div>
+        <div class="playing-container" style="height: 210px;border-top:1px solid #ccc;">
+            <div style="background-color: #fff">
+                <span class="font1">监控点：</span>
+                <span id="selectCameraName" class="font1 ml5">请选择监控点</span>
+            </div>
+            <div class="mt10">
+                <span class="font1">开始时间：</span>
+                <input id="beginTime" style="width:136px !important;" type="text" showtime="true" name="" hikui="calendar" class="hikui-calendar Wdate datetimepicker" hikmap="_hik_1_" readonly="readonly">
+            </div>
+            <div class="mt10">
+                <span class="font1">结束时间：</span>
+                <input id="endTime" style="width:136px !important;" showtime="true" type="text" name="" hikui="calendar" class="hikui-calendar Wdate datetimepicker" hikmap="_hik_2_" readonly="readonly">
+            </div>
+            <div class="mt10">
+                <span class="font1">点播类型：</span>
+                <select id="storeType" style="width:167px;height:26px;line-height:22px; padding:2px 0;"><option value="0">中心存储录像</option><option value="57">设备存储录像</option></select>
+            </div>
+            <div class="mt10">
+                <a id="playCramera_time" class="buttonM bBlue" style="width:180px;" href="javascript:void(0)">查询</a>
+            </div>
+            <!--<div class="mt10">
+                <a id="downloadVideo" class="buttonM bBlue" style="width:180px;" href="javascript:void(0)">下载</a>
+            </div>-->
+         </div>
+    </div>
+
+    <!-- 右侧按钮  -->
+    <div class="col-extra" style="display: none;">
+        <div style="margin: 5px;">
+            <a class="buttonW bBlue" id="setGlobalParam" href="#">设置参数</a>
+        </div>
+        <div style="margin: 5px;">
+            <a class="buttonW bBlue" id="getSelectedWindow" href="#">获取当前窗口</a>
+        </div>
+        <div style="margin: 5px;">
+            <a class="buttonW bBlue" id="stopPlayback" href="#">单窗口停止回放</a>
+        </div>
+        <div style="margin: 5px;">
+            <a class="buttonW bBlue" id="stopPlaybackAll" href="#">所有窗口停止回放</a>
+        </div>
+
+        <div style="margin: 5px;">
+            <a class="buttonW bBlue" id="clearAll" href="#">清空提示文本</a>
+        </div>
+        <div style="margin: 5px;">
+                <div class="textBlue">
+                    <h4>设置控件主题：</h4>
+                </div>
+                <select id="ocxSkinSelect"
+                    onChange="selectOcxSkinType()">
+                    <option value="Red">请选择控件主题</option>
+                    <option value="Red">红</option>
+                    <option value="Blue">蓝</option>
+                    <option value="Green">绿</option>
+                </select>
+            </div>
+        <div>
+            <textarea id="information" style="width: 185px;height: 530px" rows="35" cols=""></textarea>
+        </div>
+    </div>
+</div>
+
+<!-- 设置参数对话框开始  -->
+<div style="display: none;">
+    <div id="settingDialog" class="dialog" title="参数设置">
+        <div class="tab-container tab-vertical">
+            <dl class="tabs">
+                <dt>
+                </dt>
+                <dd>
+                    <ul>
+                        <li class="active"><a name="param" id="picCut"
+                            onclick="showDetail(this)" href="javascript:void(0);">抓图设置</a></li>
+                        <li><a name="param" id="videoCut" onclick="showDetail(this)"
+                            href="javascript:void(0);">录像剪辑</a></li>
+                        <li><a name="param" id="vodioproperty"
+                            onclick="showDetail(this)" href="javascript:void(0);">性能计划</a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <div class="tab-content">
+                <!-- 抓图参数 -->
+                <div class="form-inline" id="picCutparam">
+                    <fieldset>
+                        <legend>抓图设置</legend>
+                        <div class="control-group">
+                            <label class="control-label">保存格式：</label>
+                            <div class="controls">
+                                <div>
+                                    <span class="check"><label><input
+                                            data-value="jpeg" type="radio" name="capture.format" checked id="jpeg"/><span>jpeg</span>
+                                    </label> <label><input data-value="bmp" type="radio"
+                                            name="capture.format" id="bmp" /><span>bmp</span> </label> </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">保存路径：</label>
+                            <div class="controls">
+                                <div class="input-append">
+                                    <input id="captureSavePath" value="" readonly type="text"> <a
+                                        id="btnSelectCaptureSavePath" class="buttonS bDefault"
+                                        href="#" onclick="browseFolder('captureSavePath')">选择</a>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <!--录像参数-->
+                <div class="form-inline  div-none" id="videoCutparam">
+                    <fieldset>
+                        <legend>录像剪辑</legend>
+                        <div class="control-group" name="capture.option" id="sizeOptions">
+                            <label class="control-label">分包大小：</label>
+                            <div class="controls">
+                                <select name="videoClibsSize" id="videoClibsSize">
+                                    <option value="256" selected="selected">256MB</option>
+                                    <option value="512">512MB</option>
+                                    <option value="1024">1024MB</option>
+                                    <option value="2048">2048MB</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">保存路径：</label>
+                            <div class="controls">
+                                <div class="input-append">
+                                    <input id="videoClibsSavePath" value="" readonly type="text"> <a
+                                        id="btnSelectVideoClibsSavePath" class="buttonS bDefault"
+                                        href="#" onclick="browseFolder('videoClibsSavePath')">选择</a>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <!-- 性能参数-->
+                <div class="form-inline div-none" id="vodiopropertyparam">
+                    <fieldset>
+                        <legend>性能计划配置</legend>
+                        <div>
+                            <div class="control-group">
+                                <label class="control-label">解码性能：</label>
+                                <div class="controls">
+                                    <div id="videoParameter" style="width: 235px">
+                                        <span class="floatL">最小延时</span>
+                                        <div id="slide" class="uRange floatL ml5 mr10"
+                                            style="clear: none; width: 120px;"></div>
+                                        <span class="floatL">最好流畅</span>
+                                        <div class="clear textC" id="slideValue">5</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 设置参数对话框结束  -->
+
+<div style="display: none;">
+    <div id="downloadDialog" class="dialog" title="下载录像">
+             <div class="control-group">
+                            <label class="control-label">保存路径：</label>
+                            <div class="controls">
+                                <div class="input-append">
+                                    <input id="videoSavePath" value=""  type="text">
+                                </div><span>例如：E:\test.mp4  (.mp4必须加)</span>
+                            </div>
+             </div>
+    </div>
+</div>
+
+
+<div style="display: none;">
+    <div id="stopDownloadDialog" class="dialog" title="停止下载">
+             <div class="control-group">
+                            <label class="control-label">句柄：</label>
+                            <div class="controls">
+                                <div class="input-append">
+                                    <input id="videoSavePath2" value="" readonly type="text"> <a
+                                        id="btnSelectVideoSavePath" class="buttonS bDefault"
+                                        href="#" onclick="browseFolder('videoSavePath')">选择</a>
+                                </div>
+                            </div>
+             </div>
+    </div>
+</div>
+
+
+<script src="__PUBLIC__/video/js/language/messages_zh_cn.js"></script>
+<script src="__PUBLIC__/video/js/plugins/jquery.js"></script>
+<script src="__PUBLIC__/video/js/plugins/jquery-ui.js"></script>
+<script src="__PUBLIC__/video/js/jquery-override.js"></script>
+<!-- 弹出框 -->
+<script src="__PUBLIC__/video/js/plugins/popup/pop.js"></script>
+<!-- ztree -->
+<script src="__PUBLIC__/video/js/plugins/ztree/jquery.ztree.core.js"></script>
+<script src="__PUBLIC__/video/js/plugins/ztree/jquery.ztree.excheck.js"></script>
+<script src="__PUBLIC__/video/js/plugins/ztree/jquery.ztree.exedit.js"></script>
+<script src="__PUBLIC__/video/js/jquery.ztree-override.js"></script>
+<!-- 时间选择器 -->
+<script src="__PUBLIC__/video/js/plugins/base.js"></script>
+<script src="__PUBLIC__/video/js/plugins/sea.js"></script>
+<script src="__PUBLIC__/video/js/sea-override.js"></script>
+
+<!-- 回放控件js -->
+
+<script src="__PUBLIC__/video/js/playback.js"></script>
+<script src="__PUBLIC__/video/js/jquery.purl.js"></script>
+<!-- 本页面js -->
+<script src="__PUBLIC__/video/js/playbackPage.js"></script>
+
+</body>
+</html>

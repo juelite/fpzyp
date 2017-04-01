@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>cookie</title>
+        <script src="../../js/plugins/jquery.js">
+        </script>
+        <script src="../../js/plugins/ui/jquery.cookie.js">
+        </script>
+        <script>
+            function cookie(a, b, c){
+                if (b != null && c == null) {
+                    var years = 10; //此 cookie 将被保存 10年
+                    var exp = new Date(); //new Date("December 31, 9998");
+                    exp.setTime(exp.getTime() + years * 360 * 24 * 60 * 60 * 1000);
+                    c = {
+                        expires: exp
+                    }
+                }
+                return $.cookie(a, b, c)
+            }
+			if(typeof(parent.cookieCallback)=='function'){
+				parent.cookieCallback();
+			}
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

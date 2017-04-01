@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>视频预览</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<script type="text/javascript">
+    var pt = {
+        ctx: "/PlatformKit-demo"
+    };
+	var ajaxGetToken = "{:U('wbs/ajaxGetToken')}";
+	var getResourceAction = '{:U("wbs/getResourceByPage?indexCode=".$indexCode)}';
+	var getCameraAction = '{:U("wbs/getCamera")}';
+	var getStreamAction = '{:U("wbs/getStreamXml")}';
+	var indexCodeParam = '{$indexCode}';
+</script>
+<link href="__PUBLIC__/video/themes/default/css/reset.css" rel="stylesheet"/>
+<link href="__PUBLIC__/video/themes/default/css/grids.css" rel="stylesheet"/>
+<link href="__PUBLIC__/video/themes/default/css/base.css" rel="stylesheet"/>
+<link href="__PUBLIC__/video/themes/default/css/baseV1.2.0.css" rel="stylesheet"/>
+<link href="__PUBLIC__/video/js/plugins/popup/skin/default/pop.css" rel="stylesheet"/>
+<!--[if lt IE 9]>
+    <link href="__PUBLIC__/video/themes/default/css/ie.css" rel="stylesheet"/>
+<![endif]-->
+<script type="text/javascript" src="__PUBLIC__/video/js/language/messages_zh_cn.js"></script>
+<script src="__PUBLIC__/video/js/plugins/jquery.js"></script>
+<script src="__PUBLIC__/video/js/plugins/bootstrap.js"></script>
+<script src="__PUBLIC__/video/js/plugins/ui/jquery.bgiframe.js"></script>
+<script src="__PUBLIC__/video/js/plugins/ui/jquery.placeholder.js"></script>
+<script src="__PUBLIC__/video/js/plugins/ui/jquery.tipsy.js"></script>
+<script src="__PUBLIC__/video/js/plugins/ztree/jquery.ztree.core.js"></script>
+<script src="__PUBLIC__/video/js/plugins/ztree/jquery.ztree.excheck.js"></script>
+<script src="__PUBLIC__/video/js/plugins/underscore.js"></script>
+<script src="__PUBLIC__/video/js/jquery-override.js"></script>
+<script src="__PUBLIC__/video/js/jquery.ztree-override.js"></script>
+
+
+
+<script src="__PUBLIC__/video/js/plugins/ui/jquery.breadcrumbs.js"></script>
+<script src="__PUBLIC__/video/js/plugins/ui/jquery.resize.js"></script>
+<script src="__PUBLIC__/video/js/plugins/jquery-ui.js"></script>
+<script src="__PUBLIC__/video/js/plugins/base.js"></script>
+<script src="__PUBLIC__/video/js/plugins/sea.js"></script>
+<script src="__PUBLIC__/video/js/plugins/ui/jquery.cookie.js"></script>
+<script src="__PUBLIC__/video/js/plugins/forms/jquery.uniform.js"></script>
+<script src="__PUBLIC__/video/js/plugins/forms/jquery.form.js"></script>
+<script src="__PUBLIC__/video/js/plugins/forms/jquery.validate.js"></script>
+
+<script src="__PUBLIC__/video/js/plugins/ui/jquery.alerts.js"></script>
+<script src="__PUBLIC__/video/js/plugins/ui/jquery.sticky.js"></script>
+
+<script src="__PUBLIC__/video/js/plugins/popup/pop.js"></script>
+<script src="__PUBLIC__/video/js/utils/json2.js"></script>
+<script src="__PUBLIC__/video/js/utils/UserDataStorage.js"></script>
+<script src="__PUBLIC__/video/js/utils/CookieStorage.js"></script>
+<script src="__PUBLIC__/video/js/jquery-ui-override.js"></script>
+<script src="__PUBLIC__/video/js/sea-override.js"></script>
+<script src="__PUBLIC__/video/js/auto-parser.js"></script>
+
+<link href="__PUBLIC__/video/web/assets/default/css/monitor.css"
+	rel="stylesheet" />
+<!-- 以下为通用脚本 -->
+<script src="__PUBLIC__/video/js/plugins/ui/jquery.spinner.js"></script>
+<script src="__PUBLIC__/video/web/assets/js/monitor.js"></script>
+<script src="__PUBLIC__/video/web/assets/js/setting.js"></script>
+<script type="text/javascript" src="__PUBLIC__/video/js/preview.js"></script>
+
+<!-- <script src="__PUBLIC__/video/web/assets/js/preview.js"></script> -->
+<style type="text/css">
+.consoleDiv {
+	width: 180px;
+	height: 400px;
+}
+.grid-s9m0e6 .main-wrap {
+	margin: 0 0 0 250px !important;
+	border-left: 1px solid #DCDCD7;
+}
+.div-none {
+	display: none;
+}
+.tab-grey .treeview{
+    padding: 0px !important;
+}
+</style>
+<!--[if lt IE 9]>
+    <link href="__PUBLIC__/video/themes/default/css/ie.css" rel="stylesheet"/>
+    <![endif]-->
+
+</head>
+
+<body class="monitor">
+	<div class="wrapper grid-s9m0e6">
+		<div class="col-main">
+			<div class="main-wrap">
+				<div class="monitor-container">
+					<div class="grids">
+						<div class="ocx-container">
+							<div class="win_container" data-index="1" id="preview_1"
+								style="width: 100%; height: 100%;" name="ocx_1">
+								<!-- <object classid="clsid:BE020CC9-521F-4641-85E1-3B631B7ADDD9"
+									width="100%" height="100%" id="ocx_preview_0"
+									name="ocx_preview_0"
+									CODEBASE="/web/softs/HIKOCX.CAB#version=6,3,5,0">
+
+								</object> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sub">
+			<div id="tabContent"
+				class="tab-container tab-grey ui-tabs ui-widget ui-widget-content ui-corner-all">
+				<ul
+					class="tabs ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" style="display: none;">
+					<li
+						class="ui-state-default ui-corner-top ui-tabs-active ui-state-active"><a
+						href="#monResource">监控资源</a>
+					</li>
+				</ul>
+				<div class="treeview">
+					<ul id="zTreea" class="ztree" style="overflow-x: hidden;"></ul>
+				</div>
+			</div>
+			<div class="control-container" style="display: none;">
+				<a class="toggle-switch tipS" href="#" title="显示 操作面板" style="display: none"></a> <input
+					type="hidden" id="indexcode" value="" />
+				<div id="controlContent" class="control-content tab-grey ui-tabs ui-widget ui-widget-content ui-corner-all">
+					<ul class="tabs" style="display: none">
+						<li><a href="#ptzController">云台控制</a>
+						</li>
+						<li><a href="#videoParameterSet">视频参数</a>
+						</li>
+					</ul>
+					<div class="tab-content" style="display: none">
+						<div id="ptzController" class="control-panel">
+							<div class="control-mask"></div>
+							<div id="controller" class="controller">
+								<div class="speed">
+									<span id="speedVolume" class="volume">50</span><span
+										class="ico"></span>
+								</div>
+								<div id="rocker" class="rocker">
+									<div class="diagonal">
+										<ul>
+											<li class="nw"><a onMouseDown="ptzControllerMove(PTZ_CMD_UP_LEFT,PTZ_CMD_START)"
+												onMouseUp="ptzControllerMove(PTZ_CMD_UP_LEFT,PTZ_CMD_STOP)"><span class="ico"></span><i></i>
+											</a>
+											</li>
+											<li class="ne"><a onMouseDown="ptzControllerMove(PTZ_CMD_UP_RIGHT,PTZ_CMD_START)"
+												onMouseUp="ptzControllerMove(PTZ_CMD_UP_RIGHT,PTZ_CMD_STOP)"><span
+													class="ico"></span><i></i> </a>
+											</li>
+											<li class="c"><a href="#"><span class="ico"></span><i></i>
+											</a>
+											</li>
+											<li class="sw"><a onMouseDown="ptzControllerMove(PTZ_CMD_DOWN_LEFT,PTZ_CMD_START)"
+												onMouseUp="ptzControllerMove(PTZ_CMD_DOWN_LEFT,PTZ_CMD_STOP)"><span
+													class="ico"></span><i></i> </a>
+											</li>
+											<li class="se"><a onMouseDown="ptzControllerMove(PTZ_CMD_DOWN_RIGHT,PTZ_CMD_START)"
+												onMouseUp="ptzControllerMove(PTZ_CMD_DOWN_RIGHT,PTZ_CMD_STOP)"><span
+													class="ico"></span><i></i> </a>
+											</li>
+										</ul>
+									</div>
+									<div class="quartet">
+										<ul class="clearfix">
+											<li class="n"><a
+												onMouseDown="ptzControllerMove(PTZ_CMD_TILT_UP,PTZ_CMD_START)"
+												onMouseUp="ptzControllerMove(PTZ_CMD_TILT_UP,PTZ_CMD_STOP)"><span class="ico"></span>
+											</a>
+											</li>
+											<li class="w"><a onMouseDown="ptzControllerMove(PTZ_CMD_PAN_LEFT,PTZ_CMD_START)"
+												onMouseUp="ptzControllerMove(PTZ_CMD_PAN_LEFT,PTZ_CMD_STOP)"><span
+													class="ico"></span> </a>
+											</li>
+											<li class="c"><a><span class="ico"></span> </a>
+											</li>
+											<li class="e"><a onMouseDown="ptzControllerMove(PTZ_CMD_PAN_RIGHT,PTZ_CMD_START)"
+												onMouseUp="ptzControllerMove(PTZ_CMD_PAN_RIGHT,PTZ_CMD_STOP)"><span
+													class="ico"></span> </a>
+											</li>
+											<li class="s"><a onMouseDown="ptzControllerMove(PTZ_CMD_TILT_DOWN,PTZ_CMD_START)"
+												onMouseUp="ptzControllerMove(PTZ_CMD_TILT_DOWN,PTZ_CMD_STOP)"><span
+													class="ico"></span> </a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="scope">
+
+									<ul class="clearfix">
+										<li class="focal-out"><a class="tipS" title="焦距缩小"
+											onMouseDown="ptzControllerMove(PTZ_CMD_ZOOM_OUT,PTZ_CMD_START)"
+												onMouseUp="ptzControllerMove(PTZ_CMD_ZOOM_OUT,PTZ_CMD_STOP)"><span class="ico"></span>
+										</a>
+										</li>
+										<li class="focal-in"><a class="tipS" title="焦距放大"
+											onMouseDown="ptzControllerMove(PTZ_CMD_ZOOM_IN,PTZ_CMD_START)"
+												onMouseUp="ptzControllerMove(PTZ_CMD_ZOOM_IN,PTZ_CMD_STOP)"><span class="ico"></span><i></i>
+										</a>
+										</li>
+										<li class="lens-out"><a class="tipS" title="焦距拉近"
+											onMouseDown="ptzControllerMove(PTZ_CMD_FOCUS_NEAR,PTZ_CMD_START)"
+												onMouseUp="ptzControllerMove(PTZ_CMD_FOCUS_NEAR,PTZ_CMD_STOP)"><span class="ico"></span><i></i>
+										</a>
+										</li>
+										<li class="lens-in"><a class="tipS" title="焦距拉远"
+											onMouseDown="ptzControllerMove(PTZ_CMD_FOCUS_FAR,PTZ_CMD_START)"
+												onMouseUp="ptzControllerMove(PTZ_CMD_FOCUS_FAR,PTZ_CMD_STOP)"><span class="ico"></span><i></i>
+										</a>
+										</li>
+										<li class="aperture-out"><a class="tipS" title="光圈缩小"
+											onMouseDown="ptzControllerMove(PTZ_CMD_IRIS_CLOSE,PTZ_CMD_START)"
+												onMouseUp="ptzControllerMove(PTZ_CMD_IRIS_CLOSE,PTZ_CMD_STOP)"><span class="ico"></span><i></i>
+										</a>
+										</li>
+										<li class="aperture-in"><a class="tipS" title="光圈放大"
+											onMouseDown="ptzControllerMove(PTZ_CMD_IRIS_OPEN,PTZ_CMD_START)"
+												onMouseUp="ptzControllerMove(PTZ_CMD_IRIS_OPEN,PTZ_CMD_STOP)"><span class="ico"></span><i></i>
+										</a>
+										</li>
+									</ul>
+								</div>
+
+							</div>
+							<div class="setting">
+								<div>
+									<div class="combobox">
+										<input type="text" class="point-number tipS"
+											placeholder="预置点编号" title="预置点编号" id="selectedpoint">
+										<div class="btn-group dropup">
+											<a class="dropdown-toggle" href="#" data-toggle="dropdown"><span
+												class="caret"></span> </a>
+											<ul class="dropdown-menu" id="pointlist" name="pointsOfcarm">
+                                                 <li><a href='#' onclick="selectIndex(this,'selectedpoint')">1</a></li>
+                                                 <li><a href='#' onclick="selectIndex(this,'selectedpoint')">2</a></li>
+                                                 <li><a href='#' onclick="selectIndex(this,'selectedpoint')">3</a></li>
+                                                 <li><a href='#' onclick="selectIndex(this,'selectedpoint')">4</a></li>
+                                                 <li><a href='#' onclick="selectIndex(this,'selectedpoint')">5</a></li>
+                                                 <li><a href='#' onclick="selectIndex(this,'selectedpoint')">6</a></li>
+                                                 <li><a href='#' onclick="selectIndex(this,'selectedpoint')">7</a></li>
+                                                 <li><a href='#' onclick="selectIndex(this,'selectedpoint')">8</a></li>
+
+											</ul>
+										</div>
+									</div>
+									<a id="btn-call-preset" class="buttonS bDefault tipS" href="#" title="调用"><span class="ico act-apply"></span><i></i></a>
+									<a id="pointset" class="buttonS bDefault tipS" href="#"  title="设置"><span>设置</span><i></i></a>
+								</div>
+							</div>
+						</div>
+						<div id="videoParameterSet" class="control-panel">
+							<div class="control-mask"></div>
+							<div class="video-param">
+								<dl>
+									<dt>
+										<span>亮度</span><span class="controls"><input
+											type="text" data-trigger="slide" data-default="5"
+											class="input-mini" value="5" maxlength="2"
+											id="videoParameterL"> </span>
+									</dt>
+									<dd>
+										<div id="videoParameterLslider" class="uRange"></div>
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<span>对比度</span><span class="controls"><input
+											type="text" data-trigger="slide" data-default="5"
+											class="input-mini" value="5" maxlength="2"
+											id="videoParameterM"> </span>
+									</dt>
+									<dd>
+										<div class="uRange"></div>
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<span>色调</span><span class="controls"><input
+											type="text" data-trigger="slide" data-default="5"
+											class="input-mini" value="5" maxlength="2"
+											id="videoParameterS"> </span>
+									</dt>
+									<dd>
+										<div class="uRange"></div>
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<span>饱和度</span><span class="controls"><input
+											type="text" data-trigger="slide" data-default="5"
+											class="input-mini" value="5" maxlength="2"
+											id="videoParameterB"> </span>
+									</dt>
+									<dd>
+										<div class="uRange"></div>
+									</dd>
+								</dl>
+								<div class="form-actions">
+									<a class="buttonW bDefault" data-trigger="reset" href="#"
+										onclick="videoParameterGet()"><span class="ico i-reset"></span><span>保存设置</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="col-extra" style="display: none;">
+			<div style="margin: 5px;">
+				<a class="buttonW bBlue" id="paramset" href="javascript:void(0);">全局参数设置</a>
+			</div >
+
+			<div style="margin: 5px;">
+				<a class="buttonW bBlue" href="javascript:void(0);" id="stopone"
+					 onclick="stopOne()">单一停止预览</a>
+			</div>
+
+			<div style="margin: 5px;">
+				<a class="buttonW bBlue" href="javascript:void(0);"
+					onclick="stopAll()">全部停止预览</a>
+			</div>
+
+			<div style="margin: 5px;">
+				<a class="buttonW bBlue" href="javascript:void(0);"
+					onclick="getWindowState()">获取预览状态</a>
+
+			</div>
+
+			<div style="margin: 5px;">
+				<a class="buttonW bBlue" href="javascript:void(0);"
+					onclick="getwindow()">获取当前窗口</a>
+
+			</div>
+
+			<div style="margin: 5px;">
+				<div class="textBlue">
+					<h4>设置当前窗口：</h4>
+				</div>
+				<select id="windowselect"  onclick="remember('windowselect')"
+					onchange="selectWindow()">
+					<option value="00" selected="selected">请设置当前窗口</option>
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+				</select>
+			</div>
+
+			<div style="margin: 5px;">
+				<div class="textBlue">
+					<h4>设置窗口布局：</h4>
+				</div>
+				<select id="windowTypeSelect"
+					onchange="selectWindowType()">
+					<option value="1">请选择窗口布局</option>
+					<option value="1">1*1</option>
+					<option value="2">2*2</option>
+					<option value="3">3*3</option>
+					<option value="5">4*4</option>
+				</select>
+			</div>
+			<div style="margin: 5px;">
+				<div class="textBlue">
+					<h4>设置控件主题：</h4>
+				</div>
+				<select id="ocxSkinSelect"
+					onchange="selectOcxSkinType()">
+					<option value="Red">请选择控件主题</option>
+					<option value="Red">红</option>
+					<option value="Blue">蓝</option>
+					<option value="Gree">绿</option>
+				</select>
+			</div>
+
+			<div style="margin: 5px;">
+			<a class="buttonW bBlue" id="deviceTalkOpen" href="#">开启语音对讲</a>
+		</div>
+		<div style="margin: 5px;">
+			<a class="buttonW bBlue" id="deviceTalkClose" href="#">关闭语音对讲</a>
+		</div>
+		<div style="margin: 5px;">
+			<a class="buttonW bBlue" id="playSoundOpen" href="#">开启声音</a>
+		</div>
+		<div style="margin: 5px;">
+			<a class="buttonW bBlue" id="playSoundClose" href="#">关闭声音</a>
+		</div>
+		<div style="margin: 5px;">
+			<a class="buttonW bBlue" id="clearAll" href="#">清空提示文本</a>
+		</div>
+			<div class="consoleDiv" style="margin: 5px;">
+				<textarea style="width: 180px; height: 230px" name="console"
+					id="console"></textarea>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Dialog start -->
+
+
+	<div style="display: none;">
+		<div id="settingDialog" class="dialog" title="参数设置">
+			<div class="tab-container tab-vertical">
+				<dl class="tabs">
+					<dt>
+						基本设置
+					</dt>
+					<dd>
+						<ul>
+							<li class="active"><a name="param" id="picCut"
+								onclick="showDetail(this)" href="javascript:void(0);">抓图设置</a></li>
+							<li><a name="param" id="videoCut" onclick="showDetail(this)"
+								href="javascript:void(0);">录像剪辑</a></li>
+							<li><a name="param" id="vodioproperty"
+								onclick="showDetail(this)" href="javascript:void(0);">性能计划</a></li>
+						</ul>
+					</dd>
+				</dl>
+				<div class="tab-content">
+					<!-- 抓图参数 -->
+					<div class="form-inline" id="picCutparam">
+						<fieldset>
+							<legend>抓图设置</legend>
+							<div class="control-group">
+								<label class="control-label">保存格式：</label>
+								<div class="controls">
+									<div>
+										<span class="check"><label><input
+												data-value="jpeg" type="radio" name="capture.format" checked id="jpeg"/><span>jpeg</span>
+										</label> <label><input data-value="bmp" type="radio"
+												name="capture.format" id="bmp" /><span>bmp</span> </label> </span>
+									</div>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">保存路径：</label>
+								<div class="controls">
+									<div class="input-append">
+										<input id="captureSavePath" value="" readonly type="text"> <a
+											id="btnSelectCaptureSavePath" class="buttonS bDefault"
+											href="#" onclick="browseFolder('captureSavePath')">选择</a>
+									</div>
+								</div>
+							</div>
+						</fieldset>
+					</div>
+					<!-- 抓图参数 -->
+
+					<!--录像参数-->
+
+					<div class="form-inline  div-none" id="videoCutparam">
+						<fieldset>
+							<legend>录像剪辑</legend>
+							<div class="control-group">
+								<label class="control-label">分包类型：</label>
+								<div class="controls">
+									<div>
+										<span class="check"> <!-- <label><input
+												data-value="time" type="radio" id="timeOption"
+												name="capture.type" checked onchange="getOptions(this)"><span>时间</span>
+										</label>  --> <label><input data-value="size"
+												type="radio" id="sizeOption" name="capture.type" checked><span>大小</span>
+										</label> </span>
+									</div>
+								</div>
+							</div>
+							<div class="control-group" name="capture.option" id="sizeOptions">
+								<label class="control-label">分包大小：</label>
+								<div class="controls">
+									<select name="videoClibsSize" id="videoClibsSize" >
+										<option value="256" selected="selected">256MB</option>
+										<option value="512">512MB</option>
+										<option value="1024">1024MB</option>
+										<option value="2048">2048MB</option>
+									</select>
+								</div>
+							</div>
+							<!-- <div class="control-group" name="capture.option" id="timeOptions">
+								<label class="control-label">时间长度：</label>
+								<div class="controls">
+									<select name="" id="videoClibstime">
+										<option value="256">5m</option>
+										<option value="512">10m</option>
+										<option value="1024">20m</option>
+										<option value="2048">1h</option>
+									</select>
+								</div>
+							</div> -->
+							<div class="control-group">
+								<label class="control-label">保存路径：</label>
+								<div class="controls">
+									<div class="input-append">
+										<input id="videoClibsSavePath" value="" readonly type="text"> <a
+											id="btnSelectVideoClibsSavePath" class="buttonS bDefault"
+											href="#" onclick="browseFolder('videoClibsSavePath')">选择</a>
+									</div>
+								</div>
+							</div>
+						</fieldset>
+					</div>
+					<!-- 性能参数-->
+
+					<div class="form-inline div-none" id="vodiopropertyparam">
+						<fieldset>
+							<legend>性能计划配置</legend>
+							<div>
+								<!-- <div class="control-group">
+									<label class="control-label">默认码流：</label>
+									<div class="controls">
+										<div>
+											<input id="main_stream" data-value="0" type="radio"
+												name="stream.type" checked><label><span>主码流</span>
+											</label>
+										</div>
+										<div>
+											<input id="sub_stream" data-value="1" type="radio"
+												name="stream.type"><label><span>子码流</span>
+											</label>
+										</div>
+									</div>
+								</div> -->
+								<div class="control-group">
+									<label class="control-label">解码性能：</label>
+									<div class="controls">
+										<div id="videoParameter" style="width: 235px">
+											<span class="floatL">最小延时</span>
+											<div id="slide" class="uRange floatL ml5 mr10"
+												style="clear: none; width: 120px;"></div>
+											<span class="floatL">最好流畅</span>
+											<div class="clear textC" id="slideValue">5</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</fieldset>
+					</div>
+					<!-- 性能参数 -->
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="__PUBLIC__/video/js/jquery.purl.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/video/js/realtimeplay.js"></script>
+</body>
+</html>

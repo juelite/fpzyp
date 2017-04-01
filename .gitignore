@@ -1,0 +1,16 @@
+/Apps/Runtime/
+/.phpintel
+/.htaccess
+/www.onethink-local.com.sql
+/ук╨епео╒.txt
+/.idea/
+/.idea
+/Apps/Runtime/*
+/Apps/Runtime
+*.pyc
+*.thumb
+<<<<<<< HEAD
+/vendor
+/Uploads
+=======
+>>>>>>> 34658397159d77b3720d389311a33e9cc3497a39

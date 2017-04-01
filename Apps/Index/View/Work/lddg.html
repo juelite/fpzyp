@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include file="Common:header" />
+    <script language="javascript" src="__PUBLIC__/tools/print/LodopFuncs.js"></script>
+</head>
+<body class="no-skin">
+    <!-- #section:basics/navbar.layout -->
+    <include file="Common:top_maps" />
+    <!-- /section:basics/navbar.layout -->
+    <div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+    </script>
+    <!-- #section:basics/sidebar -->
+    <div id="sidebar" class="sidebar responsive">
+        <include file="Common:left_maps" />
+    </div>
+
+    <!-- /section:basics/sidebar -->
+    <div class="main-content">
+        <div class="page-content">
+            <div class="page-content-area">
+                <form action="__SELF__" method="post" id="form1">
+                    <div class="col-sm-12 text-center">
+                        <h2 style="text-align: center">作业现场公司领导和管理人员到岗到位记录表</h2>
+                    </div>
+                    <table style="width: 100%;margin-top: 10px;border: none;">
+                        <tr>
+                            <td style="text-align: right;border: none;">
+                                <h5>工作票编号：{$res.gongdanbianhao}</h5>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="width: 100%;" border="1">
+                        <tbody>
+                        <tr role="row" class="odd">
+                            <td class="center table-text-lg col-sm-2">
+                                作业名称
+                            </td>
+                            <td class="col-sm-10">
+                                {$res.gongchengmingcheng}
+                            </td>
+                        </tr>
+                        <tr role="row" class="odd">
+                            <td class="center table-text-lg col-sm-2">
+                                工作任务或地点
+                            </td>
+                            <td class="col-sm-10">
+                                <div class="col-sm-12" style="height: 100px; border: 1px #666 solid">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr role="row" class="odd">
+                            <td class="center table-text-lg col-sm-2">
+                                工作时间
+                            </td>
+                            <php>
+                                $gzsj = explode("-",$res['jihuagongzuoshijian']);
+                            </php>
+                            <td class="col-sm-10">
+                                开始时间：{$gzsj[0]|default='______'} 年 {$gzsj[1]|default='___'} 月 {$gzsj[2]|default='___'} 日 {$gzsj[3]|default='___'} 时 {$gzsj[4]|default='___'} 分
+                                结束时间：{$gzsj[5]|default='______'} 年 {$gzsj[6]|default='___'} 月 {$gzsj[7]|default='___'} 日 {$gzsj[8]|default='___'} 时 {$gzsj[9]|default='___'} 分
+                            </td>
+                        </tr>
+                        <tr role="row" class="odd">
+                            <td class="center table-text-lg col-sm-2">
+                                发现的问题和整改建议
+                            </td>
+                            <td class="col-sm-10">
+                                <div class="col-sm-12" style="height: 150px; border: 1px #666 solid">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr role="row" class="odd">
+                            <td class="center table-text-lg col-sm-2">
+                                处罚建议
+                            </td>
+                            <td class="col-sm-10">
+                                <div class="col-sm-12" style="height: 100px; border: 1px #666 solid">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <table border="1" style="width: 100%;">
+                                    <tr>
+                                        <td class="center table-text-lg">姓名</td>
+                                        <td class="center table-text-lg">单位或部门</td>
+                                        <td class="center table-text-lg">职务</td>
+                                        <td class="center table-text-lg">到达现场时间</td>
+                                        <td class="center table-text-lg">离开现场时间</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg">&nbsp;</td>
+                                        <td class="center table-text-lg"></td>
+                                        <td class="center table-text-lg"></td>
+                                        <td class="center table-text-lg"></td>
+                                        <td class="center table-text-lg"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg">&nbsp;</td>
+                                        <td class="center table-text-lg"></td>
+                                        <td class="center table-text-lg"></td>
+                                        <td class="center table-text-lg"></td>
+                                        <td class="center table-text-lg"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg">&nbsp;</td>
+                                        <td class="center table-text-lg"></td>
+                                        <td class="center table-text-lg"></td>
+                                        <td class="center table-text-lg"></td>
+                                        <td class="center table-text-lg"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg">&nbsp;</td>
+                                        <td class="center table-text-lg"></td>
+                                        <td class="center table-text-lg"></td>
+                                        <td class="center table-text-lg"></td>
+                                        <td class="center table-text-lg"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg">&nbsp;</td>
+                                        <td class="center table-text-lg"></td>
+                                        <td class="center table-text-lg"></td>
+                                        <td class="center table-text-lg"></td>
+                                        <td class="center table-text-lg"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg">&nbsp;</td>
+                                        <td class="center table-text-lg"></td>
+                                        <td class="center table-text-lg"></td>
+                                        <td class="center table-text-lg"></td>
+                                        <td class="center table-text-lg"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <small>注：此表由现场工作负责人或运行人员执存，工作结束后随同工作票一起保存。</small>
+                </form>
+            </div><!-- /.page-content-area -->
+        </div><!-- /.page-content -->
+    </div><!-- /.main-content -->
+</div><!-- /.main-container -->
+<include file="Common:common_js" />
+
+    <script language="javascript" type="text/javascript">
+        var LODOP; //声明为全局变量
+        function prn1_preview() {
+            CreateOneFormPage();
+            LODOP.PREVIEW();
+        };
+        function CreateOneFormPage(){
+            LODOP=getLodop();
+            LODOP.PRINT_INIT("打印");
+            LODOP.SET_PRINT_STYLE("FontSize",10);
+            //LODOP.SET_PRINT_STYLE("Bold",1);
+            LODOP.ADD_PRINT_HTM(0,0,"100%","100%",document.getElementById("form1").innerHTML);
+        };
+    </script>
+    <script>
+        jQuery(function($) {
+            $('.chosen-select').chosen({allow_single_deselect:true});
+            $(window).off('resize.chosen').on('resize.chosen', function() {
+                $('.chosen-select').each(function() {
+                    var $this = $(this);
+                    $this.next().css({'width': $this.parent().width()});
+                })
+            }).trigger('resize.chosen');
+            var setTime = setInterval(function(){
+                if(document.readyState == "complete"){
+                    prn1_preview();
+                    clearInterval(setTime);
+                }
+            },300);
+        });
+    </script>
+
+</body>
+</html>

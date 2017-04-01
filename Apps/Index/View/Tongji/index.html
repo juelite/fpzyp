@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include file="Common:header" />
+    <style>
+        .table-text-lg {vertical-align: middle !important;}
+    </style>
+    <script src="__PUBLIC__/assets/js/echarts.min.js"></script>
+    <script src="http://echarts.baidu.com/asset/map/js/china.js"></script>
+</head>
+<body class="no-skin">
+    <!-- #section:basics/navbar.layout -->
+    <include file="Common:top_maps" />
+    <!-- /section:basics/navbar.layout -->
+    <div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+    </script>
+    <!-- #section:basics/sidebar -->
+    <div id="sidebar" class="sidebar responsive">
+        <include file="Common:left_maps" />
+    </div>
+
+     <!-- /section:basics/sidebar -->
+    <div class="main-content">
+        <div id="pd" class="col-xs-12" style="height: 500px; margin:20px 0 !important;"></div>
+        <div id="xl" class="col-xs-12" style="height: 500px; margin:20px 0 !important;"></div>
+        <script>
+            showUserPd('pd' , '{$titlePd}' , {$mbPd} ,  {$statuPdYes}, {$statuPdNo} , 20 , 60);
+            showUserXl('xl' , '{$titleXl}' , {$mbXl} ,  {$statuXlYes}, {$statuXlNo} , 20 , 60);
+
+            function showUserPd(id , title , persons , day30 , day60 , timestart , timeend ){
+                var dom = document.getElementById(id);
+                var myChart = echarts.init(dom);
+                var option = {
+                    title: { text: title,left: 'left'},
+                    tooltip: {trigger: 'axis'},
+                    toolbox: {
+                        feature: {
+                            dataView: {show: true, readOnly: false},
+                            magicType: {show: true, type: ['line', 'bar']},
+                            restore: {show: true},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    legend: {data:['已完成','未完成']                                        },
+                    xAxis: [{type: 'category',data: persons}],
+                    yAxis: [{type: 'value',name: '数量',axisLabel: {formatter: '{value}'}}],
+                    series: [
+                        {name:'已完成',type:'bar',data:day30},
+                        {name:'未完成',type:'bar',data:day60
+                        }
+                    ]
+                };
+                if (option && typeof option === "object") {
+                    myChart.setOption(option, true);
+                }
+            }
+            function showUserXl(id , title , persons , day30 , day60 , timestart , timeend ){
+                var dom = document.getElementById(id);
+                var myChart = echarts.init(dom);
+                var option = {
+                    title: { text: title,left: 'left'},
+                    tooltip: {trigger: 'axis'},
+                    toolbox: {
+                        feature: {
+                            dataView: {show: true, readOnly: false},
+                            magicType: {show: true, type: ['line', 'bar']},
+                            restore: {show: true},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    legend: {data:['已完成','未完成']                                        },
+                    xAxis: [{type: 'category',data: persons}],
+                    yAxis: [{type: 'value',name: '数量',axisLabel: {formatter: '{value}'}}],
+                    series: [
+                        {name:'已完成',type:'bar',data:day30},
+                        {name:'未完成',type:'bar',data:day60
+                        }
+                    ]
+                };
+                if (option && typeof option === "object") {
+                    myChart.setOption(option, true);
+                }
+            }
+        </script>
+    </div><!-- /.main-content -->
+    <include file="Common:footer" />
+</div><!-- /.main-container -->
+<include file="Common:common_js" />
+
+<script>
+    jQuery(function($) {
+        $('.chosen-select').chosen({allow_single_deselect:true});
+        $(window).off('resize.chosen').on('resize.chosen', function() {
+            $('.chosen-select').each(function() {
+                var $this = $(this);
+                $this.next().css({'width': $this.parent().width()});
+            })
+        }).trigger('resize.chosen');
+    });
+</script>
+</body>
+</html>

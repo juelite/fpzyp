@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <include file="Common:header" />
+    <body class="login-layout light-login">
+    <div class="main-container">
+        <div class="main-content">
+            IP：{$area.ip} 位置：{$area.area} 网络：{$area.net}
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <div class="login-container">
+                        <div class="center">
+                            <h1>
+                                <!--<img src="http://cloud.busionline.com/Public/home/images/ui/logo-yun@2x.png">&nbsp;&nbsp;-->
+                                <span class="red-">{$webconf.sitename}</span><span class="white-" id="id-text2">管理系统</span>
+                            </h1>
+                        </div>
+                        <div class="space-6"></div>
+                        <div class="position-relative">
+                            <div id="login-box" class="login-box visible widget-box no-border">
+                                <div class="widget-body">
+                                    <div class="widget-main">
+                                        <h5 class="header green lighter bigger">
+                                            <i class="ace-icon fa fa-coffee green"></i>
+                                            请输入账号密码
+                                        </h5>
+                                        <div class="space-6"></div>
+                                        <form method="post" action="{:U('index/index')}">
+                                            <fieldset>
+                                                <label class="block clearfix">
+                                                    <span class="block input-icon input-icon-right">
+                                                        <input type="text" name="username" class="form-control" placeholder="账号" />
+                                                        <i class="ace-icon fa fa-user"></i>
+                                                    </span>
+                                                </label>
+                                                <label class="block clearfix">
+                                                    <span class="block input-icon input-icon-right">
+                                                        <input type="password" name="password" class="form-control" placeholder="密码" />
+                                                        <i class="ace-icon fa fa-lock"></i>
+                                                    </span>
+                                                </label>
+                                                <label class="block clearfix">
+                                                    <span class="block input-icon input-icon-right">
+                                                        <input type="text" name="checkcode" class="col-sm-6 cc-input" placeholder="验证码" />
+                                                        <img class="check-code" src="__ROOT__/authimg.php" alt="验证码" title="点击刷新验证码" />
+                                                    </span>
+                                                </label>
+                                                <div class="space"></div>
+                                                <div class="clearfix">
+                                                    <button type="submit" class="width-35 btn btn-sm btn-success">
+                                                        <i class="ace-icon fa fa-key"></i>
+                                                        <span class="bigger-110">登录</span>
+                                                    </button>
+                                                </div>
+                                                <div class="space-4"></div>
+                                            </fieldset>
+                                        </form>
+                                    </div><!-- /.widget-main -->
+                                </div><!-- /.widget-body -->
+                            </div><!-- /.login-box -->
+                            <h6 id="id-company-text">&copy;{$webconf.sitename}</h6>
+                        </div><!-- /.position-relative -->
+                        <div class="navbar-fixed-top align-right">
+                            <br />
+                            &nbsp;
+                            <a id="btn-login-blur" href="#">缥缈</a>
+                            <span class="blue">/</span>
+                            <a id="btn-login-light" href="#">淡雅</a>
+                            &nbsp;
+                        </div>
+                    </div>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+
+        </div><!-- /.main-content -->
+    </div><!-- /.main-container -->
+    <!-- basic scripts -->
+    <include file="Common/common_js" />
+    <script type="text/javascript">
+        $(document).ready(function(){  $("input[name=username]").focus();});
+        $(".check-code").on("click",function(){
+            $(this).attr("src","__ROOT__/authimg.php?"+Math.random());
+        })
+        jQuery(function($) {
+            $('#btn-login-light').on('click', function(e) {
+                $('body').attr('class', 'login-layout light-login');
+                $('#id-text2').attr('class', 'grey');
+                $('#id-company-text').attr('class', 'blue');
+                e.preventDefault();
+            });
+            $('#btn-login-blur').on('click', function(e) {
+                $('body').attr('class', 'login-layout blur-login');
+                $('#id-text2').attr('class', 'white');
+                $('#id-company-text').attr('class', 'light-blue');
+                e.preventDefault();
+            });
+
+        });
+    </script>
+    </body>
+</html>

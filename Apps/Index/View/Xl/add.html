@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include file="Common:header" />
+</head>
+<body class="no-skin">
+    <!-- #section:basics/navbar.layout -->
+    <include file="Common:top_maps" />
+    <!-- /section:basics/navbar.layout -->
+    <div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+    </script>
+    <!-- #section:basics/sidebar -->
+    <div id="sidebar" class="sidebar responsive">
+        <include file="Common:left_maps" />
+    </div>
+
+    <!-- /section:basics/sidebar -->
+    <div class="main-content">
+        <!-- #section:basics/content.breadcrumbs -->
+        <div class="breadcrumbs" id="breadcrumbs">
+            <script type="text/javascript">
+                try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+            </script>
+
+            <ul class="breadcrumb">
+                <li>
+                    <i class="ace-icon fa fa-home home-icon"></i>
+                    <a href="{:U('main/index')}">首页</a>
+                </li>
+                <li class="active">作业票</li>
+                <li class="active">添加作业票</li>
+            </ul><!-- /.breadcrumb -->
+            <!-- /section:basics/content.searchbox -->
+        </div>
+        <!-- /section:basics/content.breadcrumbs -->
+        <div class="page-content">
+            <div class="page-content-area">
+                <div class="page-header">
+                    <h1>
+                        添加作业票
+                        <small>
+                            <i class="ace-icon fa fa-angle-double-right"></i>
+                            请选择一个作业票类型
+                        </small>
+                    </h1>
+                </div><!-- /.page-header -->
+                <div class="row">
+                    <!-- #section:pages/pricing.large -->
+
+                    <div class="col-xs-6 col-sm-3 pricing-box">
+                        <div class="widget-box widget-color-orange">
+                            <div class="widget-header">
+                                <h5 class="widget-title bigger lighter">电缆安全施作业票</h5>
+                            </div>
+
+                            <div class="widget-body">
+                                <div class="widget-main">
+                                    <ul class="list-unstyled spaced2">
+                                        <li>
+                                            1.根据工作内容选择安全注意事项，并选择栏内“√”。
+                                        </li>
+
+                                        <li>
+                                            2.对已执行的安全注意事项在执行栏内“√”。
+                                        </li>
+
+                                        <li>
+                                            3.其他安全注意事项填写相应的空格内。
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <a href="{:U('xl/dl_order')}" class="btn btn-block btn-warning">
+                                        <i class="ace-icon fa fa-plus-circle bigger-110"></i>
+                                        <span>新建</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-3 pricing-box">
+                        <div class="widget-box widget-color-blue">
+                            <div class="widget-header">
+                                <h5 class="widget-title bigger lighter">电缆工程现场勘察记录单</h5>
+                            </div>
+
+                            <div class="widget-body">
+                                <div class="widget-main">
+                                    <ul class="list-unstyled spaced2">
+                                        <li>
+                                            1.根据工作内容选择安全注意事项，并选择栏内“√”。
+                                        </li>
+
+                                        <li>
+                                            2.对已执行的安全注意事项在执行栏内“√”。
+                                        </li>
+
+                                        <li>
+                                            3.其他安全注意事项填写相应的空格内。
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div>
+                                    <a href="{:U('work/kc_order')}" class="btn btn-block btn-primary">
+                                        <i class="ace-icon fa fa-plus-circle bigger-110"></i>
+                                        <span>新建</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-3 pricing-box">
+                        <div class="widget-box widget-color-green">
+                            <div class="widget-header">
+                                <h5 class="widget-title bigger lighter">施作业票班前、班后会记录单</h5>
+                            </div>
+
+                            <div class="widget-body">
+                                <div class="widget-main">
+                                    <ul class="list-unstyled spaced2">
+                                        <li>
+                                            1.对已执行的安全注意事项在执行栏内“√”。
+                                        </li>
+
+                                        <li>
+                                            2.对已执行的安全注意事项在执行栏内“√”。
+                                        </li>
+
+                                        <li>
+                                            3.其他安全注意事项填写相应的空格内。
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <a href="{:U('work/hy_order')}" class="btn btn-block btn-success">
+                                        <i class="ace-icon fa fa-plus-circle bigger-110"></i>
+                                        <span>新建</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- /section:pages/pricing.large -->
+                </div>
+            </div><!-- /.page-content-area -->
+        </div><!-- /.page-content -->
+    </div><!-- /.main-content -->
+    <include file="Common:footer" />
+</div><!-- /.main-container -->
+<include file="Common:common_js" />
+</body>
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include file="Common:header" />
+    <style>
+        .table-text-lg {vertical-align: middle !important;}
+    </style>
+</head>
+<body class="no-skin">
+    <!-- #section:basics/navbar.layout -->
+    <include file="Common:top_maps" />
+    <!-- /section:basics/navbar.layout -->
+    <div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+    </script>
+    <!-- #section:basics/sidebar -->
+    <div id="sidebar" class="sidebar responsive">
+        <include file="Common:left_maps" />
+    </div>
+
+    <!-- /section:basics/sidebar -->
+    <div class="main-content">
+        <!-- #section:basics/content.breadcrumbs -->
+        <div class="breadcrumbs" id="breadcrumbs">
+            <script type="text/javascript">
+                try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+            </script>
+
+            <ul class="breadcrumb">
+                <li>
+                    <i class="ace-icon fa fa-home home-icon"></i>
+                    <a href="{:U('main/index')}">首页</a>
+                </li>
+                <li class="active">作业票</li>
+                <li class="active">添加作业票</li>
+            </ul><!-- /.breadcrumb -->
+            <!-- /section:basics/content.searchbox -->
+        </div>
+        <!-- /section:basics/content.breadcrumbs -->
+        <div class="page-content">
+            <div class="page-content-area">
+                <div class="page-header">
+                    <h1>
+                        添加作业票
+                        <small>
+                            <i class="ace-icon fa fa-angle-double-right"></i>
+                            工程现场勘察记录
+                        </small>
+                    </h1>
+                </div><!-- /.page-header -->
+                <form action="__SELF__" method="post" enctype="multipart/form-data">
+                    <table class="table table-striped table-bordered table-hover no-footer">
+                        <tbody>
+                        <tr role="row" class="odd">
+                            <td colspan="3">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tr>
+                                        <td class="center table-text-lg">工作名称或工作地点</td>
+                                        <td class="center table-text-lg">工作内容</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="gongzuomingcheng1" class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="gongzuoneirong1" class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="gongzuomingcheng2" class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="gongzuoneirong2" class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="gongzuomingcheng3" class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="gongzuoneirong3" class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="gongzuomingcheng4" class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="gongzuoneirong4" class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="gongzuomingcheng5" class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="gongzuoneirong5" class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="gongzuomingcheng6" class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="gongzuoneirong6" class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg">工作条件（新装/增容/减容）</td>
+                                        <td class="center table-text-lg">
+                                            <input type="text" name="gongzuotiaojian" class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td class="center table-text-lg">
+                                                        计划工作时间
+                                                    </td>
+                                                    <td>
+
+                                                    </td>
+                                                    <div class="col-xs-8 col-sm-11">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">
+                                                                <i class="fa fa-calendar bigger-110"></i>
+                                                            </span>
+                                                            <input class="form-control" type="text" name="jihuagongzuoshijian_kaishi" id="jihuagongzuoshijian_kaishi"  value="{$record['jihuagongzuoshijian_kaishi']}" />
+                                                        </div>
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">
+                                                                <i class="fa fa-calendar bigger-110"></i>
+                                                            </span>
+                                                            <input class="form-control" type="text" name="jihuagongzuoshijian_jieshu" id="jihuagongzuoshijian_jieshu"  value="{$record['jihuagongzuoshijian_jieshu']}" />
+                                                        </div>
+                                                    </div>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td class="center table-text-lg">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td class="center table-text-lg">
+                                                        施工班组
+                                                    </td>
+                                                    <td class="center table-text-lg">
+                                                        {$record.gongzuobanzu}
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="center table-text-lg col-sm-4">
+                                <textarea class="form-control" name="anquanshigongyaoqiu" style="width: 100%;height: 100%;" placeholder="安全措施要求"></textarea>
+                            </td>
+                        </tr>
+                        <tr role="row" class="odd">
+                            <td class="center table-text-lg col-sm-4">
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <input multiple="" name="gongzuofanwei" type="file" id="gongzuofanwei" style="" />
+                                    </div>
+                                </div>
+                            </td>
+                            <td colspan="3">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tr>
+                                        <td class="center table-text-lg" colspan="3">涉及增容、减容或检修配合停电等情况</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg">
+                                            线路或设备名称
+                                        </td>
+                                        <td class="center table-text-lg">
+                                            管辖单位
+                                        </td>
+                                        <td class="center table-text-lg">
+                                            应采取的安全措施
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="xianluhuoshebeimingcheng1" class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="guanxiadanwei1" class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="yingcaidequanquancuoshi1" class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="xianluhuoshebeimingcheng2" class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="guanxiadanwei2" class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="yingcaidequanquancuoshi2" class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="xianluhuoshebeimingcheng3" class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="guanxiadanwei3" class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="yingcaidequanquancuoshi3" class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="xianluhuoshebeimingcheng4" class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="guanxiadanwei4" class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="yingcaidequanquancuoshi4" class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="xianluhuoshebeimingcheng5" class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="guanxiadanwei5" class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="yingcaidequanquancuoshi5" class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg">
+                                            双电源、发电机等倒送电情况
+                                        </td>
+
+                                        <td class="center table-text-lg" colspan="2">
+                                            应采取的安全措施
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="shuangdianyuanfadianjisongdian1" class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td colspan="2">
+                                            <input type="text" name="yingcaidequanquancuoshi6" class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="shuangdianyuanfadianjisongdian2" class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td colspan="2">
+                                            <input type="text" name="yingcaidequanquancuoshi7" class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="shuangdianyuanfadianjisongdian3" class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td colspan="2">
+                                            <input type="text" name="yingcaidequanquancuoshi8" class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr role="row" class="odd">
+                            <td colspan="4">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tr>
+                                        <td class="center table-text-lg">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-6">
+                                                        配合线路停电状态
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-6">
+                                                        <textarea class="form-control" name="peihedianlutingdianzhuangtai" style="width: 100%;height: 100px;"></textarea>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-6">
+                                                        应采取的安全措施
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-6">
+                                                        <textarea class="form-control" name="yingcaidequanquancuoshi9" style="width: 100%;height: 100px;"></textarea>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-6">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td>
+                                                        <textarea class="form-control" name="qitaanquancuoshiyaoqiu" style="width: 100%;height: 100%;" placeholder="其他安全措施要求"></textarea>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <textarea class="form-control" name="gongzuochengxu" style="width: 100%;height: 100%;" placeholder="工作程序"></textarea>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-6">
+                                                        <table class="table table-striped table-bordered table-hover no-footer">
+                                                            <tr>
+                                                                <td class="center table-text-lg">
+                                                                    现场勘察负责人
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    <input type="text" name="xianchangkaichafuzeren" class="col-xs-10 col-sm-12">
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    参加勘察人员
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    <input type="text" name="canjiakancarenyuan" class="col-xs-10 col-sm-12">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="center table-text-lg">
+                                                                    勘察日期
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    <input type="text" name="kanchariqi" class="col-xs-10 col-sm-12">
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    实际施工时间
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    <input type="text" name="shijishigongriqi" class="col-xs-10 col-sm-12">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="center table-text-lg">
+                                                                    作业票编号
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    <input type="text" value="{$no}" class="col-xs-10 col-sm-12" readonly name="gongdanbianhao">
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    施工负责人
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    <input type="text" name="shigongfuzeren" class="col-xs-10 col-sm-12">
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="center" colspan="4">
+                                <button type="submit" class="btn btn-sm btn-success">
+                                    <i class="ace-icon fa fa-floppy-o bigger-110"></i>
+                                    保 存
+                                </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div><!-- /.page-content-area -->
+        </div><!-- /.page-content -->
+    </div><!-- /.main-content -->
+    <include file="Common:footer" />
+</div><!-- /.main-container -->
+<include file="Common:common_js" />
+
+<script>
+    jQuery(function($) {
+        $('#gongzuofanwei').ace_file_input({
+            style:'well',
+            btn_choose:'工作范围（简图）',
+            btn_change:null,
+            no_icon:'ace-icon fa fa-picture-o',
+            droppable:true,
+            thumbnail:'fit'//large | fit
+            ,
+            preview_error : function(filename, error_code) {
+            }
+
+        }).on('change', function(){
+
+        });
+        $('.chosen-select').chosen({allow_single_deselect:true});
+        $(window).off('resize.chosen').on('resize.chosen', function() {
+            $('.chosen-select').each(function() {
+                var $this = $(this);
+                $this.next().css({'width': $this.parent().width()});
+            })
+        }).trigger('resize.chosen');
+
+    });
+    var gs = {
+        language:'zh-CN',
+        format:'YYYY-MM-DD HH:mm',
+        todayBtn:1,
+        autoclose:1,
+    };
+    $('#jihuagongzuoshijian_kaishi').datetimepicker(gs).next().on(ace.click_event, function(){
+        $(this).prev().focus();
+    });
+    $('#jihuagongzuoshijian_jieshu').datetimepicker(gs).next().on(ace.click_event, function(){
+        $(this).prev().focus();
+    });
+</script>
+</body>
+</html>

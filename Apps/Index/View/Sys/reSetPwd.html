@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include file="Common:header" />
+</head>
+	<body class="no-skin">
+		<!-- #section:basics/navbar.layout -->
+        <include file="Common:top_maps" />
+		<!-- /section:basics/navbar.layout -->
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+			<!-- #section:basics/sidebar -->
+            <div id="sidebar" class="sidebar responsive">
+                <include file="Common:left_maps" />
+            </div>
+			<!-- /section:basics/sidebar -->
+			<div class="main-content">
+				<!-- #section:basics/content.breadcrumbs -->
+				<div class="breadcrumbs" id="breadcrumbs">
+					<script type="text/javascript">
+						try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+					</script>
+					<ul class="breadcrumb">
+                        <li>
+                            <i class="ace-icon fa fa-home home-icon"></i>
+                            <a href="{:U('main/index')}">首页</a>
+                        </li>
+                        <li class="active">修改密码</li>
+					</ul><!-- /.breadcrumb -->
+				</div>
+				<!-- /section:basics/content.breadcrumbs -->
+				<div class="page-content">
+					<div class="page-content-area">
+						<div class="page-header">
+							<h1>
+								修改密码
+							</h1>
+						</div><!-- /.page-header -->
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+								<form class="form-horizontal" role="form" method="post" action="{:U('sys/reSetPwd')}" >
+									<!-- #section:elements.form -->
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="oldpwd"> 旧密码 </label>
+										<div class="col-sm-9">
+											<input type="password" id="oldpwd" name="oldpwd" placeholder="旧密码" class="col-xs-10 col-sm-5" value="{$edit['realname']}" />
+										</div>
+									</div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label no-padding-right" for="newpwd"> 新密码 </label>
+                                        <div class="col-sm-9">
+                                            <input type="password" id="newpwd" name="newpwd" placeholder="新密码" class="col-xs-10 col-sm-5" value="{$edit['username']}" />
+                                        </div>
+                                    </div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="newpwd1"> 重复新密码 </label>
+										<div class="col-sm-9">
+											<input type="password" id="newpwd1" name="newpwd1" placeholder="重复新密码" class="col-xs-10 col-sm-5" />
+										</div>
+									</div>
+									<div class="space-4"></div>
+									<div class="clearfix form-actions">
+										<div class="col-md-offset-3 col-md-9">
+											<button class="btn btn-info" type="submit">
+												<i class="ace-icon fa fa-check bigger-110"></i>
+												修改
+											</button>
+										</div>
+									</div>
+								</form>
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content-area -->
+				</div><!-- /.page-content -->
+			</div><!-- /.main-content -->
+            <include file="Common:footer" />
+        </div><!-- /.main-container -->
+        <include file="Common:common_js" />
+        <script type="text/javascript">
+            jQuery(function($) {
+                $('#spinner1').ace_spinner({value:0,min:0,max:200,step:10, btn_up_class:'btn-info' , btn_down_class:'btn-info'});
+            });
+        </script>
+    </body>
+</html>

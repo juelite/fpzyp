@@ -1,0 +1,234 @@
+* {
+	PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px
+}
+.pop_overlay {
+	BACKGROUND: #000000; POSITION: absolute; LEFT: 0px; TOP: 0px
+}
+.popWrap {
+	BORDER-TOP: #e4e4e4 1px solid; BORDER-RIGHT: #e4e4e4 1px solid; BACKGROUND: #fff; BORDER-BOTTOM: #e4e4e4 1px solid; POSITION: absolute; BORDER-LEFT: #e4e4e4 1px solid; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px
+}
+.ui-draggable .popTitle {
+	CURSOR: move
+}
+.popWrap .popClose {
+	OVERFLOW: hidden; HEIGHT: 19px; WIDTH: 19px; BACKGROUND: url(images/close.png) no-repeat 1px 1px; RIGHT: 10px; POSITION: absolute; TOP: 10px; TEXT-INDENT: 999px
+}
+.popWin .popTitle {
+	FONT-SIZE: 14px; HEIGHT: 40px; BORDER-BOTTOM: #e4e4e4 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 14px; LINE-HEIGHT: 40px; PADDING-RIGHT: 14px
+}
+.popPrompt .popTitle {
+	FONT-SIZE: 14px; HEIGHT: 40px; BORDER-BOTTOM: #e4e4e4 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 14px; LINE-HEIGHT: 40px; PADDING-RIGHT: 14px
+}
+.popWin .popContent {
+	OVERFLOW: auto; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px
+}
+.popPrompt .popContent {
+	OVERFLOW: auto; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px
+}
+.popWin .popButton {
+	BORDER-TOP: #f0f0f0 1px solid; BACKGROUND: #f7f7f7; PADDING-BOTTOM: 10px; TEXT-ALIGN: right; PADDING-TOP: 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px
+}
+.popPrompt .popButton {
+	BORDER-TOP: #f0f0f0 1px solid; BACKGROUND: #f7f7f7; PADDING-BOTTOM: 10px; TEXT-ALIGN: right; PADDING-TOP: 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px
+}
+.popWin .popButton BUTTON {
+	BORDER-TOP-STYLE: none; FONT-SIZE: 14px; BORDER-LEFT-STYLE: none; BORDER-TOP-COLOR: #b1b1b1; BORDER-BOTTOM: #b1b1b1 2px solid; BORDER-LEFT-COLOR: #b1b1b1; COLOR: #333; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 30px; BORDER-RIGHT-COLOR: #b1b1b1; PADDING-RIGHT: 30px; BACKGROUND-COLOR: #e2e2e2; MARGIN-RIGHT: 10px
+}
+.popPrompt .popButton BUTTON {
+	BORDER-TOP-STYLE: none; FONT-SIZE: 14px; BORDER-LEFT-STYLE: none; BORDER-TOP-COLOR: #b1b1b1; BORDER-BOTTOM: #b1b1b1 2px solid; BORDER-LEFT-COLOR: #b1b1b1; COLOR: #333; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 30px; BORDER-RIGHT-COLOR: #b1b1b1; PADDING-RIGHT: 30px; BACKGROUND-COLOR: #e2e2e2; MARGIN-RIGHT: 10px
+}
+.popWin .popButton BUTTON:hover {
+	COLOR: #757575; BACKGROUND-COLOR: #f1f1f1
+}
+.popPrompt .popButton BUTTON:hover {
+	COLOR: #757575; BACKGROUND-COLOR: #f1f1f1
+}
+.popWin .popButton BUTTON:active {
+	BORDER-TOP-COLOR: #464646; BORDER-LEFT-COLOR: #464646; COLOR: #fff; BORDER-BOTTOM-COLOR: #464646; BORDER-RIGHT-COLOR: #464646; BACKGROUND-COLOR: #737373
+}
+.popPrompt .popButton BUTTON:active {
+	BORDER-TOP-COLOR: #464646; BORDER-LEFT-COLOR: #464646; COLOR: #fff; BORDER-BOTTOM-COLOR: #464646; BORDER-RIGHT-COLOR: #464646; BACKGROUND-COLOR: #737373
+}
+.popWin .popButton BUTTON.bPrimary {
+	BORDER-TOP-COLOR: #15366d !important; BORDER-LEFT-COLOR: #15366d !important; COLOR: #fff; BORDER-BOTTOM-COLOR: #15366d !important; BORDER-RIGHT-COLOR: #15366d !important; BACKGROUND-COLOR: #3c7cd5
+}
+.popWin .popButton BUTTON.bPrimary:hover {
+	BACKGROUND-COLOR: #5197f9
+}
+.popWin .popButton BUTTON.bPrimary:active {
+	BACKGROUND-COLOR: #2b63b0
+}
+.popWrap .popButton BUTTON.bBlue {
+	BACKGROUND-COLOR: #3c7cd5
+}
+.popWrap .popButton BUTTON.bBlue:hover {
+	BACKGROUND-COLOR: #5197f9
+}
+.popWrap .popButton BUTTON.bBlue:active {
+	BACKGROUND-COLOR: #2b63b0
+}
+.popPrompt .popMsg {
+	PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 68px; MARGIN: 0px 0px 10px; PADDING-RIGHT: 10px
+}
+.pop_icon {
+	HEIGHT: 40px; WIDTH: 40px; BACKGROUND: url(images/msg_bg.png) no-repeat 100% -560px; MARGIN-TOP: 0px; FLOAT: left; MARGIN-LEFT: -50px; DISPLAY: inline
+}
+.popMsg .attention {
+	BACKGROUND-POSITION: -48px -118px
+}
+.popMsg .question {
+	BACKGROUND-POSITION: -48px -78px
+}
+.popMsg .ok {
+	BACKGROUND-POSITION: -48px -198px
+}
+.popMsg .error {
+	BACKGROUND-POSITION: -48px 2px
+}
+.popMsg .notice {
+	BACKGROUND-POSITION: -48px -236px
+}
+.popMsg .alarm {
+	BACKGROUND-POSITION: -48px -278px
+}
+.popMsg .stop {
+	BACKGROUND-POSITION: -48px -39px
+}
+.popPrompt .popMsgContent {
+	PADDING-TOP: 10px
+}
+.popPrompt .popPromptMsg {
+	TEXT-ALIGN: center
+}
+.popTips {
+	BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; BACKGROUND: #fff; BORDER-BOTTOM: #ccc 1px solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 10px; BORDER-LEFT: #ccc 1px solid; PADDING-RIGHT: 10px; border-radius: 3px; opacity: .8; -moz-border-radius: 3px; -webkit-border-radius: 3px
+}
+.popTips .tips {
+	BORDER-TOP: 5px solid; HEIGHT: 0px; BORDER-RIGHT: 5px solid; BORDER-BOTTOM: 5px solid; POSITION: absolute; BORDER-LEFT: 5px solid
+}
+.popTips .tips B {
+	BORDER-TOP: 5px solid; HEIGHT: 0px; BORDER-RIGHT: 5px solid; BORDER-BOTTOM: 5px solid; POSITION: absolute; BORDER-LEFT: 5px solid
+}
+.popTips-top .tips {
+	BORDER-TOP-COLOR: #ccc; BORDER-LEFT-COLOR: transparent; BORDER-BOTTOM-COLOR: transparent; LEFT: 10px; BORDER-RIGHT-COLOR: transparent; BOTTOM: -10px
+}
+.popTips-top .tips B {
+	BORDER-TOP-COLOR: #fff; BORDER-LEFT-COLOR: transparent; BORDER-BOTTOM-COLOR: transparent; LEFT: -5px; BORDER-RIGHT-COLOR: transparent; TOP: -6px
+}
+.popTips-bottom .tips {
+	BORDER-TOP-COLOR: transparent; BORDER-LEFT-COLOR: transparent; BORDER-BOTTOM-COLOR: #ccc; BORDER-RIGHT-COLOR: transparent; TOP: -10px
+}
+.popTips-bottom .tips B {
+	BORDER-TOP-COLOR: transparent; BORDER-LEFT-COLOR: transparent; BORDER-BOTTOM-COLOR: #fff; LEFT: -5px; BORDER-RIGHT-COLOR: transparent; TOP: -4px
+}
+.popTips-right .tips {
+	BORDER-TOP-COLOR: transparent; BORDER-LEFT-COLOR: transparent; BORDER-BOTTOM-COLOR: transparent; LEFT: -11px; BORDER-RIGHT-COLOR: #ccc; TOP: 6px
+}
+.popTips-right .tips B {
+	BORDER-TOP-COLOR: transparent; BORDER-LEFT-COLOR: transparent; BORDER-BOTTOM-COLOR: transparent; LEFT: -4px; BORDER-RIGHT-COLOR: #fff; TOP: -5px
+}
+.popTips-left .tips {
+	BORDER-TOP-COLOR: transparent; RIGHT: -10px; BORDER-LEFT-COLOR: #ccc; BORDER-BOTTOM-COLOR: transparent; BORDER-RIGHT-COLOR: transparent; TOP: 6px
+}
+.popTips-left .tips B {
+	BORDER-TOP-COLOR: transparent; BORDER-LEFT-COLOR: #fff; BORDER-BOTTOM-COLOR: transparent; LEFT: -6px; BORDER-RIGHT-COLOR: transparent; TOP: -5px
+}
+.popSticky .popMsg {
+	PADDING-BOTTOM: 10px; PADDING-TOP: 15px; PADDING-LEFT: 20px; PADDING-RIGHT: 10px
+}
+.popSticky .popMsg P {
+	FONT-SIZE: 14px; LINE-HEIGHT: 18px
+}
+.popSticky .popMsgContent {
+	PADDING-TOP: 10px
+}
+.popSticky .popSticky-icon {
+	PADDING-BOTTOM: 20px; PADDING-TOP: 20px; PADDING-LEFT: 88px; PADDING-RIGHT: 10px
+}
+.st-msg.popSticky {
+	WIDTH: 300px; MARGIN-LEFT: auto; border-radius: 5px
+}
+.st-msg.popSticky DIV.sticky-note {
+	PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px
+}
+.st-msg.popSticky DIV.sticky-note P A {
+	FONT-WEIGHT: normal
+}
+.st-msg.popSticky .block-msg {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none
+}
+.st-msg.popSticky .block-msg .msg-cnt {
+	LINE-HEIGHT: 1
+}
+.st-msg.popSticky .block-msg .info {
+	FONT-SIZE: 12px; FONT-WEIGHT: normal
+}
+.st-msg.popSticky .block-msg .bd {
+	BACKGROUND: none transparent scroll repeat 0% 0%; POSITION: static; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px
+}
+.st-msg.popSticky .block-msg .bd H6 {
+	OVERFLOW: hidden; WIDTH: 210px; WHITE-SPACE: nowrap; TEXT-OVERFLOW: ellipsis
+}
+.st-msg.popSticky .pagination {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 0px; PADDING-RIGHT: 0px
+}
+.st-msg.popSticky .pagination .pages {
+	WIDTH: auto
+}
+.st-msg.popSticky .pagination LI {
+	FONT-WEIGHT: normal; MARGIN: 0px 5px; LETTER-SPACING: 3px
+}
+.st-msg.popSticky .pagination A {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; box-shadow: none
+}
+.st-msg.popSticky .pagination A .ico {
+	MARGIN: 0px
+}
+.st-video.popSticky {
+	BACKGROUND: url(../../../../../themes/default/images/sticky_bg.png) #fff no-repeat 0px 0px
+}
+.st-picture.popSticky {
+	BACKGROUND: url(../../../../../themes/default/images/sticky_bg.png) #fff no-repeat 0px 0px
+}
+.st-video.popSticky .block-msg .bd {
+	MARGIN-LEFT: 60px
+}
+.st-picture.popSticky .block-msg .bd {
+	MARGIN-LEFT: 60px
+}
+.st-picture.popSticky {
+	BACKGROUND-POSITION: 0px -150px
+}
+.st-msg.popSticky .ico {
+	MARGIN-RIGHT: 5px
+}
+.st-msg.popSticky .i-folder-open.ico {
+	BACKGROUND-POSITION: -171px -171px
+}
+.st-msg.popSticky .i-video-play.ico {
+	BACKGROUND-POSITION: -243px -267px
+}
+.st-msg.popSticky .i-pic-edit.ico {
+	BACKGROUND-POSITION: -219px -267px
+}
+.st-msg.popSticky .i-video-police.ico {
+	BACKGROUND-POSITION: -171px -291px
+}
+.st-msg.popSticky .i-prev.ico {
+	BACKGROUND-POSITION: -99px -315px
+}
+.st-msg.popSticky A:active .i-prev {
+	BACKGROUND-POSITION: -99px -339px
+}
+.st-msg.popSticky A.disabled .i-prev {
+	BACKGROUND-POSITION: -99px -363px
+}
+.st-msg.popSticky .i-next.ico {
+	BACKGROUND-POSITION: -123px -315px
+}
+.st-msg.popSticky A:active .i-next {
+	BACKGROUND-POSITION: -123px -339px
+}
+.st-msg.popSticky A.disabled .i-next {
+	BACKGROUND-POSITION: -123px -363px
+}

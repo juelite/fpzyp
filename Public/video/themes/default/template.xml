@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+	<name>默认</name>
+    <description>该模板色系为深蓝色，属于系统默认模板，风格沉稳、大气，适用于大部分行业</description>
+    <author>柳逢春</author>
+    <email>liufengchun@hikvision.com.cn</email>
+    <create>2013-01-01</create>
+    <update>2013-06-26</update>
+    <color>color.jpg</color>
+    <thumb>thumb.jpg</thumb>
+</template>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>视频回放</title>
+    <link href="__PUBLIC__/video/css/themes.css" rel="stylesheet"/>
+    <!-- 基础样式 -->
+    <link href="__PUBLIC__/video/themes/default/css/reset.css" rel="stylesheet"/>
+    <link href="__PUBLIC__/video/themes/default/css/grids.css" rel="stylesheet"/>
+    <link href="__PUBLIC__/video/themes/default/css/base.css" rel="stylesheet"/>
+    <link href="__PUBLIC__/video/themes/default/css/baseV1.2.0.css" rel="stylesheet"/>
+    <link href="__PUBLIC__/video/themes/default/css/ui.grid.css" rel="stylesheet">
+    <!-- 弹出框 -->
+    <link href="__PUBLIC__/video/js/plugins/popup/skin/default/pop.css" rel="stylesheet"/>
+    <link href="__PUBLIC__/video/css/themes.css" rel="stylesheet"/>
+    <link href="__PUBLIC__/video/css/person.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="wrapper">
+      <div   class="nav">
+        <div class=""  id="demo-header">
+            <ul class="nav-list cf" >
+                <li class="fl text <eq name='f' value='real'>active</eq>" id="real" onclick="loadPage(this)"> 视频预览</li>
+                <li class="fl text <eq name='f' value='playback'>active</eq>" id="playback"   onclick="loadPage(this)"> 视频回放</li>
+                <!--<li class="fl text" id="message" onclick="loadPage(this)">消息接收</li>
+                <li class="fl text" id="webservice"  onclick="loadPage(this)"> 平台服务 </li>-->
+            </ul>
+        </div>
+    </div>
+    <div id="demo-content" class="demo-content">
+        <div class="demo-main" id="demo-main">
+            <iframe id="mainFrame" name="mainFrame" src="{:U('wbs/'.$f)}" frameborder="0"  scrolling="no" width="100%" height="100%" ></iframe>
+        </div>
+    </div>
+</div>
+
+<script src="__PUBLIC__/video/js/language/messages_zh_cn.js"></script>
+<script src="__PUBLIC__/video/js/plugins/jquery.js"></script>
+<script src="__PUBLIC__/video/js/plugins/jquery-ui.js"></script>
+<script src="__PUBLIC__/video/js/jquery-override.js"></script>
+<!-- 弹出框 -->
+<script src="__PUBLIC__/video/js/plugins/popup/pop.js"></script>
+<script type="text/javascript">
+
+function loadPage(e){
+    var pageid=e.id;
+    if(pageid=='real'){
+        window.location.href="{:U('wbs/main?f=real')}";
+    }else if(pageid=='playback'){
+        window.location.href="{:U('wbs/main?f=playback')}";
+    }
+}
+</script>
+</body>
+</html>

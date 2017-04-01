@@ -1,0 +1,23 @@
+.login-layout{
+  background-color: #e4e6e9;
+}
+.login-layout .widget-box{
+  padding: 0px;
+  
+}
+.login-layout .widget-box .widget-main{
+  background-color: #fff
+}
+.login-layout h1{
+  font-size: 24px;
+  margin: 0;
+  padding: 30px 10px;
+  background-color: #fff;
+}
+.login-layout .widget-box,
+.login-layout h1{
+  box-shadow: 0 1px 6px rgba(0,0,0,.1);
+}
+.navbar{
+  background-color: #333
+}

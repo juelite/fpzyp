@@ -1,0 +1,2652 @@
+.monitor .main-wrap {
+	MIN-HEIGHT: 300px
+}
+.fullscreen .monitor-container {
+	BOX-SIZING: border-box; HEIGHT: 100%; WIDTH: 100%; POSITION: fixed; PADDING-BOTTOM: 45px; PADDING-TOP: 0px; PADDING-LEFT: 0px; LEFT: 0px; Z-INDEX: 900; TOP: 0px; PADDING-RIGHT: 0px
+}
+.fullscreen .monitor-toolbar {
+	WIDTH: 100%; POSITION: fixed; LEFT: 0px; Z-INDEX: 9999; BOTTOM: 0px
+}
+FIELDSET {
+	BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 1px
+}
+.grid-s9m0 {
+	MIN-HEIGHT: 500px
+}
+.col-sub {
+	POSITION: relative
+}
+UL.ztree LI > A {
+	POSITION: relative; Z-INDEX: 1; MARGIN-RIGHT: 56px
+}
+.active_node_editor {
+	POSITION: relative
+}
+UL.ztree .node-editor {
+	WIDTH: 40px; RIGHT: -40px; POSITION: absolute; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; DISPLAY: block; TOP: 0px; PADDING-RIGHT: 0px
+}
+UL.ztree .curSelectedNode .node-editor {
+	RIGHT: -39px; TOP: -1px
+}
+UL.ztree .node-editor A {
+	PADDING-BOTTOM: 0px !important; PADDING-TOP: 0px !important; PADDING-LEFT: 5px !important; MARGIN: 0px; PADDING-RIGHT: 5px !important
+}
+#tabContent {
+	
+}
+.hasPanel #tabContent {
+	
+}
+#tabContent .treeview_main {
+	_width: 250px; _overflow: auto; _padding-top: 5px
+}
+.simple#monResource {
+	_padding-left: 0px
+}
+#controller {
+	OVERFLOW: hidden
+}
+#gridsModeGroup DD LI A {
+	_width: auto; _display: block
+}
+.tab-grey.tab-container {
+	BOX-SIZING: border-box; RIGHT: 0px; POSITION: absolute; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; LEFT: 0px; Z-INDEX: 4; TOP: 0px; PADDING-RIGHT: 0px; BOTTOM: 32px
+}
+.tab-grey.tab-container UL.tabs {
+	BOX-SIZING: border-box; HEIGHT: 30px; WIDTH: 100%; BACKGROUND: #e3e3e3; POSITION: absolute; FLOAT: left; PADDING-BOTTOM: 0px; PADDING-TOP: 5px; PADDING-LEFT: 0px; Z-INDEX: 2; PADDING-RIGHT: 0px; border-bottom-left-radius: 0; border-bottom-right-radius: 0
+}
+.tab-grey.tab-container UL.tabs LI {
+	WIDTH: 74px
+}
+.tab-grey.tab-container UL.tabs LI A {
+	PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px
+}
+#controlContent .tabs {
+	_position: relative
+}
+.tab-grey.tab-container .tab-content {
+	BOX-SIZING: border-box; HEIGHT: 100%; POSITION: relative; PADDING-TOP: 30px
+}
+.tab-grey.tab-container .tab-content > DIV {
+	HEIGHT: 100%; POSITION: relative
+}
+.tab-grey.tab-container .btn-toolbar {
+	BOX-SIZING: border-box; HEIGHT: 38px; WIDTH: 100%; POSITION: absolute; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; Z-INDEX: 4; PADDING-RIGHT: 0px
+}
+#monResource .btn-toolbar {
+	HEIGHT: 30px; LINE-HEIGHT: 20px; _height: 20px
+}
+#monFavorite .btn-toolbar {
+	HEIGHT: 30px; LINE-HEIGHT: 20px; _height: 20px
+}
+#monResource .treeview {
+	PADDING-TOP: 61px
+}
+.simple#monResource .breadLine {
+	DISPLAY: none
+}
+#monResource .treeview_main {
+	PADDING-TOP: 30px; _margin-top: 30px
+}
+#monFavorite .treeview {
+	PADDING-TOP: 30px
+}
+.tab-grey .searchLine {
+	BORDER-TOP: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid; BACKGROUND: #fff; BORDER-BOTTOM: #cccccc 1px solid; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: #cccccc 1px solid; MARGIN: 0px; PADDING-RIGHT: 25px; border-radius: 2px; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1); -webkit-transition: border linear 0.2s,box-shadow linear 0.2s; -moz-transition: border linear 0.2s,box-shadow linear 0.2s; -o-transition: border linear 0.2s,box-shadow linear 0.2s; transition: border linear 0.2s,box-shadow linear 0.2s; -ms-transition: border linear 0.2s,box-shadow linear 0.2s
+}
+.controller .setting A.active {
+	BORDER-TOP-STYLE: none !important; BORDER-LEFT-STYLE: none !important; BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-BOTTOM-STYLE: none !important; BORDER-RIGHT-STYLE: none !important; DISPLAY: inline !important
+}
+.controller .setting A:active {
+	BORDER-TOP-STYLE: none !important; BORDER-LEFT-STYLE: none !important; BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-BOTTOM-STYLE: none !important; BORDER-RIGHT-STYLE: none !important; DISPLAY: inline !important
+}
+#monResource .search-input {
+	HEIGHT: 26px; PADDING-BOTTOM: 2px; PADDING-TOP: 2px; PADDING-LEFT: 0px; CLEAR: both; MARGIN: 4px 0px 0px; DISPLAY: none; PADDING-RIGHT: 0px
+}
+#monResource .search-input #orgName {
+	WIDTH: 195px; MARGIN-LEFT: 5px
+}
+#monResource #orgSearch {
+	CURSOR: pointer; HEIGHT: 20px; WIDTH: 24px; BACKGROUND: url(../images/search_org.png) no-repeat 0px 50%; DISPLAY: block
+}
+#monResource #orgSearch:hover {
+	CURSOR: hand; WIDTH: 24px; BACKGROUND: url(../images/search_org.png) no-repeat -24px 50%
+}
+.hasFilter#monResource .search-input {
+	DISPLAY: block
+}
+.hasFilter#monResource .btn-toolbar {
+	HEIGHT: 60px
+}
+.hasFilter#monResource .breadLine {
+	TOP: 60px
+}
+.hasView#monResource #orgSearch {
+	COLOR: #f00; DISPLAY: none
+}
+.tab-grey .searchLine INPUT[type='text'] {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 24px; WIDTH: 100%; VERTICAL-ALIGN: top; BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 2px; PADDING-TOP: 2px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; box-shadow: none; transition: none
+}
+.tab-grey .searchLine BUTTON {
+	BORDER-TOP-STYLE: none !important; BORDER-LEFT-STYLE: none !important; WIDTH: 28px; BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-BOTTOM-STYLE: none !important; BORDER-RIGHT-STYLE: none !important
+}
+.tab-grey .breadLine {
+	BOX-SIZING: border-box; HEIGHT: auto; WIDTH: 100%; BACKGROUND: #fff; BORDER-BOTTOM: #c4c6c5 1px solid; POSITION: absolute; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MIN-HEIGHT: 30px; Z-INDEX: 2; DISPLAY: block; TOP: 30px !important; PADDING-RIGHT: 0px
+}
+.tab-grey .breadLine UL.breadcrumbs {
+	BACKGROUND: #f1f1f1; ZOOM: 1; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 20px; Z-INDEX: 2; PADDING-RIGHT: 5px
+}
+.tab-grey .breadLine UL.breadcrumbs LI {
+	FONT-SIZE: 12px; WHITE-SPACE: nowrap; FONT-WEIGHT: bold; PADDING-LEFT: 5px; LINE-HEIGHT: 18px
+}
+.tab-grey .breadLine UL.breadcrumbs LI LI {
+	FONT-WEIGHT: normal; PADDING-LEFT: 0px
+}
+.tab-grey .breadLine UL.breadcrumbs LI A {
+	HEIGHT: auto; BACKGROUND-POSITION: 100% 6px; FONT-WEIGHT: normal; COLOR: #3063b0; PADDING-BOTTOM: 3px !important; PADDING-TOP: 3px !important; PADDING-LEFT: 0px !important; LINE-HEIGHT: normal; PADDING-RIGHT: 10px !important
+}
+.tab-grey .breadLine UL.breadcrumbs LI A:hover {
+	COLOR: #f60
+}
+.tab-grey .breadLine UL.breadcrumbs LI SPAN {
+	FLOAT: none; DISPLAY: inline
+}
+.tab-grey .breadLine UL.breadcrumbs LI LI A {
+	BACKGROUND-POSITION: 100% 0px; COLOR: #6a6a6a; PADDING-BOTTOM: 5px !important; PADDING-TOP: 5px !important; PADDING-LEFT: 10px !important; PADDING-RIGHT: 10px !important
+}
+.tab-grey .breadLine UL.breadcrumbs LI LI A:hover {
+	COLOR: #fff
+}
+.tab-grey .breadLine .toggle-more {
+	HEIGHT: 13px; WIDTH: 13px; POSITION: absolute; BACKGROUND-POSITION: -269px -6px; ZOOM: 1; LEFT: 0px; MARGIN: 7px 5px; Z-INDEX: 3; DISPLAY: inline; TEXT-INDENT: -9999px
+}
+.tab-grey .breadLine .toggle-more:hover {
+	BACKGROUND-POSITION: -269px -30px
+}
+.tab-grey .collapse.breadLine .toggle-more {
+	BACKGROUND-POSITION: -293px -6px
+}
+.tab-grey .collapse.breadLine .toggle-more:hover {
+	BACKGROUND-POSITION: -293px -30px
+}
+.tab-grey .category {
+	BOX-SIZING: border-box; WIDTH: 100%; PADDING-BOTTOM: 5px !important; PADDING-TOP: 5px !important; PADDING-LEFT: 20px !important; MARGIN: 0px; PADDING-RIGHT: 5px !important
+}
+.tab-grey .collapse .category {
+	DISPLAY: none
+}
+.tab-grey .category LI A {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 0px; MARGIN: 0px 5px 3px; DISPLAY: block; PADDING-RIGHT: 0px
+}
+.tab-grey .category LI A:hover {
+	
+}
+.tab-grey .category LI.active A {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-BOTTOM-STYLE: none; COLOR: #f60; BORDER-RIGHT-STYLE: none
+}
+.tab-grey .treeview {
+	BOX-SIZING: border-box; OVERFLOW: hidden; HEIGHT: 100%; POSITION: relative; PADDING-BOTTOM: 1px; PADDING-TOP: 38px; PADDING-LEFT: 0px; Z-INDEX: 1; PADDING-RIGHT: 0px
+}
+.tab-grey .treeview .ztree {
+	BOX-SIZING: border-box; OVERFLOW: auto; HEIGHT: 100%; _overflow: inherit
+}
+.tab-grey #monSearch {
+	POSITION: relative; Z-INDEX: 1
+}
+.tab-grey #monSearch .treeview {
+	PADDING-BOTTOM: 30px
+}
+.tab-grey .pagination-mini {
+	MARGIN-TOP: -30px; POSITION: relative; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; Z-INDEX: 2; PADDING-RIGHT: 5px
+}
+.spot-list {
+	BOX-SIZING: border-box; OVERFLOW: auto; HEIGHT: 100%; BORDER-BOTTOM: #c4c6c5 1px solid
+}
+.spot-list > DIV {
+	MARGIN-BOTTOM: 1px; POSITION: relative; Z-INDEX: 3
+}
+.spot-list DL {
+	BORDER-TOP: #ccc 1px dashed; BORDER-BOTTOM: #ccc 1px dashed; POSITION: relative; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 10px; MARGIN: -1px 0px 0px; Z-INDEX: 1; PADDING-RIGHT: 10px
+}
+.spot-list DL:hover {
+	BACKGROUND: #ddeaff
+}
+.spot-list DL.hover {
+	BACKGROUND: #ddeaff
+}
+.spot-list DL.active {
+	BORDER-TOP: #ffb951 1px solid; BORDER-RIGHT: #ffb951 1px solid; BACKGROUND: #ffe6b0; BORDER-BOTTOM: #ffb951 1px solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 9px; BORDER-LEFT: #ffb951 1px solid; Z-INDEX: 2; PADDING-RIGHT: 9px
+}
+.spot-list DL DT {
+	POSITION: relative; PADDING-RIGHT: 42px
+}
+.spot-list DL DT .ico {
+	HEIGHT: 18px; WIDTH: 18px
+}
+.spot-list DL DT .more {
+	RIGHT: 0px; POSITION: absolute; DISPLAY: block; TOP: 0px
+}
+.spot-list DL DT .more A {
+	MARGIN-LEFT: 5px
+}
+.spot-list DL:hover DT .more {
+	DISPLAY: block
+}
+.spot-list DL.hover DT .more {
+	DISPLAY: block
+}
+.spot-list DL DT H6 {
+	FONT-SIZE: 12px; WORD-WRAP: break-word; WORD-BREAK: break-all
+}
+.spot-list DL DT H6 .ico {
+	MARGIN-RIGHT: 5px
+}
+.spot-list DL DD {
+	WORD-WRAP: break-word; WORD-BREAK: break-all; MARGIN-LEFT: 23px
+}
+.spot-list DL DD EM {
+	COLOR: #ff6600; FONT-STYLE: normal
+}
+.dualBoxes .spot-list {
+	BORDER-LEFT-STYLE: none; BORDER-RIGHT-STYLE: none
+}
+.spot-list .tips {
+	FONT-WEIGHT: normal; COLOR: #4f7307; MARGIN: 5px
+}
+.spot-list .tips CODE {
+	COLOR: #ff0000
+}
+.control-container {
+	BOX-SIZING: border-box; OVERFLOW: hidden; BORDER-TOP: #c6c6c6 1px solid; HEIGHT: 31px; BORDER-RIGHT: #c6c6c6 1px solid; WIDTH: 247px; BACKGROUND: #e3e3e3; BORDER-BOTTOM: #c6c6c6 1px; POSITION: absolute; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: #c6c6c6 1px solid; MARGIN: 0px 1px 0px 2px; Z-INDEX: 5; PADDING-RIGHT: 0px; BOTTOM: 0px; _width: 100%
+}
+.hasPanel .control-container {
+	OVERFLOW: visible; HEIGHT: 255px
+}
+.toggle-switch {
+	HEIGHT: 16px; WIDTH: 16px; RIGHT: 8px; POSITION: absolute; BACKGROUND-POSITION: -292px -52px; Z-INDEX: 10; DISPLAY: block; TOP: 8px
+}
+.toggle-switch:hover {
+	BACKGROUND-POSITION: -292px -76px
+}
+.hasPanel .toggle-switch {
+	BACKGROUND-POSITION: -268px -52px
+}
+.hasPanel .toggle-switch:hover {
+	BACKGROUND-POSITION: -268px -76px
+}
+.hasPanel .tab-grey {
+	BOTTOM: 256px
+}
+.control-content UL.tabs {
+	border-radius: 0
+}
+.control-content .tab-content {
+	BORDER-TOP: #c8c8c8 0px solid; HEIGHT: 210px; BORDER-RIGHT: #c8c8c8 1px solid; BACKGROUND: #f1f1f1; BORDER-BOTTOM: #c8c8c8 1px solid; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; BORDER-LEFT: #c8c8c8 1px solid; PADDING-RIGHT: 10px; box-shadow: 0 2px 3px rgba(0, 0, 0, .2)
+}
+.control-container .tab-content {
+	POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; Z-INDEX: 1; PADDING-RIGHT: 0px
+}
+.control-container .tab-content .control-mask {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BACKGROUND: #fff; RIGHT: 0px; BORDER-BOTTOM-STYLE: none; POSITION: absolute; BORDER-RIGHT-STYLE: none; LEFT: 0px; Z-INDEX: 10; TOP: 0px; BOTTOM: 0px; opacity: 0.3
+}
+.control-panel {
+	POSITION: relative; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px
+}
+.control-panel .controller {
+	HEIGHT: 128px; WIDTH: 201px; BACKGROUND: url(../images/controller_bg.png) no-repeat 0px 0px; PADDING-BOTTOM: 6px; PADDING-TOP: 6px; PADDING-LEFT: 6px; MARGIN: 0px auto; PADDING-RIGHT: 6px
+}
+.control-panel .controller .ico {
+	BACKGROUND: url(../images/sprite_control.png) no-repeat -9999px 0px
+}
+.control-panel .toolbar .ico {
+	BACKGROUND: url(../images/sprite_control.png) no-repeat -9999px 0px
+}
+.control-panel .setting .ico {
+	BACKGROUND: url(../images/sprite_control.png) no-repeat -9999px 0px
+}
+.controller LI A I {
+	BACKGROUND: url(../images/sprite_control.png) no-repeat -9999px 0px
+}
+.controller .speed {
+	BACKGROUND: url(../images/sprite_control.png) no-repeat -9999px 0px
+}
+.controller .speed .ui-slider-handle {
+	BACKGROUND: url(../images/sprite_control.png) no-repeat -9999px 0px
+}
+.controller .rocker {
+	BACKGROUND: url(../images/sprite_control.png) no-repeat -9999px 0px
+}
+.controller .quartet LI {
+	BACKGROUND: url(../images/sprite_control.png) no-repeat -9999px 0px
+}
+.controller .scope A {
+	BACKGROUND: url(../images/sprite_control.png) no-repeat -9999px 0px
+}
+.controller .tool A {
+	BACKGROUND: url(../images/sprite_control.png) no-repeat -9999px 0px
+}
+.control-panel .toolbar LI A {
+	BACKGROUND: url(../images/sprite_control.png) no-repeat -9999px 0px
+}
+.control-panel .locked .ico {
+	BACKGROUND: url(../images/sprite_control.png) no-repeat -9999px 0px
+}
+.monitor-toolbar .ico {
+	BACKGROUND: url(../images/sprite_control.png) no-repeat -9999px 0px
+}
+.controller {
+	POSITION: relative; ZOOM: 1
+}
+.controller LI A {
+	POSITION: relative; ZOOM: 1
+}
+.controller LI A I {
+	HEIGHT: 18px; WIDTH: 18px; RIGHT: 0px; POSITION: absolute; DISPLAY: block; BOTTOM: 0px
+}
+.controller .speed {
+	HEIGHT: 84px; WIDTH: 44px; POSITION: absolute; BACKGROUND-POSITION: 0px 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 9px; PADDING-LEFT: 8px; LEFT: 6px; TOP: 6px; PADDING-RIGHT: 0px
+}
+.controller .speed .volume {
+	HEIGHT: 61px; WIDTH: 24px; DISPLAY: block; BACKGROUND-COLOR: transparent; border-radius: 0; box-shadow: none
+}
+.controller .speed .volume .ui-slider-range {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 61px; WIDTH: 24px; BACKGROUND: url(../images/volume.png) no-repeat 0px 100%; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; border-radius: 0; box-shadow: none
+}
+.controller .speed .volume .ui-slider-handle {
+	HEIGHT: 12px; WIDTH: 16px; BACKGROUND-POSITION: -316px -6px; LEFT: -11px
+}
+.controller .speed .volume .ui-slider-handle:hover {
+	BACKGROUND-POSITION: -316px -206px
+}
+.controller .speed .volume .ui-slider-handle:active {
+	BACKGROUND-POSITION: -316px -406px
+}
+.controller .speed .ico {
+	HEIGHT: 13px; WIDTH: 18px; BACKGROUND-POSITION: -291px -5px
+}
+.controller .rocker {
+	HEIGHT: 93px; WIDTH: 89px; POSITION: absolute; BACKGROUND-POSITION: -90px 0px; LEFT: 36px; Z-INDEX: 2; TOP: 6px
+}
+.controller .rocker .diagonal {
+	HEIGHT: 100%; WIDTH: 100%; POSITION: absolute; Z-INDEX: 2; DISPLAY: none
+}
+.controller .rocker .diagonal LI {
+	HEIGHT: 22px; WIDTH: 44px; POSITION: relative; FLOAT: left; Z-INDEX: 2
+}
+.controller .rocker .diagonal LI A {
+	HEIGHT: 21px; WIDTH: 20px; POSITION: absolute; Z-INDEX: 3
+}
+.controller .rocker .diagonal LI A .ico {
+	HEIGHT: 21px; WIDTH: 20px
+}
+.controller .rocker .diagonal .c {
+	HEIGHT: 38px; WIDTH: 38px; MARGIN-LEFT: 13px
+}
+.controller .rocker .diagonal .c A {
+	HEIGHT: 38px; WIDTH: 38px
+}
+.controller .rocker .diagonal .c .ico {
+	HEIGHT: 38px; WIDTH: 38px
+}
+.controller .rocker .diagonal LI.nw {
+	BACKGROUND-POSITION: -432px -122px
+}
+.controller .rocker .diagonal LI.nw A {
+	LEFT: 4px; TOP: 3px
+}
+.controller .rocker .diagonal LI.nw A .ico {
+	BACKGROUND-POSITION: -530px -1px
+}
+.controller .rocker .diagonal LI.ne {
+	BACKGROUND-POSITION: -283px -120px
+}
+.controller .rocker .diagonal LI.ne A {
+	RIGHT: 3px; TOP: 3px
+}
+.controller .rocker .diagonal LI.ne A .ico {
+	BACKGROUND-POSITION: -458px -1px
+}
+.controller .rocker .diagonal LI.sw {
+	BACKGROUND-POSITION: -384px -120px
+}
+.controller .rocker .diagonal LI.sw A {
+	LEFT: 4px; BOTTOM: 3px
+}
+.controller .rocker .diagonal LI.sw A .ico {
+	BACKGROUND-POSITION: -506px -1px
+}
+.controller .rocker .diagonal LI.se {
+	BACKGROUND-POSITION: -335px -118px
+}
+.controller .rocker .diagonal LI.se A {
+	RIGHT: 3px; BOTTOM: 3px
+}
+.controller .rocker .diagonal LI.se A .ico {
+	BACKGROUND-POSITION: -482px -1px
+}
+.controller .rocker .diagonal LI.nw A:hover .ico {
+	BACKGROUND-POSITION: -530px -201px
+}
+.controller .rocker .diagonal LI.ne A:hover .ico {
+	BACKGROUND-POSITION: -458px -201px
+}
+.controller .rocker .diagonal LI.sw A:hover .ico {
+	BACKGROUND-POSITION: -506px -201px
+}
+.controller .rocker .diagonal LI.se A:hover .ico {
+	BACKGROUND-POSITION: -482px -201px
+}
+.controller .rocker .diagonal LI.nw A.active .ico {
+	BACKGROUND-POSITION: -530px -401px
+}
+.controller .rocker .diagonal LI.nw A:active .ico {
+	BACKGROUND-POSITION: -530px -401px
+}
+.controller .rocker .diagonal LI.ne A.active .ico {
+	BACKGROUND-POSITION: -458px -401px
+}
+.controller .rocker .diagonal LI.ne A:active .ico {
+	BACKGROUND-POSITION: -458px -401px
+}
+.controller .rocker .diagonal LI.sw A.active .ico {
+	BACKGROUND-POSITION: -506px -401px
+}
+.controller .rocker .diagonal LI.sw A:active .ico {
+	BACKGROUND-POSITION: -506px -401px
+}
+.controller .rocker .diagonal LI.se A.active .ico {
+	BACKGROUND-POSITION: -482px -401px
+}
+.controller .rocker .diagonal LI.se A:active .ico {
+	BACKGROUND-POSITION: -482px -401px
+}
+.controller .rocker .quartet {
+	HEIGHT: 100%; WIDTH: 100%; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 0px
+}
+.controller .rocker .quartet LI {
+	FLOAT: left
+}
+.controller .rocker .quartet LI A {
+	TEXT-ALIGN: center; DISPLAY: block
+}
+.controller .rocker .quartet LI A .ico {
+	HEIGHT: 25px; WIDTH: 25px
+}
+.controller .rocker .quartet LI.n A {
+	HEIGHT: 25px; WIDTH: 38px; MARGIN: 0px 25px
+}
+.controller .rocker .quartet LI.n A .ico {
+	BACKGROUND-POSITION: -335px 0px
+}
+.controller .rocker .quartet LI.w A {
+	HEIGHT: 38px; WIDTH: 25px
+}
+.controller .rocker .quartet LI.w A .ico {
+	MARGIN-TOP: 6px; BACKGROUND-POSITION: -407px 0px
+}
+.controller .rocker .quartet LI.c A {
+	HEIGHT: 38px; WIDTH: 38px; POSITION: relative
+}
+.controller .rocker .quartet LI.c A .ico {
+	HEIGHT: 38px; WIDTH: 38px; BACKGROUND-POSITION: -209px -99px
+}
+.controller .rocker .quartet LI.c A I {
+	RIGHT: 10px; BACKGROUND-POSITION: -435px -3px; BOTTOM: 10px
+}
+.controller .diagonalOn.rocker .quartet LI.c A I {
+	BACKGROUND-POSITION: -435px -3px
+}
+.controller .rocker .quartet LI.e A {
+	HEIGHT: 38px; WIDTH: 25px
+}
+.controller .rocker .quartet LI.e A .ico {
+	MARGIN-TOP: 6px; BACKGROUND-POSITION: -359px 0px
+}
+.controller .rocker .quartet LI.s A {
+	HEIGHT: 25px; WIDTH: 38px; MARGIN: 0px 25px
+}
+.controller .rocker .quartet LI.s A .ico {
+	BACKGROUND-POSITION: -383px 0px
+}
+.controller .rocker .quartet LI.n A:hover .ico {
+	BACKGROUND-POSITION: -335px -200px
+}
+.controller .rocker .quartet LI.w A:hover .ico {
+	BACKGROUND-POSITION: -407px -200px
+}
+.controller .diagonalOn.rocker .quartet LI.c A .ico {
+	BACKGROUND-POSITION: -209px -299px
+}
+.controller .rocker .quartet LI.c A:hover I {
+	BACKGROUND-POSITION: -435px -3px
+}
+.controller .rocker .quartet LI.e A:hover .ico {
+	BACKGROUND-POSITION: -359px -200px
+}
+.controller .rocker .quartet LI.s A:hover .ico {
+	BACKGROUND-POSITION: -383px -200px
+}
+.controller .rocker .diagonal LI.nw A.active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .rocker .diagonal LI.nw A:active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .rocker .diagonal LI.ne A.active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .rocker .diagonal LI.ne A:active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .rocker .diagonal LI.sw A.active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .rocker .diagonal LI.sw A:active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .rocker .diagonal LI.se A.active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .rocker .diagonal LI.c A:active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .rocker .diagonal LI.c A.active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .rocker .diagonal LI.se A:active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .rocker .quartet LI.n A.active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .rocker .quartet LI.n A:active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .rocker .quartet LI.w A.active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .rocker .quartet LI.w A:active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .rocker .quartet LI.c A.active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .rocker .quartet LI.c A:active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .rocker .quartet LI.e A.active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .rocker .quartet LI.e A:active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .rocker .quartet LI.s A.active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .rocker .quartet LI.s A:active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .scope LI.selected.focal-out A {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .scope LI.focal-out A.active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .scope LI.focal-out A:active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .scope LI.selected.focal-in A {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .scope LI.focal-in A.active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .scope LI.focal-in A:active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .scope LI.selected.lens-out A {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .scope LI.lens-out A.active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .scope LI.lens-out A:active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .scope LI.selected.lens-in A {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .scope LI.lens-in A.active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .scope LI.lens-in A:active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .scope LI.selected.aperture-out A {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .scope LI.aperture-out A.active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .scope LI.aperture-out A:active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .scope LI.selected.aperture-in A {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .scope LI.aperture-in A.active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .scope LI.aperture-in A:active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .tool LI.selected.act-lockptz A {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .tool LI.act-lockptz A.active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .tool LI.act-lockptz A:active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .tool LI.selected.act-zoom3d A {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .tool LI.act-zoom3d A.active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .tool LI.act-zoom3d A:active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .tool LI.selected.act-light A {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .tool LI.act-light A.active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .tool LI.act-light A:active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .tool LI.selected.act-brush A {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .tool LI.act-brush A.active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .tool LI.act-brush A:active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .tool LI.selected.act-patrol A {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .tool LI.act-patrol A.active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .tool LI.act-patrol A:active {
+	BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BACKGROUND-COLOR: transparent
+}
+.controller .rocker .quartet LI.n A.active .ico {
+	BACKGROUND-POSITION: -335px -400px
+}
+.controller .rocker .quartet LI.n A:active .ico {
+	BACKGROUND-POSITION: -335px -400px
+}
+.controller .rocker .quartet LI.w A.active .ico {
+	BACKGROUND-POSITION: -407px -400px
+}
+.controller .rocker .quartet LI.w A:active .ico {
+	BACKGROUND-POSITION: -407px -400px
+}
+.controller .rocker .quartet LI.c A.active .ico {
+	BACKGROUND-POSITION: -209px -499px
+}
+.controller .rocker .quartet LI.c A:active .ico {
+	BACKGROUND-POSITION: -209px -499px
+}
+.controller .rocker .quartet LI.e A.active .ico {
+	BACKGROUND-POSITION: -359px -400px
+}
+.controller .rocker .quartet LI.e A:active .ico {
+	BACKGROUND-POSITION: -359px -400px
+}
+.controller .rocker .quartet LI.s A.active .ico {
+	BACKGROUND-POSITION: -383px -400px
+}
+.controller .rocker .quartet LI.s A:active .ico {
+	BACKGROUND-POSITION: -383px -400px
+}
+.controller .rocker .diagonal LI.c A.active .ico {
+	BACKGROUND-POSITION: -209px -499px
+}
+.controller .rocker .diagonal LI.c A:active .ico {
+	BACKGROUND-POSITION: -209px -499px
+}
+.controller .scope {
+	HEIGHT: 93px; WIDTH: 104px; RIGHT: 6px; POSITION: absolute; TOP: 6px
+}
+.controller .scope LI {
+	FLOAT: left
+}
+.controller .scope LI A {
+	HEIGHT: 31px; WIDTH: 42px; TEXT-ALIGN: right; DISPLAY: block
+}
+.controller .scope LI A .ico {
+	MARGIN: 6px 10px 0px 0px
+}
+.controller .scope LI.focal-out A {
+	WIDTH: 62px; BACKGROUND-POSITION: -180px 0px
+}
+.controller .scope LI.focal-out A .ico {
+	BACKGROUND-POSITION: -291px -27px
+}
+.controller .scope LI.focal-in A {
+	BACKGROUND-POSITION: -242px 0px
+}
+.controller .scope LI.focal-in A .ico {
+	BACKGROUND-POSITION: -315px -27px
+}
+.controller .scope LI.lens-out A {
+	WIDTH: 38px; BACKGROUND-POSITION: -204px -31px; MARGIN-LEFT: 24px
+}
+.controller .scope LI.lens-out A .ico {
+	BACKGROUND-POSITION: -339px -27px
+}
+.controller .scope LI.lens-in A {
+	BACKGROUND-POSITION: -242px -31px
+}
+.controller .scope LI.lens-in A .ico {
+	BACKGROUND-POSITION: -363px -27px
+}
+.controller .scope LI.aperture-out A {
+	WIDTH: 62px; BACKGROUND-POSITION: -180px -62px
+}
+.controller .scope LI.aperture-out A .ico {
+	BACKGROUND-POSITION: -387px -27px
+}
+.controller .scope LI.aperture-in A {
+	BACKGROUND-POSITION: -242px -62px
+}
+.controller .scope LI.aperture-in A .ico {
+	BACKGROUND-POSITION: -411px -27px
+}
+.controller .scope LI.focal-out A:hover {
+	WIDTH: 62px; BACKGROUND-POSITION: -180px -200px
+}
+.controller .scope LI.focal-out A:hover .ico {
+	BACKGROUND-POSITION: -291px -227px
+}
+.controller .scope LI.focal-in A:hover {
+	BACKGROUND-POSITION: -242px -200px
+}
+.controller .scope LI.focal-in A:hover .ico {
+	BACKGROUND-POSITION: -315px -227px
+}
+.controller .scope LI.lens-out A:hover {
+	WIDTH: 38px; BACKGROUND-POSITION: -204px -231px; MARGIN-LEFT: 24px
+}
+.controller .scope LI.lens-out A:hover .ico {
+	BACKGROUND-POSITION: -339px -227px
+}
+.controller .scope LI.lens-in A:hover {
+	BACKGROUND-POSITION: -242px -231px
+}
+.controller .scope LI.lens-in A:hover .ico {
+	BACKGROUND-POSITION: -363px -227px
+}
+.controller .scope LI.aperture-out A:hover {
+	WIDTH: 62px; BACKGROUND-POSITION: -180px -262px
+}
+.controller .scope LI.aperture-out A:hover .ico {
+	BACKGROUND-POSITION: -387px -227px
+}
+.controller .scope LI.aperture-in A:hover {
+	BACKGROUND-POSITION: -242px -262px
+}
+.controller .scope LI.aperture-in A:hover .ico {
+	BACKGROUND-POSITION: -411px -227px
+}
+.controller .scope LI.selected.focal-out A {
+	BACKGROUND-POSITION: -180px -400px
+}
+.controller .scope LI.focal-out A.active {
+	BACKGROUND-POSITION: -180px -400px
+}
+.controller .scope LI.focal-out A:active {
+	BACKGROUND-POSITION: -180px -400px
+}
+.controller .scope LI.selected.focal-out A .ico {
+	BACKGROUND-POSITION: -291px -427px
+}
+.controller .scope LI.focal-out A.active .ico {
+	BACKGROUND-POSITION: -291px -427px
+}
+.controller .scope LI.focal-out A:active .ico {
+	BACKGROUND-POSITION: -291px -427px
+}
+.controller .scope LI.selected.focal-in A {
+	BACKGROUND-POSITION: -242px -400px
+}
+.controller .scope LI.focal-in A.active {
+	BACKGROUND-POSITION: -242px -400px
+}
+.controller .scope LI.focal-in A:active {
+	BACKGROUND-POSITION: -242px -400px
+}
+.controller .scope LI.selected.focal-in A .ico {
+	BACKGROUND-POSITION: -315px -427px
+}
+.controller .scope LI.focal-in A.active .ico {
+	BACKGROUND-POSITION: -315px -427px
+}
+.controller .scope LI.focal-in A:active .ico {
+	BACKGROUND-POSITION: -315px -427px
+}
+.controller .scope LI.selected.lens-out A {
+	BACKGROUND-POSITION: -204px -431px; MARGIN-LEFT: 24px
+}
+.controller .scope LI.lens-out A.active {
+	BACKGROUND-POSITION: -204px -431px; MARGIN-LEFT: 24px
+}
+.controller .scope LI.lens-out A:active {
+	BACKGROUND-POSITION: -204px -431px; MARGIN-LEFT: 24px
+}
+.controller .scope LI.selected.lens-out A .ico {
+	BACKGROUND-POSITION: -339px -427px
+}
+.controller .scope LI.lens-out A.active .ico {
+	BACKGROUND-POSITION: -339px -427px
+}
+.controller .scope LI.lens-out A:active .ico {
+	BACKGROUND-POSITION: -339px -427px
+}
+.controller .scope LI.selected.lens-in A {
+	BACKGROUND-POSITION: -242px -431px
+}
+.controller .scope LI.lens-in A.active {
+	BACKGROUND-POSITION: -242px -431px
+}
+.controller .scope LI.lens-in A:active {
+	BACKGROUND-POSITION: -242px -431px
+}
+.controller .scope LI.selected.lens-in A .ico {
+	BACKGROUND-POSITION: -363px -427px
+}
+.controller .scope LI.lens-in A.active .ico {
+	BACKGROUND-POSITION: -363px -427px
+}
+.controller .scope LI.lens-in A:active .ico {
+	BACKGROUND-POSITION: -363px -427px
+}
+.controller .scope LI.selected.aperture-out A {
+	BACKGROUND-POSITION: -180px -462px
+}
+.controller .scope LI.aperture-out A.active {
+	BACKGROUND-POSITION: -180px -462px
+}
+.controller .scope LI.aperture-out A:active {
+	BACKGROUND-POSITION: -180px -462px
+}
+.controller .scope LI.selected.aperture-out A .ico {
+	BACKGROUND-POSITION: -387px -427px
+}
+.controller .scope LI.aperture-out A.active .ico {
+	BACKGROUND-POSITION: -387px -427px
+}
+.controller .scope LI.aperture-out A:active .ico {
+	BACKGROUND-POSITION: -387px -427px
+}
+.controller .scope LI.selected.aperture-in A {
+	BACKGROUND-POSITION: -242px -462px
+}
+.controller .scope LI.aperture-in A.active {
+	BACKGROUND-POSITION: -242px -462px
+}
+.controller .scope LI.aperture-in A:active {
+	BACKGROUND-POSITION: -242px -462px
+}
+.controller .scope LI.selected.aperture-in A .ico {
+	BACKGROUND-POSITION: -411px -427px
+}
+.controller .scope LI.aperture-in A.active .ico {
+	BACKGROUND-POSITION: -411px -427px
+}
+.controller .scope LI.aperture-in A:active .ico {
+	BACKGROUND-POSITION: -411px -427px
+}
+.controller .tool {
+	MARGIN-TOP: 95px
+}
+.controller .tool LI {
+	FLOAT: left
+}
+.controller .tool LI A {
+	HEIGHT: 31px; WIDTH: 40px; TEXT-ALIGN: center; DISPLAY: block
+}
+.controller .tool LI A .ico {
+	MARGIN: 6px
+}
+.controller .tool LI.act-gohome A {
+	BACKGROUND-POSITION: 0px -100px
+}
+.controller .tool LI.act-gohome A .ico {
+	BACKGROUND-POSITION: -435px -27px
+}
+.controller .tool LI.act-lockptz A {
+	BACKGROUND-POSITION: 0px -100px
+}
+.controller .tool LI.act-lockptz A .ico {
+	BACKGROUND-POSITION: -483px -27px
+}
+.controller .tool LI.act-zoom3d A {
+	BACKGROUND-POSITION: -40px -100px
+}
+.controller .tool LI.act-zoom3d A .ico {
+	WIDTH: 24px; BACKGROUND-POSITION: -504px -27px
+}
+.controller .tool LI.act-light A {
+	BACKGROUND-POSITION: -80px -100px
+}
+.controller .tool LI.act-light A .ico {
+	BACKGROUND-POSITION: -387px -51px
+}
+.controller .tool LI.selected.act-light A .ico {
+	BACKGROUND-POSITION: -411px -51px
+}
+.controller .tool LI.act-brush A {
+	BACKGROUND-POSITION: -120px -100px
+}
+.controller .tool LI.act-brush A .ico {
+	BACKGROUND-POSITION: -435px -51px
+}
+.controller .tool LI.act-patrol A {
+	WIDTH: 41px; BACKGROUND-POSITION: -160px -100px
+}
+.controller .tool LI.act-patrol A .ico {
+	BACKGROUND-POSITION: -531px -27px
+}
+.controller .tool LI.act-gohome A:hover {
+	BACKGROUND-POSITION: 0px -300px
+}
+.controller .tool LI.act-gohome A.hover {
+	BACKGROUND-POSITION: 0px -300px
+}
+.controller .tool LI.act-gohome A:hover .ico {
+	BACKGROUND-POSITION: -435px -227px
+}
+.controller .tool LI.act-gohome A.hover .ico {
+	BACKGROUND-POSITION: -435px -227px
+}
+.controller .tool LI.act-lockptz A:hover {
+	BACKGROUND-POSITION: 0px -300px
+}
+.controller .tool LI.act-lockptz A.hover {
+	BACKGROUND-POSITION: 0px -300px
+}
+.controller .tool LI.act-zoom3d A:hover {
+	BACKGROUND-POSITION: -40px -300px
+}
+.controller .tool LI.act-zoom3d A.hover {
+	BACKGROUND-POSITION: -40px -300px
+}
+.controller .tool LI.act-zoom3d A:hover .ico {
+	BACKGROUND-POSITION: -504px -227px
+}
+.controller .tool LI.act-zoom3d A.hover .ico {
+	BACKGROUND-POSITION: -504px -227px
+}
+.controller .tool LI.act-light A:hover {
+	BACKGROUND-POSITION: -80px -300px
+}
+.controller .tool LI.act-light A.hover {
+	BACKGROUND-POSITION: -80px -300px
+}
+.controller .tool LI.act-light A:hover .ico {
+	BACKGROUND-POSITION: -387px -251px
+}
+.controller .tool LI.act-light A.hover .ico {
+	BACKGROUND-POSITION: -387px -251px
+}
+.controller .tool LI.selected.act-light A:hover .ico {
+	BACKGROUND-POSITION: -411px -251px
+}
+.controller .tool LI.selected.act-light A.hover .ico {
+	BACKGROUND-POSITION: -411px -251px
+}
+.controller .tool LI.act-brush A:hover {
+	BACKGROUND-POSITION: -120px -300px
+}
+.controller .tool LI.act-brush A.hover {
+	BACKGROUND-POSITION: -120px -300px
+}
+.controller .tool LI.act-brush A:hover .ico {
+	BACKGROUND-POSITION: -435px -251px
+}
+.controller .tool LI.act-brush A.hover .ico {
+	BACKGROUND-POSITION: -435px -251px
+}
+.controller .tool LI.selected.act-brush A:hover .ico {
+	BACKGROUND-POSITION: -459px -251px
+}
+.controller .tool LI.selected.act-brush A.hover .ico {
+	BACKGROUND-POSITION: -459px -251px
+}
+.controller .tool LI.act-patrol A:hover {
+	BACKGROUND-POSITION: -160px -300px
+}
+.controller .tool LI.act-patrol A.hover {
+	BACKGROUND-POSITION: -160px -300px
+}
+.controller .tool LI.act-patrol A:hover .ico {
+	BACKGROUND-POSITION: -531px -227px
+}
+.controller .tool LI.act-patrol A.hover .ico {
+	BACKGROUND-POSITION: -531px -227px
+}
+.controller .tool LI.act-gohome A.active {
+	BACKGROUND-POSITION: 0px -500px
+}
+.controller .tool LI.act-gohome A:active {
+	BACKGROUND-POSITION: 0px -500px
+}
+.controller .tool LI.act-gohome A.active .ico {
+	BACKGROUND-POSITION: -435px -427px
+}
+.controller .tool LI.act-gohome A:active .ico {
+	BACKGROUND-POSITION: -435px -427px
+}
+.controller .tool LI.selected.act-lockptz A {
+	BACKGROUND-POSITION: 0px -500px
+}
+.controller .tool LI.act-lockptz A.active {
+	BACKGROUND-POSITION: 0px -500px
+}
+.controller .tool LI.act-lockptz A:active {
+	BACKGROUND-POSITION: 0px -500px
+}
+.controller .tool LI.selected.act-lockptz A .ico {
+	BACKGROUND-POSITION: -483px -427px
+}
+.controller .tool LI.act-lockptz A.active .ico {
+	BACKGROUND-POSITION: -483px -427px
+}
+.controller .tool LI.act-lockptz A:active .ico {
+	BACKGROUND-POSITION: -483px -427px
+}
+.controller .tool LI.selected.act-zoom3d A {
+	BACKGROUND-POSITION: -40px -500px
+}
+.controller .tool LI.act-zoom3d A.active {
+	BACKGROUND-POSITION: -40px -500px
+}
+.controller .tool LI.act-zoom3d A:active {
+	BACKGROUND-POSITION: -40px -500px
+}
+.controller .tool LI.selected.act-zoom3d A .ico {
+	BACKGROUND-POSITION: -504px -427px
+}
+.controller .tool LI.act-zoom3d A.active .ico {
+	BACKGROUND-POSITION: -504px -427px
+}
+.controller .tool LI.act-zoom3d A:active .ico {
+	BACKGROUND-POSITION: -504px -427px
+}
+.controller .tool LI.selected.act-light A {
+	BACKGROUND-POSITION: -80px -500px
+}
+.controller .tool LI.act-light A.active {
+	BACKGROUND-POSITION: -80px -500px
+}
+.controller .tool LI.act-light A:active {
+	BACKGROUND-POSITION: -80px -500px
+}
+.controller .tool LI.act-light A.active .ico {
+	BACKGROUND-POSITION: -387px -451px
+}
+.controller .tool LI.act-light A:active .ico {
+	BACKGROUND-POSITION: -387px -451px
+}
+.controller .tool LI.selected.act-light A .ico {
+	BACKGROUND-POSITION: -411px -451px
+}
+.controller .tool LI.selected.act-light A.active .ico {
+	BACKGROUND-POSITION: -411px -451px
+}
+.controller .tool LI.selected.act-light A:active .ico {
+	BACKGROUND-POSITION: -411px -451px
+}
+.controller .tool LI.selected.act-brush A {
+	BACKGROUND-POSITION: -120px -500px
+}
+.controller .tool LI.act-brush A.active {
+	BACKGROUND-POSITION: -120px -500px
+}
+.controller .tool LI.act-brush A:active {
+	BACKGROUND-POSITION: -120px -500px
+}
+.controller .tool LI.act-brush A.active .ico {
+	BACKGROUND-POSITION: -435px -451px
+}
+.controller .tool LI.act-brush A:active .ico {
+	BACKGROUND-POSITION: -435px -451px
+}
+.controller .tool LI.selected.act-brush A .ico {
+	BACKGROUND-POSITION: -459px -451px
+}
+.controller .tool LI.selected.act-brush A.active .ico {
+	BACKGROUND-POSITION: -459px -451px
+}
+.controller .tool LI.selected.act-brush A:active .ico {
+	BACKGROUND-POSITION: -459px -451px
+}
+.controller .tool LI.selected.act-patrol A {
+	BACKGROUND-POSITION: -160px -500px
+}
+.controller .tool LI.act-patrol A.active {
+	BACKGROUND-POSITION: -160px -500px
+}
+.controller .tool LI.act-patrol A:active {
+	BACKGROUND-POSITION: -160px -500px
+}
+.controller .tool LI.selected.act-patrol A .ico {
+	BACKGROUND-POSITION: -531px -427px
+}
+.controller .tool LI.act-patrol A.active .ico {
+	BACKGROUND-POSITION: -531px -427px
+}
+.controller .tool LI.act-patrol A:active .ico {
+	BACKGROUND-POSITION: -531px -427px
+}
+.control-panel .toolbar {
+	WIDTH: 213px; ZOOM: 1; MARGIN: 6px 0px 0px
+}
+.control-panel .toolbar:before {
+	CONTENT: ""; DISPLAY: table
+}
+.control-panel .toolbar:after {
+	CONTENT: ""; DISPLAY: table
+}
+.control-panel .toolbar:after {
+	CLEAR: both
+}
+.control-panel .toolbar LI {
+	FLOAT: left
+}
+.control-panel .toolbar LI A {
+	HEIGHT: 27px; WIDTH: 66px; BACKGROUND-POSITION: 0px -140px; DISPLAY: block; MARGIN-RIGHT: 7px
+}
+.control-panel .toolbar LI A .ico {
+	MARGIN: 5px 24px 4px
+}
+.control-panel .toolbar LI.opt-flag A .ico {
+	BACKGROUND-POSITION: -291px -51px
+}
+.control-panel .toolbar LI.opt-route A .ico {
+	BACKGROUND-POSITION: -315px -51px
+}
+.control-panel .toolbar LI.opt-patrol A {
+	MARGIN-RIGHT: 0px
+}
+.control-panel .toolbar LI.opt-patrol A .ico {
+	BACKGROUND-POSITION: -339px -51px
+}
+.control-panel .toolbar LI A:hover {
+	BACKGROUND-POSITION: 0px -340px
+}
+.control-panel .toolbar LI.opt-flag A:hover .ico {
+	BACKGROUND-POSITION: -291px -251px
+}
+.control-panel .toolbar LI.opt-route A:hover .ico {
+	BACKGROUND-POSITION: -315px -251px
+}
+.control-panel .toolbar LI.opt-patrol A:hover .ico {
+	BACKGROUND-POSITION: -339px -251px
+}
+.control-panel .toolbar LI A.active {
+	BACKGROUND-POSITION: 0px -540px
+}
+.control-panel .toolbar LI A:active {
+	BACKGROUND-POSITION: 0px -540px
+}
+.control-panel .toolbar LI.selected A {
+	BACKGROUND-POSITION: 0px -540px
+}
+.control-panel .toolbar LI.opt-flag A.active .ico {
+	BACKGROUND-POSITION: -291px -451px
+}
+.control-panel .toolbar LI.opt-flag A:active .ico {
+	BACKGROUND-POSITION: -291px -451px
+}
+.control-panel .toolbar LI.selected.opt-flag A .ico {
+	BACKGROUND-POSITION: -291px -451px
+}
+.control-panel .toolbar LI.opt-route A.active .ico {
+	BACKGROUND-POSITION: -315px -451px
+}
+.control-panel .toolbar LI.opt-route A:active .ico {
+	BACKGROUND-POSITION: -315px -451px
+}
+.control-panel .toolbar LI.selected.opt-route A .ico {
+	BACKGROUND-POSITION: -315px -451px
+}
+.control-panel .toolbar LI.opt-patrol A.active .ico {
+	BACKGROUND-POSITION: -339px -451px
+}
+.control-panel .toolbar LI.opt-patrol A:active .ico {
+	BACKGROUND-POSITION: -339px -451px
+}
+.control-panel .toolbar LI.selected.opt-patrol A .ico {
+	BACKGROUND-POSITION: -339px -451px
+}
+.control-panel .setting {
+	FONT-SIZE: 0px; WIDTH: 213px; ZOOM: 1; CLEAR: both; MARGIN: 6px 0px 0px
+}
+.control-panel .setting:before {
+	CONTENT: ""; DISPLAY: table
+}
+.control-panel .setting:after {
+	CONTENT: ""; DISPLAY: table
+}
+.control-panel .setting:after {
+	CLEAR: both
+}
+.control-panel .setting INPUT.point-number {
+	WIDTH: 104px
+}
+.control-panel .setting INPUT.cruise-number {
+	WIDTH: 110px
+}
+.control-panel .setting .preset-container LI A {
+	OVERFLOW: hidden; WIDTH: 140px; WHITE-SPACE: nowrap; TEXT-OVERFLOW: ellipsis
+}
+.control-panel .setting .buttonS {
+	PADDING-BOTTOM: 2px; PADDING-TOP: 2px; PADDING-LEFT: 10px; MARGIN-LEFT: 5px; PADDING-RIGHT: 10px
+}
+.control-panel .setting .buttonS SPAN {
+	MARGIN-LEFT: 0px
+}
+.control-panel .setting .act-apply {
+	BACKGROUND-POSITION: -363px -51px
+}
+.control-panel .setting .act-setting {
+	BACKGROUND-POSITION: -531px -75px
+}
+.control-panel .setting A:hover .act-apply {
+	BACKGROUND-POSITION: -363px -251px
+}
+.control-panel .setting A:hover .act-setting {
+	BACKGROUND-POSITION: -531px -275px
+}
+.control-panel .setting A.active .act-apply {
+	BACKGROUND-POSITION: -363px -451px
+}
+.control-panel .setting A:active .act-apply {
+	BACKGROUND-POSITION: -363px -451px
+}
+.control-panel .setting A.active .act-setting {
+	BACKGROUND-POSITION: -531px -475px
+}
+.control-panel .setting A:active .act-setting {
+	BACKGROUND-POSITION: -531px -475px
+}
+.control-panel .locked {
+	ZOOM: 1; DISPLAY: inline
+}
+.control-panel .locked .ico {
+	VERTICAL-ALIGN: -3px; BACKGROUND-POSITION: -314px -170px; MARGIN: 0px 5px 0px 0px
+}
+.control-panel .block-locked {
+	RIGHT: -10px; POSITION: absolute; LEFT: -10px; Z-INDEX: 5; TOP: -10px; BOTTOM: -10px
+}
+.control-panel .block-locked .form-horizontal {
+	
+}
+.control-panel .block-locked .form-horizontal .control-label {
+	WIDTH: 60px; COLOR: #fff
+}
+.control-panel .block-locked .form-horizontal .controls {
+	MARGIN-LEFT: 60px; MARGIN-RIGHT: 0px
+}
+.control-panel .block-locked .form-horizontal .controls INPUT {
+	WIDTH: 138px
+}
+.control-panel .block-locked .form-horizontal .form-actions {
+	PADDING-LEFT: 60px
+}
+.monitor-container {
+	BOX-SIZING: border-box; HEIGHT: 100%; POSITION: relative; Z-INDEX: 1; -moz-box-sizing: border-box
+}
+.monitor-container .grids {
+	BOX-SIZING: border-box; OVERFLOW: hidden; HEIGHT: 100%; BACKGROUND: #262626; POSITION: relative
+}
+.monitor-container .grids UL {
+	HEIGHT: 100%; BACKGROUND: #fff
+}
+.monitor-container .grids LI.grid {
+	BOX-SIZING: border-box; BORDER-TOP: #fff 1px solid; HEIGHT: 50%; BORDER-RIGHT: #fff 1px solid; WIDTH: 50%; BORDER-BOTTOM: #fff 1px solid; FLOAT: left; BORDER-LEFT: #fff 1px solid; DISPLAY: block; border-radius: 5px; _width: 49.8%; -moz-box-sizing: border-box
+}
+.monitor-container .grids LI.selected {
+	BORDER-TOP: #ff6600 1px solid; BORDER-RIGHT: #ff6600 1px solid; BORDER-BOTTOM: #ff6600 1px solid; BORDER-LEFT: #ff6600 1px solid
+}
+.monitor-container .grids LI.ui-sortable-helper {
+	BORDER-TOP: #f60 1px solid; BORDER-RIGHT: #f60 1px solid; BACKGROUND: #262626; BORDER-BOTTOM: #f60 1px solid; BORDER-LEFT: #f60 1px solid
+}
+.monitor-container .grids LI.ui-sortable-placeholder {
+	BORDER-TOP: #f60 1px solid; BORDER-RIGHT: #f60 1px solid; BACKGROUND: #262626; BORDER-BOTTOM: #f60 1px solid; BORDER-LEFT: #f60 1px solid
+}
+.ocx-container {
+	BOX-SIZING: border-box; HEIGHT: 100%; BACKGROUND: #262626; POSITION: relative; border-radius: 4px
+}
+.monitor-toolbar {
+	HEIGHT: 45px; MARGIN-TOP: -45px; POSITION: relative; BACKGROUND-POSITION: 0px -1480px; Z-INDEX: 2; BACKGROUND-COLOR: #ababab
+}
+.monitor-toolbar .video-bar {
+	FLOAT: left; PADDING-BOTTOM: 6px; PADDING-TOP: 6px; PADDING-LEFT: 6px; PADDING-RIGHT: 6px
+}
+.monitor-toolbar .window-bar {
+	FLOAT: right; PADDING-BOTTOM: 6px; PADDING-TOP: 6px; PADDING-LEFT: 6px; PADDING-RIGHT: 6px
+}
+.monitor-toolbar .window-bar .dropdown-menu {
+	RIGHT: -1px; LEFT: auto
+}
+.monitor-toolbar .btn-group {
+	POSITION: relative; ZOOM: 1; Z-INDEX: 1; DISPLAY: inline
+}
+.monitor-toolbar .btn-group .caret {
+	MARGIN-LEFT: 0px
+}
+.monitor-toolbar .rightdd.btn-group .buttonS {
+	PADDING-RIGHT: 21px
+}
+.monitor-toolbar .rightdd.btn-group .dropdown-toggle {
+	BORDER-TOP-STYLE: none !important; BACKGROUND: none transparent scroll repeat 0% 0%; RIGHT: 0px; BORDER-BOTTOM-STYLE: none !important; POSITION: absolute; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; BORDER-RIGHT-STYLE: none !important; PADDING-LEFT: 3px; BORDER-LEFT: #ababab 1px solid; MARGIN: 1px; Z-INDEX: 2; LINE-HEIGHT: 20px; PADDING-RIGHT: 3px; border-top-left-radius: 0; border-bottom-left-radius: 0; box-shadow: none
+}
+.monitor-toolbar .bDefault {
+	BORDER-TOP: #737373 1px solid; HEIGHT: 20px; BORDER-RIGHT: #737373 1px solid; BORDER-BOTTOM: #737373 1px solid; POSITION: relative; BACKGROUND-POSITION: 0px -1200px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 6px; BORDER-LEFT: #737373 1px solid; PADDING-RIGHT: 6px; BACKGROUND-COLOR: #9a9a9a; border-radius: 4px
+}
+.monitor-toolbar .bDefault:hover {
+	BORDER-TOP-COLOR: #555555 !important; BACKGROUND-POSITION: 0px -1250px; BORDER-LEFT-COLOR: #555555 !important; BORDER-BOTTOM-COLOR: #555555 !important; BORDER-RIGHT-COLOR: #555555 !important; BACKGROUND-COLOR: #a5a5a5
+}
+.monitor-toolbar .active.bDefault {
+	BORDER-TOP-COLOR: #555555 !important; BACKGROUND-POSITION: 0px -1300px; BORDER-LEFT-COLOR: #555555 !important; BORDER-BOTTOM-COLOR: #555555 !important; BORDER-RIGHT-COLOR: #555555 !important; BACKGROUND-COLOR: #f1f1f1
+}
+.monitor-toolbar .bDefault:active {
+	BORDER-TOP-COLOR: #555555 !important; BACKGROUND-POSITION: 0px -1300px; BORDER-LEFT-COLOR: #555555 !important; BORDER-BOTTOM-COLOR: #555555 !important; BORDER-RIGHT-COLOR: #555555 !important; BACKGROUND-COLOR: #f1f1f1
+}
+.monitor-toolbar .open.btn-group .bDefault {
+	BORDER-TOP-COLOR: #555555 !important; BACKGROUND-POSITION: 0px -1300px; BORDER-LEFT-COLOR: #555555 !important; BORDER-BOTTOM-COLOR: #555555 !important; BORDER-RIGHT-COLOR: #555555 !important; BACKGROUND-COLOR: #f1f1f1
+}
+.monitor-toolbar .disabled.bDefault {
+	BORDER-TOP: #adadad 1px solid; BORDER-RIGHT: #adadad 1px solid; BACKGROUND: #d4d4d4; BORDER-BOTTOM: #adadad 1px solid; COLOR: #a8a8a8 !important; BORDER-LEFT: #adadad 1px solid; box-shadow: none; opacity: 1; -webkit-filter: grayscale(100%)
+}
+.monitor-toolbar .disabled.btn-group .bDefault {
+	BORDER-TOP: #adadad 1px solid; BORDER-RIGHT: #adadad 1px solid; BACKGROUND: #d4d4d4; BORDER-BOTTOM: #adadad 1px solid; COLOR: #a8a8a8 !important; BORDER-LEFT: #adadad 1px solid; box-shadow: none; opacity: 1; -webkit-filter: grayscale(100%)
+}
+.monitor-toolbar .disabled.rightdd.btn-group .dropdown-toggle {
+	BORDER-TOP-STYLE: none !important; BORDER-BOTTOM-STYLE: none !important; BORDER-RIGHT-STYLE: none !important; BORDER-LEFT: #adadad 1px solid
+}
+.monitor-toolbar .video-bar .buttonS {
+	FLOAT: left; MARGIN-LEFT: 3px; MARGIN-RIGHT: 3px
+}
+.monitor-toolbar .video-bar .btn-group {
+	FLOAT: left; MARGIN-LEFT: 3px; MARGIN-RIGHT: 3px
+}
+.monitor-toolbar .video-bar .btn-group .buttonS {
+	MARGIN: 0px
+}
+.monitor-toolbar .divider {
+	FONT-SIZE: 0px; HEIGHT: 26px; WIDTH: 1px; VERTICAL-ALIGN: middle; BACKGROUND: #7e7e7e; ZOOM: 1; MARGIN: 3px; DISPLAY: inline
+}
+.monitor-toolbar A.bDefault I {
+	HEIGHT: 18px; WIDTH: 18px; RIGHT: 0px; POSITION: absolute; DISPLAY: block; BOTTOM: 0px
+}
+.monitor-toolbar .act-save {
+	DISPLAY: none
+}
+.monitor-toolbar A.act-save .ico {
+	BACKGROUND-POSITION: -411px -75px
+}
+.monitor-toolbar A.act-vcamera .ico {
+	BACKGROUND-POSITION: -291px -75px
+}
+.monitor-toolbar A.act-camera .ico {
+	BACKGROUND-POSITION: -315px -75px
+}
+.monitor-toolbar A.act-camera-multi .ico {
+	BACKGROUND-POSITION: -339px -75px
+}
+.monitor-toolbar A.act-folder .ico {
+	BACKGROUND-POSITION: -387px -75px
+}
+.monitor-toolbar A.act-vclose .ico {
+	BACKGROUND-POSITION: -363px -75px
+}
+.monitor-toolbar .unable A.act-camera .ico {
+	BACKGROUND-POSITION: -315px -603px
+}
+.monitor-toolbar .unable A.act-camera-multi .ico {
+	BACKGROUND-POSITION: -339px -603px
+}
+.monitor-toolbar A.act-vcamera.unable .ico {
+	BACKGROUND-POSITION: -291px -603px
+}
+.monitor-toolbar A.act-save.unable .ico {
+	BACKGROUND-POSITION: -411px -603px
+}
+.monitor-toolbar A.act-vclose.unable .ico {
+	BACKGROUND-POSITION: -363px -603px
+}
+.monitor-toolbar .dropdown-menu DL LI {
+	WIDTH: 56px; TEXT-ALIGN: center
+}
+.window-bar .btn-group .ico {
+	WIDTH: 21px
+}
+.screen-normal A.act-grids-square1 .ico {
+	BACKGROUND-POSITION: -289px -99px
+}
+.screen-normal A.act-grids-square4 .ico {
+	BACKGROUND-POSITION: -313px -99px
+}
+.screen-normal A.act-grids-square9 .ico {
+	BACKGROUND-POSITION: -337px -99px
+}
+.screen-normal A.act-grids-square16 .ico {
+	BACKGROUND-POSITION: -361px -99px
+}
+.screen-normal A.act-grids-square25 .ico {
+	BACKGROUND-POSITION: -385px -99px
+}
+.screen-normal A.act-grids-prominent6 .ico {
+	BACKGROUND-POSITION: -409px -99px
+}
+.screen-normal A.act-grids-mix7 .ico {
+	BACKGROUND-POSITION: -433px -99px
+}
+.screen-normal A.act-grids-prominent8 .ico {
+	BACKGROUND-POSITION: -457px -99px
+}
+.screen-normal A.act-grids-mix10 .ico {
+	BACKGROUND-POSITION: -481px -99px
+}
+.screen-normal A.act-grids-prominent10 .ico {
+	BACKGROUND-POSITION: -505px -99px
+}
+.screen-normal A.act-grids-mix13 .ico {
+	BACKGROUND-POSITION: -529px -99px
+}
+.screen-normal A.act-grids-prominent13 .ico {
+	BACKGROUND-POSITION: -553px -99px
+}
+.screen-normal A.act-grids-mix14 .ico {
+	BACKGROUND-POSITION: -577px -99px
+}
+.screen-normal A.act-grids-prominent17 .ico {
+	BACKGROUND-POSITION: -601px -99px
+}
+.screen-wide A.act-grids-square1 .ico {
+	BACKGROUND-POSITION: -289px -123px
+}
+.screen-wide A.act-grids-prominent3 .ico {
+	BACKGROUND-POSITION: -313px -123px
+}
+.screen-wide A.act-grids-prominent4 .ico {
+	BACKGROUND-POSITION: -337px -123px
+}
+.screen-wide A.act-grids-square6 .ico {
+	BACKGROUND-POSITION: -361px -123px
+}
+.screen-wide A.act-grids-mix6 .ico {
+	BACKGROUND-POSITION: -385px -123px
+}
+.screen-wide A.act-grids-prominent7 .ico {
+	BACKGROUND-POSITION: -409px -123px
+}
+.screen-wide A.act-grids-prominent9 .ico {
+	BACKGROUND-POSITION: -433px -123px
+}
+.screen-wide A.act-grids-square12 .ico {
+	BACKGROUND-POSITION: -457px -123px
+}
+.screen-wide A.act-grids-mix12 .ico {
+	BACKGROUND-POSITION: -481px -123px
+}
+.screen-wide A.act-grids-square15 .ico {
+	BACKGROUND-POSITION: -505px -123px
+}
+.screen-wide A.act-grids-mix15 .ico {
+	BACKGROUND-POSITION: -529px -123px
+}
+.screen-wide A.act-grids-square24 .ico {
+	BACKGROUND-POSITION: -553px -123px
+}
+.monitor-toolbar A.act-adaptive .ico {
+	BACKGROUND-POSITION: -459px -75px
+}
+.monitor-toolbar A.act-normal .ico {
+	BACKGROUND-POSITION: -435px -75px
+}
+.monitor-toolbar A.act-fullscreen .ico {
+	BACKGROUND-POSITION: -483px -75px
+}
+.monitor-toolbar A.selected.act-fullscreen .ico {
+	BACKGROUND-POSITION: -507px -75px
+}
+.monitor-toolbar A.act-setting .ico {
+	BACKGROUND-POSITION: -531px -75px
+}
+.screen-yuyan1 A.act-grids-square1 .ico {
+	BACKGROUND-POSITION: -289px -99px
+}
+.screen-yuyan1 A.act-grids-square2 .ico {
+	BACKGROUND-POSITION: -577px -123px
+}
+.screen-yuyan1 A.act-grids-square4 .ico {
+	BACKGROUND-POSITION: -313px -99px
+}
+.screen-yuyan1 A.act-grids-square9 .ico {
+	BACKGROUND-POSITION: -337px -99px
+}
+.screen-yuyan2 A.act-grids-square1 .ico {
+	BACKGROUND-POSITION: -289px -99px
+}
+.screen-yuyan2 A.act-grids-prominent3 .ico {
+	BACKGROUND-POSITION: -313px -123px
+}
+.screen-yuyan2 A.act-grids-square4 .ico {
+	BACKGROUND-POSITION: -313px -99px
+}
+.screen-yuyan2 A.act-grids-square9 .ico {
+	BACKGROUND-POSITION: -337px -99px
+}
+.monitor-toolbar A.act-save:hover .ico {
+	BACKGROUND-POSITION: -411px -275px
+}
+.monitor-toolbar A.act-vcamera:hover .ico {
+	BACKGROUND-POSITION: -291px -275px
+}
+.monitor-toolbar A.act-camera:hover .ico {
+	BACKGROUND-POSITION: -315px -275px
+}
+.monitor-toolbar A.act-camera-multi:hover .ico {
+	BACKGROUND-POSITION: -339px -275px
+}
+.monitor-toolbar A.act-folder:hover .ico {
+	BACKGROUND-POSITION: -387px -275px
+}
+.monitor-toolbar A.act-vclose:hover .ico {
+	BACKGROUND-POSITION: -363px -275px
+}
+.monitor-toolbar .unable A.act-camera:hover .ico {
+	BACKGROUND-POSITION: -315px -603px
+}
+.monitor-toolbar .unable A.act-camera-multi:hover .ico {
+	BACKGROUND-POSITION: -339px -603px
+}
+.monitor-toolbar A.act-vcamera.unable:hover .ico {
+	BACKGROUND-POSITION: -291px -603px
+}
+.monitor-toolbar A.act-save.unable:hover .ico {
+	BACKGROUND-POSITION: -411px -603px
+}
+.monitor-toolbar A.act-vclose.unable:hover .ico {
+	BACKGROUND-POSITION: -363px -603px
+}
+.screen-normal A.act-grids-square1:hover .ico {
+	BACKGROUND-POSITION: -289px -299px
+}
+.screen-normal A.act-grids-square4:hover .ico {
+	BACKGROUND-POSITION: -313px -299px
+}
+.screen-normal A.act-grids-square9:hover .ico {
+	BACKGROUND-POSITION: -337px -299px
+}
+.screen-normal A.act-grids-square16:hover .ico {
+	BACKGROUND-POSITION: -361px -299px
+}
+.screen-normal A.act-grids-square25:hover .ico {
+	BACKGROUND-POSITION: -385px -299px
+}
+.screen-normal A.act-grids-prominent6:hover .ico {
+	BACKGROUND-POSITION: -409px -299px
+}
+.screen-normal A.act-grids-mix7:hover .ico {
+	BACKGROUND-POSITION: -433px -299px
+}
+.screen-normal A.act-grids-prominent8:hover .ico {
+	BACKGROUND-POSITION: -457px -299px
+}
+.screen-normal A.act-grids-mix10:hover .ico {
+	BACKGROUND-POSITION: -481px -299px
+}
+.screen-normal A.act-grids-prominent10:hover .ico {
+	BACKGROUND-POSITION: -505px -299px
+}
+.screen-normal A.act-grids-mix13:hover .ico {
+	BACKGROUND-POSITION: -529px -299px
+}
+.screen-normal A.act-grids-prominent13:hover .ico {
+	BACKGROUND-POSITION: -553px -299px
+}
+.screen-normal A.act-grids-mix14:hover .ico {
+	BACKGROUND-POSITION: -577px -299px
+}
+.screen-normal A.act-grids-prominent17:hover .ico {
+	BACKGROUND-POSITION: -601px -299px
+}
+.screen-wide A.act-grids-square1:hover .ico {
+	BACKGROUND-POSITION: -289px -323px
+}
+.screen-wide A.act-grids-prominent3:hover .ico {
+	BACKGROUND-POSITION: -313px -323px
+}
+.screen-wide A.act-grids-prominent4:hover .ico {
+	BACKGROUND-POSITION: -337px -323px
+}
+.screen-wide A.act-grids-square6:hover .ico {
+	BACKGROUND-POSITION: -361px -323px
+}
+.screen-wide A.act-grids-mix6:hover .ico {
+	BACKGROUND-POSITION: -385px -323px
+}
+.screen-wide A.act-grids-prominent7:hover .ico {
+	BACKGROUND-POSITION: -409px -323px
+}
+.screen-wide A.act-grids-prominent9:hover .ico {
+	BACKGROUND-POSITION: -433px -323px
+}
+.screen-wide A.act-grids-square12:hover .ico {
+	BACKGROUND-POSITION: -457px -323px
+}
+.screen-wide A.act-grids-mix12:hover .ico {
+	BACKGROUND-POSITION: -481px -323px
+}
+.screen-wide A.act-grids-square15:hover .ico {
+	BACKGROUND-POSITION: -505px -323px
+}
+.screen-wide A.act-grids-mix15:hover .ico {
+	BACKGROUND-POSITION: -529px -323px
+}
+.screen-wide A.act-grids-square24:hover .ico {
+	BACKGROUND-POSITION: -553px -323px
+}
+.monitor-toolbar A.act-adaptive:hover .ico {
+	BACKGROUND-POSITION: -459px -275px
+}
+.monitor-toolbar A.act-normal:hover .ico {
+	BACKGROUND-POSITION: -435px -275px
+}
+.monitor-toolbar A.act-fullscreen:hover .ico {
+	BACKGROUND-POSITION: -483px -275px
+}
+.monitor-toolbar A.selected.act-fullscreen:hover .ico {
+	BACKGROUND-POSITION: -507px -275px
+}
+.monitor-toolbar A.act-setting:hover .ico {
+	BACKGROUND-POSITION: -531px -275px
+}
+.screen-yuyan1 A.act-grids-square1:hover .ico {
+	BACKGROUND-POSITION: -289px -299px
+}
+.screen-yuyan1 A.act-grids-square2:hover .ico {
+	BACKGROUND-POSITION: -577px -323px
+}
+.screen-yuyan1 A.act-grids-square4:hover .ico {
+	BACKGROUND-POSITION: -313px -299px
+}
+.screen-yuyan1 A.act-grids-square9:hover .ico {
+	BACKGROUND-POSITION: -337px -299px
+}
+.screen-yuyan2 A.act-grids-square1:hover .ico {
+	BACKGROUND-POSITION: -289px -299px
+}
+.screen-yuyan2 A.act-grids-prominent3:hover .ico {
+	BACKGROUND-POSITION: -313px -323px
+}
+.screen-yuyan2 A.act-grids-square4:hover .ico {
+	BACKGROUND-POSITION: -313px -299px
+}
+.screen-yuyan2 A.act-grids-square9:hover .ico {
+	BACKGROUND-POSITION: -337px -299px
+}
+.monitor-toolbar A.selected.act-save .ico {
+	BACKGROUND-POSITION: -411px -475px
+}
+.monitor-toolbar A.active.act-save .ico {
+	BACKGROUND-POSITION: -411px -475px
+}
+.monitor-toolbar A.act-save:active .ico {
+	BACKGROUND-POSITION: -411px -475px
+}
+.monitor-toolbar A.selected.act-vcamera .ico {
+	BACKGROUND-POSITION: -291px -475px
+}
+.monitor-toolbar A.active.act-vcamera .ico {
+	BACKGROUND-POSITION: -291px -475px
+}
+.monitor-toolbar A.act-vcamera:active .ico {
+	BACKGROUND-POSITION: -291px -475px
+}
+.monitor-toolbar A.selected.act-camera .ico {
+	BACKGROUND-POSITION: -315px -475px
+}
+.monitor-toolbar A.active.act-camera .ico {
+	BACKGROUND-POSITION: -315px -475px
+}
+.monitor-toolbar A.act-camera:active .ico {
+	BACKGROUND-POSITION: -315px -475px
+}
+.monitor-toolbar .open A.act-camera .ico {
+	BACKGROUND-POSITION: -315px -475px
+}
+.monitor-toolbar A.selected.act-camera-multi .ico {
+	BACKGROUND-POSITION: -339px -475px
+}
+.monitor-toolbar A.active.act-camera-multi .ico {
+	BACKGROUND-POSITION: -339px -475px
+}
+.monitor-toolbar A.act-camera-multi:active .ico {
+	BACKGROUND-POSITION: -339px -475px
+}
+.monitor-toolbar .open A.act-camera-multi .ico {
+	BACKGROUND-POSITION: -339px -475px
+}
+.monitor-toolbar A.selected.act-folder .ico {
+	BACKGROUND-POSITION: -387px -475px
+}
+.monitor-toolbar A.active.act-folder .ico {
+	BACKGROUND-POSITION: -387px -475px
+}
+.monitor-toolbar A.act-folder:active .ico {
+	BACKGROUND-POSITION: -387px -475px
+}
+.monitor-toolbar .open A.act-folder .ico {
+	BACKGROUND-POSITION: -387px -475px
+}
+.monitor-toolbar A.selected.act-vclose .ico {
+	BACKGROUND-POSITION: -363px -475px
+}
+.monitor-toolbar A.active.act-vclose .ico {
+	BACKGROUND-POSITION: -363px -475px
+}
+.monitor-toolbar A.act-vclose:active .ico {
+	BACKGROUND-POSITION: -363px -475px
+}
+.monitor-toolbar .unable A.selected.act-camera .ico {
+	BACKGROUND-POSITION: -315px -603px
+}
+.monitor-toolbar .unable A.active.act-camera .ico {
+	BACKGROUND-POSITION: -315px -603px
+}
+.monitor-toolbar .unable A.act-camera:active .ico {
+	BACKGROUND-POSITION: -315px -603px
+}
+.monitor-toolbar .unable A.selected.act-camera-multi .ico {
+	BACKGROUND-POSITION: -339px -603px
+}
+.monitor-toolbar .unable A.active.act-camera-multi .ico {
+	BACKGROUND-POSITION: -339px -603px
+}
+.monitor-toolbar .unable A.act-camera-multi:active .ico {
+	BACKGROUND-POSITION: -339px -603px
+}
+.monitor-toolbar A.selected.act-vcamera.unable .ico {
+	BACKGROUND-POSITION: -291px -603px
+}
+.monitor-toolbar A.active.act-vcamera.unable .ico {
+	BACKGROUND-POSITION: -291px -603px
+}
+.monitor-toolbar A.act-vcamera.unable:active .ico {
+	BACKGROUND-POSITION: -291px -603px
+}
+.monitor-toolbar A.selected.act-save.unable .ico {
+	BACKGROUND-POSITION: -411px -603px
+}
+.monitor-toolbar A.active.act-save.unable .ico {
+	BACKGROUND-POSITION: -411px -603px
+}
+.monitor-toolbar A.act-save.unable:active .ico {
+	BACKGROUND-POSITION: -411px -603px
+}
+.monitor-toolbar A.selected.act-vclose.unable .ico {
+	BACKGROUND-POSITION: -363px -603px
+}
+.monitor-toolbar A.active.act-vclose.unable .ico {
+	BACKGROUND-POSITION: -363px -603px
+}
+.monitor-toolbar A.act-vclose.unable:active .ico {
+	BACKGROUND-POSITION: -363px -603px
+}
+.screen-normal A.selected.act-grids-square1 .ico {
+	BACKGROUND-POSITION: -289px -499px
+}
+.screen-normal A.active.act-grids-square1 .ico {
+	BACKGROUND-POSITION: -289px -499px
+}
+.screen-normal A.act-grids-square1:active .ico {
+	BACKGROUND-POSITION: -289px -499px
+}
+.screen-normal A.selected.act-grids-square4 .ico {
+	BACKGROUND-POSITION: -313px -499px
+}
+.screen-normal A.active.act-grids-square4 .ico {
+	BACKGROUND-POSITION: -313px -499px
+}
+.screen-normal A.act-grids-square4:active .ico {
+	BACKGROUND-POSITION: -313px -499px
+}
+.screen-normal A.selected.act-grids-square9 .ico {
+	BACKGROUND-POSITION: -337px -499px
+}
+.screen-normal A.active.act-grids-square9 .ico {
+	BACKGROUND-POSITION: -337px -499px
+}
+.screen-normal A.act-grids-square9:active .ico {
+	BACKGROUND-POSITION: -337px -499px
+}
+.screen-normal A.selected.act-grids-square16 .ico {
+	BACKGROUND-POSITION: -361px -499px
+}
+.screen-normal A.active.act-grids-square16 .ico {
+	BACKGROUND-POSITION: -361px -499px
+}
+.screen-normal A.act-grids-square16:active .ico {
+	BACKGROUND-POSITION: -361px -499px
+}
+.screen-normal A.selected.act-grids-square25 .ico {
+	BACKGROUND-POSITION: -385px -499px
+}
+.screen-normal A.active.act-grids-square25 .ico {
+	BACKGROUND-POSITION: -385px -499px
+}
+.screen-normal A.act-grids-square25:active .ico {
+	BACKGROUND-POSITION: -385px -499px
+}
+.screen-normal A.selected.act-grids-prominent6 .ico {
+	BACKGROUND-POSITION: -409px -499px
+}
+.screen-normal A.active.act-grids-prominent6 .ico {
+	BACKGROUND-POSITION: -409px -499px
+}
+.screen-normal A.act-grids-prominent6:active .ico {
+	BACKGROUND-POSITION: -409px -499px
+}
+.screen-normal A.selected.act-grids-mix7 .ico {
+	BACKGROUND-POSITION: -433px -499px
+}
+.screen-normal A.active.act-grids-mix7 .ico {
+	BACKGROUND-POSITION: -433px -499px
+}
+.screen-normal A.act-grids-mix7:active .ico {
+	BACKGROUND-POSITION: -433px -499px
+}
+.screen-normal A.selected.act-grids-prominent8 .ico {
+	BACKGROUND-POSITION: -457px -499px
+}
+.screen-normal A.active.act-grids-prominent8 .ico {
+	BACKGROUND-POSITION: -457px -499px
+}
+.screen-normal A.act-grids-prominent8:active .ico {
+	BACKGROUND-POSITION: -457px -499px
+}
+.screen-normal A.selected.act-grids-mix10 .ico {
+	BACKGROUND-POSITION: -481px -499px
+}
+.screen-normal A.active.act-grids-mix10 .ico {
+	BACKGROUND-POSITION: -481px -499px
+}
+.screen-normal A.act-grids-mix10:active .ico {
+	BACKGROUND-POSITION: -481px -499px
+}
+.screen-normal A.selected.act-grids-prominent10 .ico {
+	BACKGROUND-POSITION: -505px -499px
+}
+.screen-normal A.active.act-grids-prominent10 .ico {
+	BACKGROUND-POSITION: -505px -499px
+}
+.screen-normal A.act-grids-prominent10:active .ico {
+	BACKGROUND-POSITION: -505px -499px
+}
+.screen-normal A.selected.act-grids-mix13 .ico {
+	BACKGROUND-POSITION: -529px -499px
+}
+.screen-normal A.active.act-grids-mix13 .ico {
+	BACKGROUND-POSITION: -529px -499px
+}
+.screen-normal A.act-grids-mix13:active .ico {
+	BACKGROUND-POSITION: -529px -499px
+}
+.screen-normal A.selected.act-grids-prominent13 .ico {
+	BACKGROUND-POSITION: -553px -499px
+}
+.screen-normal A.active.act-grids-prominent13 .ico {
+	BACKGROUND-POSITION: -553px -499px
+}
+.screen-normal A.act-grids-prominent13:active .ico {
+	BACKGROUND-POSITION: -553px -499px
+}
+.screen-normal A.selected.act-grids-mix14 .ico {
+	BACKGROUND-POSITION: -577px -499px
+}
+.screen-normal A.active.act-grids-mix14 .ico {
+	BACKGROUND-POSITION: -577px -499px
+}
+.screen-normal A.act-grids-mix14:active .ico {
+	BACKGROUND-POSITION: -577px -499px
+}
+.screen-normal A.selected.act-grids-prominent17 .ico {
+	BACKGROUND-POSITION: -601px -499px
+}
+.screen-normal A.active.act-grids-prominent17 .ico {
+	BACKGROUND-POSITION: -601px -499px
+}
+.screen-normal A.act-grids-prominent17:active .ico {
+	BACKGROUND-POSITION: -601px -499px
+}
+.screen-wide A.selected.act-grids-square1 .ico {
+	BACKGROUND-POSITION: -289px -523px
+}
+.screen-wide A.active.act-grids-square1 .ico {
+	BACKGROUND-POSITION: -289px -523px
+}
+.screen-wide A.act-grids-square1:active .ico {
+	BACKGROUND-POSITION: -289px -523px
+}
+.screen-wide A.selected.act-grids-prominent3 .ico {
+	BACKGROUND-POSITION: -313px -523px
+}
+.screen-wide A.active.act-grids-prominent3 .ico {
+	BACKGROUND-POSITION: -313px -523px
+}
+.screen-wide A.act-grids-prominent3:active .ico {
+	BACKGROUND-POSITION: -313px -523px
+}
+.screen-wide A.selected.act-grids-prominent4 .ico {
+	BACKGROUND-POSITION: -337px -523px
+}
+.screen-wide A.active.act-grids-prominent4 .ico {
+	BACKGROUND-POSITION: -337px -523px
+}
+.screen-wide A.act-grids-prominent4:active .ico {
+	BACKGROUND-POSITION: -337px -523px
+}
+.screen-wide A.selected.act-grids-square6 .ico {
+	BACKGROUND-POSITION: -361px -523px
+}
+.screen-wide A.active.act-grids-square6 .ico {
+	BACKGROUND-POSITION: -361px -523px
+}
+.screen-wide A.act-grids-square6:active .ico {
+	BACKGROUND-POSITION: -361px -523px
+}
+.screen-wide A.selected.act-grids-mix6 .ico {
+	BACKGROUND-POSITION: -385px -523px
+}
+.screen-wide A.ico.active.act-grids-mix6 {
+	BACKGROUND-POSITION: -385px -523px
+}
+.screen-wide A.ico.act-grids-mix6:active {
+	BACKGROUND-POSITION: -385px -523px
+}
+.screen-wide A.selected.act-grids-prominent7 .ico {
+	BACKGROUND-POSITION: -409px -523px
+}
+.screen-wide A.active.act-grids-prominent7 .ico {
+	BACKGROUND-POSITION: -409px -523px
+}
+.screen-wide A.act-grids-prominent7:active .ico {
+	BACKGROUND-POSITION: -409px -523px
+}
+.screen-wide A.selected.act-grids-prominent9 .ico {
+	BACKGROUND-POSITION: -433px -523px
+}
+.screen-wide A.active.act-grids-prominent9 .ico {
+	BACKGROUND-POSITION: -433px -523px
+}
+.screen-wide A.act-grids-prominent9:active .ico {
+	BACKGROUND-POSITION: -433px -523px
+}
+.screen-wide A.selected.act-grids-square12 .ico {
+	BACKGROUND-POSITION: -457px -523px
+}
+.screen-wide A.active.act-grids-square12 .ico {
+	BACKGROUND-POSITION: -457px -523px
+}
+.screen-wide A.act-grids-square12:active .ico {
+	BACKGROUND-POSITION: -457px -523px
+}
+.screen-wide A.selected.act-grids-mix12 .ico {
+	BACKGROUND-POSITION: -481px -523px
+}
+.screen-wide A.active.act-grids-mix12 .ico {
+	BACKGROUND-POSITION: -481px -523px
+}
+.screen-wide A.act-grids-mix12:active .ico {
+	BACKGROUND-POSITION: -481px -523px
+}
+.screen-wide A.selected.act-grids-square15 .ico {
+	BACKGROUND-POSITION: -505px -523px
+}
+.screen-wide A.active.act-grids-square15 .ico {
+	BACKGROUND-POSITION: -505px -523px
+}
+.screen-wide A.act-grids-square15:active .ico {
+	BACKGROUND-POSITION: -505px -523px
+}
+.screen-wide A.selected.act-grids-mix15 .ico {
+	BACKGROUND-POSITION: -529px -523px
+}
+.screen-wide A.active.act-grids-mix15 .ico {
+	BACKGROUND-POSITION: -529px -523px
+}
+.screen-wide A.act-grids-mix15:active .ico {
+	BACKGROUND-POSITION: -529px -523px
+}
+.screen-wide A.selected.act-grids-square24 .ico {
+	BACKGROUND-POSITION: -553px -523px
+}
+.screen-wide A.active.act-grids-square24 .ico {
+	BACKGROUND-POSITION: -553px -523px
+}
+.screen-wide A.act-grids-square24:active .ico {
+	BACKGROUND-POSITION: -553px -523px
+}
+.monitor-toolbar A.selected.act-adaptive .ico {
+	BACKGROUND-POSITION: -459px -475px
+}
+.monitor-toolbar A.active.act-adaptive .ico {
+	BACKGROUND-POSITION: -459px -475px
+}
+.monitor-toolbar A.act-adaptive:active .ico {
+	BACKGROUND-POSITION: -459px -475px
+}
+.monitor-toolbar A.selected.act-normal .ico {
+	BACKGROUND-POSITION: -435px -475px
+}
+.monitor-toolbar A.active.act-normal .ico {
+	BACKGROUND-POSITION: -435px -475px
+}
+.monitor-toolbar A.act-normal:active .ico {
+	BACKGROUND-POSITION: -435px -475px
+}
+.monitor-toolbar A.active.act-fullscreen .ico {
+	BACKGROUND-POSITION: -483px -475px
+}
+.monitor-toolbar A.act-fullscreen:active .ico {
+	BACKGROUND-POSITION: -483px -475px
+}
+.monitor-toolbar A.selected.act-fullscreen .ico {
+	BACKGROUND-POSITION: -507px -475px
+}
+.monitor-toolbar A.selected.act-fullscreen:active .ico {
+	BACKGROUND-POSITION: -507px -475px
+}
+.monitor-toolbar A.active.act-setting .ico {
+	BACKGROUND-POSITION: -531px -475px
+}
+.monitor-toolbar A.act-setting:active .ico {
+	BACKGROUND-POSITION: -531px -475px
+}
+.screen-yuyan1 A.selected.act-grids-square1 .ico {
+	BACKGROUND-POSITION: -289px -499px
+}
+.screen-yuyan1 A.active.act-grids-square1 .ico {
+	BACKGROUND-POSITION: -289px -499px
+}
+.screen-yuyan1 A.act-grids-square1:active .ico {
+	BACKGROUND-POSITION: -289px -499px
+}
+.screen-yuyan1 A.selected.act-grids-square2 .ico {
+	BACKGROUND-POSITION: -577px -523px
+}
+.screen-yuyan1 A.active.act-grids-square2 .ico {
+	BACKGROUND-POSITION: -577px -523px
+}
+.screen-yuyan1 A.act-grids-square2:active .ico {
+	BACKGROUND-POSITION: -577px -523px
+}
+.screen-yuyan1 A.selected.act-grids-square4 .ico {
+	BACKGROUND-POSITION: -313px -499px
+}
+.screen-yuyan1 A.active.act-grids-square4 .ico {
+	BACKGROUND-POSITION: -313px -499px
+}
+.screen-yuyan1 A.act-grids-square4:active .ico {
+	BACKGROUND-POSITION: -313px -499px
+}
+.screen-yuyan1 A.selected.act-grids-square9 .ico {
+	BACKGROUND-POSITION: -337px -499px
+}
+.screen-yuyan1 A.active.act-grids-square9 .ico {
+	BACKGROUND-POSITION: -337px -499px
+}
+.screen-yuyan1 A.act-grids-square9:active .ico {
+	BACKGROUND-POSITION: -337px -499px
+}
+.screen-yuyan2 A.selected.act-grids-square1 .ico {
+	BACKGROUND-POSITION: -289px -499px
+}
+.screen-yuyan2 A.active.act-grids-square1 .ico {
+	BACKGROUND-POSITION: -289px -499px
+}
+.screen-yuyan2 A.act-grids-square1:active .ico {
+	BACKGROUND-POSITION: -289px -499px
+}
+.screen-yuyan2 A.selected.act-grids-prominent3 .ico {
+	BACKGROUND-POSITION: -313px -523px
+}
+.screen-yuyan2 A.active.act-grids-prominent3 .ico {
+	BACKGROUND-POSITION: -313px -523px
+}
+.screen-yuyan2 A.act-grids-prominent3:active .ico {
+	BACKGROUND-POSITION: -313px -523px
+}
+.screen-yuyan2 A.selected.act-grids-square4 .ico {
+	BACKGROUND-POSITION: -313px -499px
+}
+.screen-yuyan2 A.active.act-grids-square4 .ico {
+	BACKGROUND-POSITION: -313px -499px
+}
+.screen-yuyan2 A.act-grids-square4:active .ico {
+	BACKGROUND-POSITION: -313px -499px
+}
+.screen-yuyan2 A.selected.act-grids-square9 .ico {
+	BACKGROUND-POSITION: -337px -499px
+}
+.screen-yuyan2 A.active.act-grids-square9 .ico {
+	BACKGROUND-POSITION: -337px -499px
+}
+.screen-yuyan2 A.act-grids-square9:active .ico {
+	BACKGROUND-POSITION: -337px -499px
+}
+.video-param DL {
+	
+}
+.video-param DT {
+	POSITION: relative
+}
+.video-param DT .controls {
+	RIGHT: 0px; POSITION: absolute; TOP: 3px
+}
+.video-param DT .controls INPUT {
+	HEIGHT: 12px; WIDTH: 20px; MARGIN: 6px 0px 0px; LINE-HEIGHT: 12px
+}
+.video-param DD {
+	CLEAR: both; MARGIN-RIGHT: 60px
+}
+.video-param .ui-spinner {
+	DISPLAY: inline
+}
+.ocx-recording.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-voice.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-tag.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-record.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-capture.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-intel.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-multiCapture.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-playback.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-digitalZzoom.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-manualAlarm.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-ptzControl.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-valume.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-voiceIntercom.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-spotInfo.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-setting.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-streamCode.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-close.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-save.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-clip.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-pstream.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-cstream.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-ostream.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-istream.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-fault.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-yuyan.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-zoom3d.ico {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-draggable LI I {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-sortable LI I {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-controler A {
+	HEIGHT: 20px; WIDTH: 20px; BACKGROUND: url(../images/sprite_ocx.png) no-repeat -9999px 0px
+}
+.ocx-recording.ico {
+	BACKGROUND-POSITION: -74px -74px
+}
+.ocx-voice.ico {
+	BACKGROUND-POSITION: -98px -74px
+}
+.mute .ocx-voice.ico {
+	BACKGROUND-POSITION: -122px -74px
+}
+.ocx-tag.ico {
+	BACKGROUND-POSITION: -2px -2px
+}
+.ocx-record.ico {
+	BACKGROUND-POSITION: -26px -2px
+}
+.ocx-capture.ico {
+	BACKGROUND-POSITION: -50px -2px
+}
+.ocx-playback.ico {
+	BACKGROUND-POSITION: -74px -2px
+}
+.ocx-digitalZzoom.ico {
+	BACKGROUND-POSITION: -98px -2px
+}
+.ocx-manualAlarm.ico {
+	BACKGROUND-POSITION: -122px -2px
+}
+.ocx-ptzControl.ico {
+	BACKGROUND-POSITION: -146px -2px
+}
+.ocx-valume.ico {
+	BACKGROUND-POSITION: -170px -2px
+}
+.ocx-voiceIntercom.ico {
+	BACKGROUND-POSITION: -194px -2px
+}
+.ocx-spotInfo.ico {
+	BACKGROUND-POSITION: -218px -2px
+}
+.ocx-setting.ico {
+	BACKGROUND-POSITION: -242px -2px
+}
+.ocx-streamCode.ico {
+	BACKGROUND-POSITION: -266px -2px
+}
+.ocx-close.ico {
+	BACKGROUND-POSITION: -290px -2px
+}
+.ocx-save.ico {
+	BACKGROUND-POSITION: -2px -26px
+}
+.ocx-multiCapture.ico {
+	BACKGROUND-POSITION: -26px -26px
+}
+.ocx-clip.ico {
+	BACKGROUND-POSITION: -50px -26px
+}
+.ocx-intel.ico {
+	BACKGROUND-POSITION: -74px -26px
+}
+.ocx-fault.ico {
+	BACKGROUND-POSITION: -98px -26px
+}
+.ocx-pstream.ico {
+	BACKGROUND-POSITION: -74px -26px
+}
+.ocx-cstream.ico {
+	BACKGROUND-POSITION: -98px -26px
+}
+.ocx-ostream.ico {
+	BACKGROUND-POSITION: -122px -26px
+}
+.ocx-istream.ico {
+	BACKGROUND-POSITION: -146px -26px
+}
+.ocx-fault.ico {
+	BACKGROUND-POSITION: -170px -26px
+}
+.ocx-yuyan.ico {
+	BACKGROUND-POSITION: -194px -26px
+}
+.ocx-zoom3d.ico {
+	WIDTH: 24px; BACKGROUND-POSITION: -216px -26px
+}
+A:hover .ocx-tag.ico {
+	BACKGROUND-POSITION: -2px -202px
+}
+A:hover .ocx-record.ico {
+	BACKGROUND-POSITION: -26px -202px
+}
+A:hover .ocx-capture.ico {
+	BACKGROUND-POSITION: -50px -202px
+}
+A:hover .ocx-playback.ico {
+	BACKGROUND-POSITION: -74px -202px
+}
+A:hover .ocx-digitalZzoom.ico {
+	BACKGROUND-POSITION: -98px -202px
+}
+A:hover .ocx-manualAlarm.ico {
+	BACKGROUND-POSITION: -122px -202px
+}
+A:hover .ocx-ptzControl.ico {
+	BACKGROUND-POSITION: -146px -202px
+}
+A:hover .ocx-valume.ico {
+	BACKGROUND-POSITION: -170px -202px
+}
+A:hover .ocx-voiceIntercom.ico {
+	BACKGROUND-POSITION: -194px -202px
+}
+A:hover .ocx-spotInfo.ico {
+	BACKGROUND-POSITION: -218px -202px
+}
+A:hover .ocx-setting.ico {
+	BACKGROUND-POSITION: -242px -202px
+}
+A:hover .ocx-streamCode.ico {
+	BACKGROUND-POSITION: -266px -202px
+}
+A:hover .ocx-close.ico {
+	BACKGROUND-POSITION: -290px -202px
+}
+A:hover .ocx-save.ico {
+	BACKGROUND-POSITION: -2px -226px
+}
+A:hover .ocx-multiCapture.ico {
+	BACKGROUND-POSITION: -26px -226px
+}
+A:hover .ocx-clip.ico {
+	BACKGROUND-POSITION: -50px -226px
+}
+A:hover .ocx-pstream.ico {
+	BACKGROUND-POSITION: -74px -226px
+}
+A:hover .ocx-cstream.ico {
+	BACKGROUND-POSITION: -98px -226px
+}
+A:hover .ocx-ostream.ico {
+	BACKGROUND-POSITION: -122px -226px
+}
+A:hover .ocx-istream.ico {
+	BACKGROUND-POSITION: -146px -226px
+}
+A:hover .ocx-fault.ico {
+	BACKGROUND-POSITION: -170px -226px
+}
+A:hover .ocx-yuyan.ico {
+	BACKGROUND-POSITION: -194px -226px
+}
+A:hover .ocx-zoom3d.ico {
+	BACKGROUND-POSITION: -216px -226px
+}
+A:active .ocx-tag.ico {
+	BACKGROUND-POSITION: -2px -402px
+}
+A.active .ocx-tag.ico {
+	BACKGROUND-POSITION: -2px -402px
+}
+A:active .ocx-record.ico {
+	BACKGROUND-POSITION: -26px -402px
+}
+A.active .ocx-record.ico {
+	BACKGROUND-POSITION: -26px -402px
+}
+A:active .ocx-capture.ico {
+	BACKGROUND-POSITION: -50px -402px
+}
+A.active .ocx-capture.ico {
+	BACKGROUND-POSITION: -50px -402px
+}
+A:active .ocx-playback.ico {
+	BACKGROUND-POSITION: -74px -402px
+}
+A.active .ocx-playback.ico {
+	BACKGROUND-POSITION: -74px -402px
+}
+A:active .ocx-digitalZzoom.ico {
+	BACKGROUND-POSITION: -98px -402px
+}
+A.active .ocx-digitalZzoom.ico {
+	BACKGROUND-POSITION: -98px -402px
+}
+A:active .ocx-manualAlarm.ico {
+	BACKGROUND-POSITION: -122px -402px
+}
+A.active .ocx-manualAlarm.ico {
+	BACKGROUND-POSITION: -122px -402px
+}
+A:active .ocx-ptzControl.ico {
+	BACKGROUND-POSITION: -146px -402px
+}
+A.active .ocx-ptzControl.ico {
+	BACKGROUND-POSITION: -146px -402px
+}
+A:active .ocx-valume.ico {
+	BACKGROUND-POSITION: -170px -402px
+}
+A.active .ocx-valume.ico {
+	BACKGROUND-POSITION: -170px -402px
+}
+A:active .ocx-voiceIntercom.ico {
+	BACKGROUND-POSITION: -194px -402px
+}
+A.active .ocx-voiceIntercom.ico {
+	BACKGROUND-POSITION: -194px -402px
+}
+A:active .ocx-spotInfo.ico {
+	BACKGROUND-POSITION: -218px -402px
+}
+A.active .ocx-spotInfo.ico {
+	BACKGROUND-POSITION: -218px -402px
+}
+A:active .ocx-setting.ico {
+	BACKGROUND-POSITION: -242px -402px
+}
+A.active .ocx-setting.ico {
+	BACKGROUND-POSITION: -242px -402px
+}
+A:active .ocx-streamCode.ico {
+	BACKGROUND-POSITION: -266px -402px
+}
+A.active .ocx-streamCode.ico {
+	BACKGROUND-POSITION: -266px -402px
+}
+A:active .ocx-close.ico {
+	BACKGROUND-POSITION: -290px -402px
+}
+A.active .ocx-close.ico {
+	BACKGROUND-POSITION: -290px -402px
+}
+A:active .ocx-save.ico {
+	BACKGROUND-POSITION: -2px -426px
+}
+A.active .ocx-save.ico {
+	BACKGROUND-POSITION: -2px -426px
+}
+A:active .ocx-multiCapture.ico {
+	BACKGROUND-POSITION: -26px -426px
+}
+A.active .ocx-multiCapture.ico {
+	BACKGROUND-POSITION: -26px -426px
+}
+A:active .ocx-clip.ico {
+	BACKGROUND-POSITION: -50px -426px
+}
+A.active .ocx-clip.ico {
+	BACKGROUND-POSITION: -50px -426px
+}
+A:active .ocx-pstream.ico {
+	BACKGROUND-POSITION: -74px -426px
+}
+A.active .ocx-pstream.ico {
+	BACKGROUND-POSITION: -74px -426px
+}
+A:active .ocx-cstream.ico {
+	BACKGROUND-POSITION: -98px -426px
+}
+A.active .ocx-cstream.ico {
+	BACKGROUND-POSITION: -98px -426px
+}
+A:active .ocx-ostream.ico {
+	BACKGROUND-POSITION: -122px -426px
+}
+A.active .ocx-ostream.ico {
+	BACKGROUND-POSITION: -122px -426px
+}
+A:active .ocx-istream.ico {
+	BACKGROUND-POSITION: -146px -426px
+}
+A.active .ocx-istream.ico {
+	BACKGROUND-POSITION: -146px -426px
+}
+A:active .ocx-fault.ico {
+	BACKGROUND-POSITION: -170px -426px
+}
+A.active .ocx-fault.ico {
+	BACKGROUND-POSITION: -170px -426px
+}
+A:active .ocx-yuyan.ico {
+	BACKGROUND-POSITION: -194px -426px
+}
+A.active .ocx-yuyan.ico {
+	BACKGROUND-POSITION: -194px -426px
+}
+A:active .ocx-zoom3d.ico {
+	BACKGROUND-POSITION: -216px -426px
+}
+A.active .ocx-zoom3d.ico {
+	BACKGROUND-POSITION: -216px -426px
+}
+.ocx-draggable {
+	BORDER-TOP: #e3e3e3 1px solid; BORDER-RIGHT: #e3e3e3 1px solid; BORDER-BOTTOM: #e3e3e3 1px solid; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; BORDER-LEFT: #e3e3e3 1px solid; MARGIN: 0px 0px 10px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #fff
+}
+.ocx-sortable {
+	BORDER-TOP: #e3e3e3 1px solid; BORDER-RIGHT: #e3e3e3 1px solid; BORDER-BOTTOM: #e3e3e3 1px solid; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; BORDER-LEFT: #e3e3e3 1px solid; MARGIN: 0px 0px 10px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #fff
+}
+.hover.ocx-draggable {
+	BORDER-TOP: #ff6600 1px solid; BORDER-RIGHT: #ff6600 1px solid; BORDER-BOTTOM: #ff6600 1px solid; BORDER-LEFT: #ff6600 1px solid
+}
+.hover.ocx-sortable {
+	BORDER-TOP: #ff6600 1px solid; BORDER-RIGHT: #ff6600 1px solid; BORDER-BOTTOM: #ff6600 1px solid; BORDER-LEFT: #ff6600 1px solid
+}
+.ocx-draggable LI {
+	WIDTH: 80px; FLOAT: left; MARGIN: 2px; DISPLAY: block
+}
+.ocx-sortable LI {
+	WIDTH: 80px; FLOAT: left; MARGIN: 2px; DISPLAY: block
+}
+.ocx-draggable LI A {
+	CURSOR: move; HEIGHT: 20px; WIDTH: 20px; BACKGROUND: #21252b; POSITION: relative; PADDING-BOTTOM: 6px; PADDING-TOP: 6px; PADDING-LEFT: 6px; DISPLAY: block; PADDING-RIGHT: 6px; border-radius: 4px
+}
+.ocx-sortable LI A {
+	CURSOR: move; HEIGHT: 20px; WIDTH: 20px; BACKGROUND: #21252b; POSITION: relative; PADDING-BOTTOM: 6px; PADDING-TOP: 6px; PADDING-LEFT: 6px; DISPLAY: block; PADDING-RIGHT: 6px; border-radius: 4px
+}
+.ocx-draggable LI > SPAN {
+	PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 0px; DISPLAY: block; PADDING-RIGHT: 0px
+}
+.ocx-draggable .ui-draggable-dragging {
+	WIDTH: auto; BACKGROUND: none transparent scroll repeat 0% 0%; opacity: 0.5
+}
+.ocx-sortable .ui-sortable-helper {
+	WIDTH: auto; BACKGROUND: none transparent scroll repeat 0% 0%; opacity: 0.5
+}
+.ocx-draggable .ui-draggable-dragging > SPAN {
+	DISPLAY: none
+}
+.ocx-sortable LI > SPAN {
+	DISPLAY: none
+}
+.ocx-draggable .ui-draggable-dragging I {
+	HEIGHT: 24px; WIDTH: 24px; RIGHT: -12px; POSITION: absolute; BACKGROUND-POSITION: 0px -72px; BOTTOM: -12px
+}
+.ocx-draggable .ui-draggable-disabled {
+	opacity: 1
+}
+.ocx-draggable LI.ui-draggable-disabled I {
+	HEIGHT: 24px; WIDTH: 24px; RIGHT: -12px; POSITION: absolute; BACKGROUND-POSITION: -24px -72px; BOTTOM: -12px
+}
+.ocx-sortable {
+	HEIGHT: 72px
+}
+.ocx-sortable LI {
+	WIDTH: auto
+}
+.ocx-sortable .ui-sortable-placeholder {
+	BACKGROUND: #ccc; border-radius: 4px
+}
+.ocx-sortable LI.deleting I {
+	HEIGHT: 24px; WIDTH: 24px; RIGHT: -12px; POSITION: absolute; BACKGROUND-POSITION: -48px -72px; BOTTOM: -12px
+}
+.sliderbar {
+	OVERFLOW: hidden !important; MIN-WIDTH: 300px; POSITION: absolute; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 0px; MIN-HEIGHT: 40px; PADDING-RIGHT: 0px
+}
+.sliderbar UL LI {
+	FONT-SIZE: 12px; WIDTH: 33.33%; BACKGROUND: url(../images/time_line.png) no-repeat center bottom; FLOAT: left; PADDING-BOTTOM: 10px; TEXT-ALIGN: center; PADDING-TOP: 0px; PADDING-LEFT: 0px; DISPLAY: block; LINE-HEIGHT: 12px; PADDING-RIGHT: 0px
+}
+.sliderbar .ui-slider-horizontal {
+	MARGIN: 8px 16.66%
+}
+.i-plan-video {
+	HEIGHT: 12px; WIDTH: 12px; VERTICAL-ALIGN: middle; MARGIN-RIGHT: 5px
+}
+.i-movement-spy {
+	HEIGHT: 12px; WIDTH: 12px; VERTICAL-ALIGN: middle; MARGIN-RIGHT: 5px
+}
+.i-alarm-video {
+	HEIGHT: 12px; WIDTH: 12px; VERTICAL-ALIGN: middle; MARGIN-RIGHT: 5px
+}
+.i-plan-video {
+	BACKGROUND: #4b8dd7
+}
+.i-movement-spy {
+	BACKGROUND: #e7b930
+}
+.i-alarm-video {
+	BACKGROUND: #b31919
+}
+.yuyanTab {
+	HEIGHT: 30px; WIDTH: 100%; BACKGROUND: #ffe032; POSITION: absolute; Z-INDEX: 2; DISPLAY: none
+}
+.closeB {
+	CURSOR: pointer; HEIGHT: 20px; WIDTH: 15px; BACKGROUND: url(../images/close.png) no-repeat -50% 0px; PADDING-RIGHT: 10px
+}
+.view-menu {
+	OVERFLOW: auto; HEIGHT: 500px
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include file="Common:header" />
+</head>
+	<body class="no-skin">
+		<!-- #section:basics/navbar.layout -->
+        <include file="Common:top_maps" />
+		<!-- /section:basics/navbar.layout -->
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+			<!-- #section:basics/sidebar -->
+            <div id="sidebar" class="sidebar responsive">
+                <include file="Common:left_maps" />
+            </div>
+			<!-- /section:basics/sidebar -->
+			<div class="main-content">
+				<!-- #section:basics/content.breadcrumbs -->
+				<div class="breadcrumbs" id="breadcrumbs">
+					<script type="text/javascript">
+						try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+					</script>
+					<ul class="breadcrumb">
+                        <li>
+                            <i class="ace-icon fa fa-home home-icon"></i>
+                            <a href="{:U('main/index')}">首页</a>
+                        </li>
+                        <li class="active">用户管理</li>
+                        <li class="active">权限设置</li>
+					</ul><!-- /.breadcrumb -->
+				</div>
+				<!-- /section:basics/content.breadcrumbs -->
+				<div class="page-content">
+					<div class="page-content-area">
+						<div class="page-header">
+							<h1>
+                                {$role[name]} - 权限设置
+							</h1>
+						</div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+
+                                <!-- 所有用户组设置权限的链接 -->
+                                <!-- 这里把用户组列出来，方便同时设置多个组权限的情况（不用每次都返回列表页） -->
+                                <!--  <div class="form-group" style="width: 70%;margin: auto;"> -->
+
+                                <!-- </div> -->
+                                <!-- /所有用户组设置权限的链接 -->
+
+								<!-- PAGE CONTENT BEGINS -->
+								<form class="form-horizontal" role="form" method="post" action="{:U('sys/power')}">
+									<!-- #section:elements.form -->
+                                    <input type="hidden" name="id" value="{$role[id]}"/>
+									<div class="form-group" style="width: 70%;margin: auto;">
+                                        <ul class="nav nav-pills">
+                                            <volist name="groups" id="mvo" >
+                                                <li class="<php> if( $mvo['id'] == $currentGroupId) echo 'active'; </php>">
+                                                    <a class=" " href="{:U('sys/power' , array('id'=>$mvo[id]))}">
+                                                        <i class="ace-icon fa fa-cog bigger-160"></i>&nbsp;
+                                                        {$mvo.name}
+                                                    </a>
+                                                </li>
+                                            </volist>
+                                        </ul>
+                                        <volist name="module" id="module">
+                                            <div class="checkbox-group" style="padding: 10px; border: 1px dotted #ccc; margin: 5px;">
+                                                <div class="module" style="border-bottom: 1px dotted #ccc;margin-bottom: 15px;">
+                                                    <label for="{$module.id}">
+                                                    <input name="{$module.id}" onclick="selectAll({$module['id']})" id="{$module.id}" class="ace ace-checkbox-2" type="checkbox" value="{$module.id}" />
+                                                        <span class="lbl"> {$module.name} </span>
+                                                    </label>
+                                                </div>
+                                                <div class="sub-checkbox">
+                                                <volist name="module['sub']" id="sub">
+                                                    <label style="padding:0 15px;">
+                                                    <input name="{$module.id}[]" id="{$sub.id}" class="ace" type="checkbox" value="{$sub.id}" <notempty name="role['power'][$sub['id']]">checked="checked"</notempty> />
+                                                        <span class="lbl" style="width: 120px;"> {$sub.name} </span></label>
+                                                </volist>
+                                                </div>
+                                            </div>
+                                        </volist>
+									</div>
+
+									<div class="clearfix form-actions">
+										<div class="col-md-offset-3 col-md-9">
+											<button class="btn btn-info" type="submit">
+												<i class="ace-icon fa fa-check bigger-110"></i>
+												保存
+											</button>
+										</div>
+									</div>
+								</form>
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content-area -->
+				</div><!-- /.page-content -->
+			</div><!-- /.main-content -->
+            <include file="Common:footer" />
+        </div><!-- /.main-container -->
+        <include file="Common:common_js" />
+        <script type="text/javascript">
+            function selectAll(id){
+                var checklist = document.getElementsByName (id+"[]");
+                if(document.getElementById(id).checked){
+                    for(var i=0;i<checklist.length;i++){
+                        checklist[i].checked = 1;
+                    }
+                }else{
+                    for(var j=0;j<checklist.length;j++){
+                        checklist[j].checked = 0;
+                    }
+                }
+            }
+            $(function(){
+                $("form .sub-checkbox").each(function(){
+                    var that = $(this);
+                    var all = that.find("input:checkbox");
+                    console.log(all);
+                    all.on("change",function () {
+                        var el = that.find('input:checkbox:checked');
+                        var title = that.siblings(".module");
+                        console.log(title,all.length,el.length);
+                        if(all.length === el.length){
+                            console.log('全选中了')
+                            window.test = title.find("input");
+                            title.find("input")[0].checked = 1;
+                            //.attr("checked","checked");
+                        }else{
+                            title.find("input")[0].checked = 0;
+//                            title.find("input").removeAttr("checked");
+                        }
+                    }).trigger('change');
+                })
+            });
+
+        </script>
+    </body>
+</html>

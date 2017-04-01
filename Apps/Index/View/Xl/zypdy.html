@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script language="javascript" src="__PUBLIC__/tools/print/LodopFuncs.js"></script>
+</head>
+<body class="no-skin">
+    <div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+    </script>
+    <div class="main-content">
+        <div class="page-content">
+            <div class="page-content-area">
+                <form action="__SELF__" method="post" id="form1">
+                    <div class="tabbable">
+
+
+                        <div class="col-sm-12" style="width: 100%;">
+                            <div class="col-sm-3" style="width: 25%; float: left">
+                                <table class="col-sm-8" style="border: 2px solid #000;">
+                                    <tr>
+                                        <td class="col-sm-3"></td>
+                                        <td>已执行</td>
+                                        <td class="col-sm-3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>盖</td>
+                                        <td>不执行</td>
+                                        <td>章处</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>作废</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-sm-6 text-center" style="width: 50%; float: left">
+                                <h2 style="text-align: center;">温岭市非普电气有限公司电缆安全施工作业票</h2>
+                                <eq name="num" value="zyp1">
+                                    <h5 style="text-align: center; margin: auto;">(第一联 工作票签发人留存)</h5>
+                                    <else/>
+                                    <h5 style="text-align: center; margin: auto;">(第二联 交工作负责人带至现场执行)</h5>
+                                </eq>
+                                <!-- <h5>一并使用工作票种类</h5> -->
+                            </div>
+                            <div class="col-sm-3" style="width: 25%; float: right">
+                                <table class="col-sm-8" style="border: 2px solid #000; float: right;">
+                                    <tr>
+                                        <td class="col-sm-3"></td>
+                                        <td>合格</td>
+                                        <td class="col-sm-3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>盖</td>
+                                        <td></td>
+                                        <td>章处</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>不合格</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <table style="width: 100%;margin-top: 10px;border: none;">
+                            <tr>
+                                <td style="text-align: right;border: none;">
+                                    <h5>NO. {$record['gongdanbianhao']}</h5>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div style="width: 50%;float: left;">
+                            <table style="width: 100%;font-size:13px;" border="1">
+                                <tbody>
+                                <tr role="row" class="odd">
+                                    <td class="center table-text-lg col-sm-2">
+                                        工程名称
+                                    </td>
+                                    <td class="col-sm-5" colspan="3">
+                                        {$record['gongchengmingcheng']}
+                                    </td>
+                                </tr>
+                                <tr role="row" class="odd">
+                                    <td class="center table-text-lg col-sm-2">
+                                        工作班组
+                                    </td>
+                                    <td class="col-sm-4" >
+                                        {$record['gongzuobanzu']|deviceToWorkTeam=###}
+                                    </td>
+                                    <td class="center table-text-lg col-sm-2">
+                                        施工（工作）负责人
+                                    </td>
+                                    <td class="col-sm-4" >
+                                        {$record['shigongfuzeren']}
+                                    </td>
+                                </tr>
+                                <tr role="row" class="odd">
+                                    <td class="center table-text-lg col-sm-2">
+                                        施工人员（除负责人）
+                                    </td>
+                                    <td class="col-sm-5" colspan="3">
+                                        职工 {$record['zhigongrenshu']}人、
+                                        技工 {$record['jigongrenshu']}人、
+                                        民工 {$record['mingongrenshu']}人，
+                                        共 {$record['renshuzonghe']}人
+                                    </td>
+                                </tr>
+                                <tr role="row" class="odd">
+                                    <td class="center table-text-lg col-sm-2">
+                                        计划工作时间
+                                    </td>
+                                    <td class="col-sm-5" colspan="3">
+                                        <!--{$record['jihuagongzuoshijian'][0]}年
+                                        {$record['jihuagongzuoshijian'][1]}月
+                                        {$record['jihuagongzuoshijian'][2]}日
+                                        {$record['jihuagongzuoshijian'][3]}时
+                                        {$record['jihuagongzuoshijian'][4]}分 至
+                                        {$record['jihuagongzuoshijian'][5]}年
+                                        {$record['jihuagongzuoshijian'][6]}月
+                                        {$record['jihuagongzuoshijian'][7]}日
+                                        {$record['jihuagongzuoshijian'][8]}时
+                                        {$record['jihuagongzuoshijian'][9]}分-->
+                                        {$record['jihuagongzuoshijian_kaishi']}至
+                                        {$record['jihuagongzuoshijian_jieshu']}
+                                    </td>
+                                </tr>
+                                <tr role="row" class="odd">
+                                    <td class="center table-text-lg" colspan="1">
+                                        分项作业内容
+                                    </td>
+                                    <td class="center table-text-lg" colspan="3">
+                                        岗位作业人员
+                                    </td>
+                                </tr>
+                                <tr role="row" class="odd">
+                                    <td class="table-text-lg" colspan="1">
+                                        <label>
+                                            <eq name="record['dianlanyunshuhezhuangxie']" value="1"> √ </eq>
+                                        </label>
+                                        电缆运输和装卸
+                                    </td>
+                                    <td class="center table-text-lg" colspan="3">
+                                        <table class="table table-striped table-bordered table-hover no-footer">
+                                            <tr>
+                                                <td class="table-text-lg">
+                                                    指挥
+                                                </td>
+                                                <td class="table-text-lg">
+                                                    {$record['zhihui1']}
+                                                </td>
+                                                <td class="table-text-lg">
+                                                    押车人员
+                                                </td>
+                                                <td class="table-text-lg">
+                                                    {$record['yache1']}
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr role="row" class="odd">
+                                    <td class="table-text-lg" colspan="1">
+                                        <label>
+                                            <eq name="record['wagoufushe']" value="1"> √ </eq>
+                                        </label>
+                                        电缆沟挖掘和挖掘道路、敷设钢管
+                                    </td>
+                                    <td class="center table-text-lg" colspan="3">
+                                        <table class="table table-striped table-bordered table-hover no-footer">
+                                            <tr>
+                                                <td class="table-text-lg">
+                                                    指挥
+                                                </td>
+                                                <td class="table-text-lg">
+                                                    {$record['zhihui2']}
+                                                </td>
+                                                <td class="table-text-lg">
+                                                    监护人员
+                                                </td>
+                                                <td class="table-text-lg">
+                                                    {$record['jiahui1']}
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr role="row" class="odd">
+                                    <td class="table-text-lg" colspan="1">
+                                        <label>
+                                            <eq name="record['fushedianlan']" value="1"> √ </eq>
+                                        </label>
+                                        敷设电缆
+                                    </td>
+                                    <td class="center table-text-lg" colspan="3">
+                                        <table class="table table-striped table-bordered table-hover no-footer">
+                                            <tr>
+                                                <td class="table-text-lg">
+                                                    指挥
+                                                </td>
+                                                <td class="table-text-lg">
+                                                    {$record['zhihui3']}
+                                                </td>
+                                                <td class="table-text-lg">
+                                                    监护人员
+                                                </td>
+                                                <td class="table-text-lg">
+                                                    {$record['jianhui2']}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-text-lg">
+                                                    牵引
+                                                </td>
+                                                <td class="table-text-lg">
+                                                    {$record['qianyin']}
+                                                </td>
+                                                <td class="table-text-lg">
+                                                    电缆盘看守
+                                                </td>
+                                                <td class="table-text-lg">
+                                                    {$record['dianlanpankanshou']}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-text-lg">
+                                                    转弯处看守
+                                                </td>
+                                                <td class="table-text-lg">
+                                                    {$record['zhuanwankanshou']}
+                                                </td>
+                                                <td class="table-text-lg">
+                                                    穿出管口处看守
+                                                </td>
+                                                <td class="table-text-lg">
+                                                    {$record['chuanchukanshou']}
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr role="row" class="odd">
+
+                                    <td class="table-text-lg" colspan="1">
+                                        <label>
+                                            <eq name="record['dinlantou']" value="1"> √ </eq>
+                                        </label>
+                                        电缆头制作
+                                    </td>
+                                    <td class="center table-text-lg" colspan="3">
+                                        {$record['dinlantoutext']}
+                                    </td>
+                                </tr>
+                                <tr role="row" class="odd">
+
+                                    <td class="table-text-lg" colspan="1">
+                                        <label>
+                                            <eq name="record['dianlanshiyan']" value="1"> √ </eq>
+                                        </label>
+                                        电缆试验（未投运电缆）
+                                    </td>
+                                    <td class="center table-text-lg" colspan="3">
+                                        {$record['dianlanshiyantext']}
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <table style="width: 100%;font-size:13px;" border="1">
+                                <tr>
+                                    <!--TODO 基本安全注意事项-->
+                                    <td class="center table-text-lg" colspan="2">基本安全注意事项</td>
+                                    <td class="center table-text-lg" style="width: 6%;">选择</td>
+                                    <td class="center table-text-lg" style="width: 6%;">执行</td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">1</td>
+                                    <td class="table-text-lg">
+                                        统一信号，服从指挥，不得擅自离岗，互相关心施工安全
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(1 , $record['jibenzhuyishixiangxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(1 , $record['jibenzhuyishixiangzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">2</td>
+                                    <td class="table-text-lg">
+                                        进入施工作业现场必须正确使用安全帽及其他安全劳保用品
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(2 , $record['jibenzhuyishixiangxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(2 , $record['jibenzhuyishixiangzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">3</td>
+                                    <td class="table-text-lg">
+                                        所有电动机具使用前必须检查，严禁使用不合格工器具或超载使用
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(3, $record['jibenzhuyishixiangxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(3 , $record['jibenzhuyishixiangzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">4</td>
+                                    <td class="table-text-lg">
+                                        穿越公路，河流等设施应征得主管部门同意，做好相关安全设施，并设专人看守
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(4 , $record['jibenzhuyishixiangxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(4 , $record['jibenzhuyishixiangzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">5</td>
+                                    <td class="table-text-lg">
+                                        用汽车吊起重时，重物及吊臂下，严禁有人行走或停留
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(5 , $record['jibenzhuyishixiangxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(5 , $record['jibenzhuyishixiangzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">6</td>
+                                    <td class="table-text-lg">
+                                        手工锯、割、锉等工作时，力度要适度，防止过力而碰伤手臂
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(6 , $record['jibenzhuyishixiangxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(6 , $record['jibenzhuyishixiangzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">7</td>
+                                    <td class="table-text-lg">
+                                        登杆前，应先检查根部、基础和拉线是否牢固，高处作业必须系安全带，系安全带后检查扣环是否牢固
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(7 , $record['jibenzhuyishixiangxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(7 , $record['jibenzhuyishixiangzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">8</td>
+                                    <td class="table-text-lg">
+                                        高处作业应使用工具袋，上下传递物件应用拴牢传递，严禁上下抛掷
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(8 , $record['jibenzhuyishixiangxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(8 , $record['jibenzhuyishixiangzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">9</td>
+                                    <td class="table-text-lg">
+                                        高处作业现场，地面人员不得站在作业处垂直下方，在行人道口或人口密集区工作，工作点下方应设围栏或其他保护措施
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(9 , $record['jibenzhuyishixiangxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(9 , $record['jibenzhuyishixiangzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">10</td>
+                                    <td class="table-text-lg">
+                                        吊装电缆头应固定好吊装工器具，认真检查吊装用的工具、绳索，防止绳索断开
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(10 , $record['jibenzhuyishixiangxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(10 , $record['jibenzhuyishixiangzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">11</td>
+                                    <td class="table-text-lg">
+                                        电缆井内工作时，禁止只打开一只井盖（单眼井除外）。电缆沟的盖板开启后，应自然通风一段时间后方可下井工作
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(11 , $record['jibenzhuyishixiangxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(11 , $record['jibenzhuyishixiangzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">12</td>
+                                    <td class="table-text-lg">
+                                        进入电缆井、电缆隧道前，应先用吹风机排除浊气，再用气体检测仪检查井内或隧道内的易燃易爆及有毒气体的含量是否超标，并做好记录
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(12 , $record['jibenzhuyishixiangxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(12 , $record['jibenzhuyishixiangzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table style="width: 100%;font-size:13px;" border="1">
+                                <tr>
+                                    <!--TODO 电缆运输和装卸工作安全注意事项-->
+                                    <td class="center table-text-lg" colspan="2">电缆运输和装卸工作安全注意事项</td>
+                                    <td class="center table-text-lg" style="width: 6%;">选择</td>
+                                    <td class="center table-text-lg" style="width: 6%;">执行</td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">1</td>
+                                    <td class="table-text-lg">
+                                        复杂道路、大件运输前应组织对道路进行勘察，并向司乘人员交底
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(1 , $record['yunshuzhuangxiexuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(1 , $record['yunshuzhuangxiezhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">2</td>
+                                    <td class="table-text-lg">
+                                        电缆盘禁止平放运输
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(2 , $record['yunshuzhuangxiexuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(2 , $record['yunshuzhuangxiezhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">3</td>
+                                    <td class="table-text-lg">
+                                        吊装电缆工作应设专人负责，明确分工。吊车装卸电缆时，起重工作应有一人统一指挥
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(3 , $record['yunshuzhuangxiexuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(3 , $record['yunshuzhuangxiezhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">4</td>
+                                    <td class="table-text-lg">
+                                        电缆盘挂吊钩，人员撤离后方可起吊
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(4 , $record['yunshuzhuangxiexuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(4 , $record['yunshuzhuangxiezhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">5</td>
+                                    <td class="table-text-lg">
+                                        与工作无关人员禁止在起重区域内行走或停留
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(5 , $record['yunshuzhuangxiexuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(5 , $record['yunshuzhuangxiezhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">6</td>
+                                    <td class="table-text-lg">
+                                        卸电缆应使用吊车或将其沿坚固的铺板渐渐滚下，与电缆盘相反的制动绳应满足牵引力，并固定在牢固地点，电缆盘滚落前方严禁有人，不允许将电缆盘从车上直接推下
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(6 , $record['yunshuzhuangxiexuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(6 , $record['yunshuzhuangxiezhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">7</td>
+                                    <td class="table-text-lg">
+                                        电缆盘沿下颇滚动时，应防止电缆盘顺势滚动
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(7 , $record['yunshuzhuangxiexuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(7 , $record['yunshuzhuangxiezhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">8</td>
+                                    <td class="table-text-lg">
+                                        电缆盘放稳后，方可摘钩
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(8 , $record['yunshuzhuangxiexuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(8 , $record['yunshuzhuangxiezhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">9</td>
+                                    <td class="table-text-lg">
+                                        行车过程中押车人员应随时观察电缆盘稳固情况，如有异常立即停车处理
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(9 , $record['yunshuzhuangxiexuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(9 , $record['yunshuzhuangxiezhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">10</td>
+                                    <td class="table-text-lg">
+                                        电缆盘运输过程中必须捆绑牢固，线盘的周围应塞牢，防止滚动、移动
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(10 , $record['yunshuzhuangxiexuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(10 , $record['yunshuzhuangxiezhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">11</td>
+                                    <td class="table-text-lg">
+                                        载货机动车除押运和装卸人员外，不得搭乘其他人员，押运和装卸人员必须坐在安全位置上
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(11 , $record['yunshuzhuangxiexuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(11, $record['yunshuzhuangxiezhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table style="width: 100%;font-size:13px;" border="1">
+                                <tr>
+                                    <!--TODO 电缆沟挖掘和挖掘道路、敷设钢管工作安全注意事项-->
+                                    <td class="center table-text-lg" colspan="2">电缆沟挖掘和挖掘道路、敷设钢管工作安全注意事项</td>
+                                    <td class="center table-text-lg" style="width: 6%;">选择</td>
+                                    <td class="center table-text-lg" style="width: 6%;">执行</td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">1</td>
+                                    <td class="table-text-lg">
+                                        挖掘电缆沟前必须与地下管道、电缆等地下设施的主管单位取得联系，明确地下设施的确切位置，做好防范措施
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(1 , $record['wagufushexuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(1 , $record['wagufushezhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">2</td>
+                                    <td class="table-text-lg">
+                                        挖掘电缆沟前，现场应做好明显标志或围栏
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(2 , $record['wagufushexuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(2 , $record['wagufushezhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">3</td>
+                                    <td class="table-text-lg">
+                                        挖掘过程中碰到地下物体，不得擅自破坏，要验明后再进行
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(3 , $record['wagufushexuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(3 , $record['wagufushezhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">4</td>
+                                    <td class="table-text-lg">
+                                        在电缆路径上挖掘，不得使用尖镐，要使用铁锹，挖到电缆时更要注意，防止碰坏电缆
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(4 , $record['wagufushexuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(4 , $record['wagufushezhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">5</td>
+                                    <td class="table-text-lg">
+                                        挖掘电缆沟时，应及时清理坑口附近浮土、石块，坑边禁止外人逗留
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(5 , $record['wagufushexuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(5 , $record['wagufushezhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">6</td>
+                                    <td class="table-text-lg">
+                                        在超过1.5m深的基坑内工作，抛土要特别注意防止土石回落
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(6 , $record['wagufushexuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(6 , $record['wagufushezhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">7</td>
+                                    <td class="table-text-lg">
+                                        在松软土层挖沟应有防止塌方措施，禁止由下部掏挖土层
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(7 , $record['wagufushexuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(7 , $record['wagufushezhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">8</td>
+                                    <td class="table-text-lg">
+                                        进行石坑、冻土坑打眼时，打锤人应站在扶钎人侧面，严禁站在对面，并不得带手套，扶钎人应带安全帽
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(8 , $record['wagufushexuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(8 , $record['wagufushezhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">9</td>
+                                    <td class="table-text-lg">
+                                        在居民区及交通道路附近挖掘电缆沟，应设坑盖或可靠围栏，加挂警告标牌，夜间挂红灯
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(9 , $record['wagufushexuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(9 , $record['wagufushezhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">10</td>
+                                    <td class="table-text-lg">
+                                        使用梯子前必须检查是否牢固可靠
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(10 , $record['wagufushexuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(10 , $record['wagufushezhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">11</td>
+                                    <td class="table-text-lg">
+                                        在下水道、煤气管线、垃圾堆、潮湿地或有腐质物等附近挖基坑时，必须设监护人，监护人应密切注意挖坑人，防止煤气、沼气中毒
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(11 , $record['wagufushexuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(11 , $record['wagufushezhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div style="width: 50%;float: left;">
+                            <table style="width: 100%;font-size:13px;" border="1">
+                                <tr>
+                                    <!--TODO 敷设电缆工作安全注意事项-->
+                                    <td class="center table-text-lg" colspan="2">敷设电缆工作安全注意事项</td>
+                                    <td class="center table-text-lg" style="width: 6%;">选择</td>
+                                    <td class="center table-text-lg" style="width: 6%;">执行</td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">1</td>
+                                    <td class="table-text-lg">
+                                        电缆沟边应修有人工牵引电缆的平整通道
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(1 , $record['fushedianlanxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(1 , $record['fushedianlanzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">2</td>
+                                    <td class="table-text-lg">
+                                        电缆需要穿入管道时，过管道应预敷牵引线
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(2 , $record['fushedianlanxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(2 , $record['fushedianlanzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">3</td>
+                                    <td class="table-text-lg">
+                                        电缆盘及放线架应固定在硬质平整的地面上，轴、杠两端应打好临时拉线，电缆支架应有足够的机械强度
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(3 , $record['fushedianlanxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(3 , $record['fushedianlanzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">4</td>
+                                    <td class="table-text-lg">
+                                        电缆盘应设专人看守，电缆盘滚动时禁止用手制动
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(4 , $record['fushedianlanxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(4 , $record['fushedianlanzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">5</td>
+                                    <td class="table-text-lg">
+                                        电缆穿入保护管时，送电缆人的手与管口应保持一定距离
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(5, $record['fushedianlanxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(5 , $record['fushedianlanzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">6</td>
+                                    <td class="table-text-lg">
+                                        敷设电缆时，敷设通道应畅通，电缆沟、隧道、夹层内应清理干净，并有足够的安全照明
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(6 , $record['fushedianlanxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(6 , $record['fushedianlanzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">7</td>
+                                    <td class="table-text-lg">
+                                        敷设电缆时，敷设人员应均匀分布，缓缓走动，不得拥挤
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(7 , $record['fushedianlanxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(7 , $record['fushedianlanzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">8</td>
+                                    <td class="table-text-lg">
+                                        沿电缆直线部分每隔50m应有专人监护，转弯处和穿出管口处也应有专人监护，发现问题及时发出停止信号。电缆拐弯处，施工人员应站在外侧
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(8 , $record['fushedianlanxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(8 , $record['fushedianlanzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">9</td>
+                                    <td class="table-text-lg">
+                                        敷设过程中电缆不得翻身并保持足够的弯曲半径
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(9 , $record['fushedianlanxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(9 , $record['fushedianlanzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">10</td>
+                                    <td class="table-text-lg">
+                                        敷设电缆时，临时打开的隧道孔盖，应设围栏或标志，完工后应立即封
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(11 , $record['fushedianlanxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(11 , $record['fushedianlanzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">11</td>
+                                    <td class="table-text-lg">
+                                        电缆穿入配电盘时盘上应有专人接应，防止电缆触及带电部分或损坏设备
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(12 , $record['fushedianlanxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(12 , $record['fushedianlanzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">12</td>
+                                    <td class="table-text-lg">
+                                        电缆敷设进入高压室或配电所时，完工后应将穿越过的洞孔进行封堵，以达到防火、防水和防小动物的要求
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(13 , $record['fushedianlanxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(13 , $record['fushedianlanzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">13</td>
+                                    <td class="table-text-lg">
+                                        使用滑轮敷设电缆，不要将手放在滑轮前侧抚摸电缆，避免手挤进滑轮
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(14 , $record['fushedianlanxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(14 , $record['fushedianlanzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">14</td>
+                                    <td class="table-text-lg">
+                                        在电缆沟和隧道内敷设电缆时，禁止在电缆支架口拖拉，以免挂坏钢甲、铅皮、外护套
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(15 , $record['fushedianlanxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(15 , $record['fushedianlanzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">15</td>
+                                    <td class="table-text-lg">
+                                        再已运行电缆的沟道中敷设电缆，电缆盖板应放在稳妥位置，防止滑落砸伤运行电缆。所敷设电缆与运行电缆交叉时，应采取保护措施，防止摩擦，挂坏运行电缆造成事故
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(16 , $record['fushedianlanxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(16 , $record['fushedianlanzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">16</td>
+                                    <td class="table-text-lg">
+                                        敷设人员不得随意移动运行电缆和践踏悬空的运行电缆
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(16 , $record['fushedianlanxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(16 , $record['fushedianlanzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table style="width: 100%;font-size:13px;" border="1">
+                                <tr>
+                                    <!--TODO 电缆头制作安全注意事项-->
+                                    <td class="center table-text-lg" colspan="2">电缆头制作安全注意事项</td>
+                                    <td class="center table-text-lg" style="width: 6%;">选择</td>
+                                    <td class="center table-text-lg" style="width: 6%;">执行</td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">1</td>
+                                    <td class="table-text-lg">
+                                        制作中间接头时，接头坑边应留有通道，坑边不得放置工具、材料，传递物件注意轻接轻放
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(1 , $record['dianlantouxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(1 , $record['dianlantouzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">2</td>
+                                    <td class="table-text-lg">
+                                        用刀或其他工具时，不准对着人体
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(2 , $record['dianlantouxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(2 , $record['dianlantouzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">3</td>
+                                    <td class="table-text-lg">
+                                        喷灯使用完毕，应立即放气，放置在安全地点，冷却后装运
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(3 , $record['dianlantouxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(3 , $record['dianlantouzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">4</td>
+                                    <td class="table-text-lg">
+                                        使用携带型火炉或喷灯时，火焰与带电部分应保持足够的安全距离。并不得在带电导线、带电设备、变压器、油断路器附近以及电缆夹层、隧道、沟洞内对火炉或喷灯加油及点火
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(4 , $record['dianlantouxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(4, $record['dianlantouzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">5</td>
+                                    <td class="table-text-lg">
+                                        使用喷灯应先检查喷灯本体是否漏气或堵塞，喷灯加油不得超过桶容量的3/4
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(5 , $record['dianlantouxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(5 , $record['dianlantouzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table style="width: 100%;font-size:13px;" border="1">
+                                <tr>
+                                    <!--TODO 电缆试验（未投运电缆）工作安全注意事项-->
+                                    <td class="center table-text-lg" colspan="2">电缆试验（未投运电缆）工作安全注意事项</td>
+                                    <td class="center table-text-lg" style="width: 6%;">选择</td>
+                                    <td class="center table-text-lg" style="width: 6%;">执行</td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">1</td>
+                                    <td class="table-text-lg">
+                                        高压试验工作不得少于两人。试验负责人应对全体试验人员详细交待试验中的安全注意事项，并对实验过程进行监护
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(1 , $record['dianlanshiyanxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(1 , $record['dianlanshiyanzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">2</td>
+                                    <td class="table-text-lg">
+                                        试验现场应装设围栏，悬挂警告牌，电缆另一端派专人看守
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(2 , $record['dianlanshiyanxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(2 , $record['dianlanshiyanzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">3</td>
+                                    <td class="table-text-lg">
+                                        注意试验装置的正确接线，试验装置的金属外壳应可靠接地，试验电源开关应有明显断开点
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(3 , $record['dianlanshiyanxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(3 , $record['dianlanshiyanzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">4</td>
+                                    <td class="table-text-lg">
+                                        试验要使用专用试验电源，不得使用绝缘老化的电线，安全开关要完好，熔丝应合格
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(4 , $record['dianlanshiyanxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(4 , $record['dianlanshiyanzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">5</td>
+                                    <td class="table-text-lg">
+                                        试验加压前必须认真检查试验接线、试验仪表基调压的起始状态正确无误后，通知所有人员离开被试电缆，取得负责人许可方可加压。加压时操作人应站在绝缘垫上
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(4 , $record['dianlanshiyanxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(5 , $record['dianlanshiyanzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">6</td>
+                                    <td class="table-text-lg">
+                                        试验中变更接线或试验结束时，应首先将调压器退回零位，断开试验电源，并对电缆进行充分放电
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(6 , $record['dianlanshiyanxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(6 , $record['dianlanshiyanzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">7</td>
+                                    <td class="table-text-lg">
+                                        做交流耐压试验时，实验人员要与试验设备和被试验设备保持足够的安全距离
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(7 , $record['dianlanshiyanxuanze'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+                                            <php> if(in_array(7 , $record['dianlanshiyanzhixing'])){ echo "√";}else{echo "口";} </php>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table style="width: 100%;font-size:13px;" border="1">
+                                <tr>
+                                    <!--TODO 其他安全注意事项-->
+                                    <td class="center table-text-lg" colspan="2">其他安全注意事项</td>
+                                    <td class="center table-text-lg" style="width: 6%;">选择</td>
+                                    <td class="center table-text-lg" style="width: 6%;">执行</td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">1</td>
+                                    <td class="table-text-lg">
+
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">2</td>
+                                    <td class="table-text-lg">
+
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">3</td>
+                                    <td class="table-text-lg">
+
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">4</td>
+                                    <td class="table-text-lg">
+
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">5</td>
+                                    <td class="table-text-lg">
+
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">6</td>
+                                    <td class="table-text-lg">
+
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg col-sm-1">7</td>
+                                    <td class="table-text-lg">
+
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+
+                                        </label>
+                                    </td>
+                                    <td class="center table-text-lg col-sm-1">
+                                        <label>
+
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table style="width: 100%;font-size:13px;" border="1">
+                                <tr>
+                                    <td class="center table-text-lg" colspan="4">
+                                        受安全技术交底人员签名
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center table-text-lg" colspan="4">
+                                        <br><br><br><br><br><br><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">
+                                        <table class="table table-striped table-bordered table-hover no-footer">
+                                            <tr>
+                                                <td colspan="4" class="table-text-lg center">
+                                                    ________年______月______日______时______分 至 _______年______月______日______时______分
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="center table-text-lg col-sm-2">
+                                                    工作开始时间
+                                                </td>
+                                                <td class="center table-text-lg col-sm-4">
+                                                    <empty name="record['gongzuokaishishijian'][0]">&nbsp;&nbsp;</empty>{$record['gongzuokaishishijian'][0]}年
+                                                    <empty name="record['gongzuokaishishijian'][1]">&nbsp;&nbsp;</empty>{$record['gongzuokaishishijian'][1]}月
+                                                    <empty name="record['gongzuokaishishijian'][2]">&nbsp;&nbsp;</empty>{$record['gongzuokaishishijian'][2]}日
+                                                    <empty name="record['gongzuokaishishijian'][3]">&nbsp;&nbsp;</empty>{$record['gongzuokaishishijian'][3]}时
+                                                    <empty name="record['gongzuokaishishijian'][4]">&nbsp;&nbsp;</empty>{$record['gongzuokaishishijian'][4]}分
+                                                </td>
+                                                <td class="center table-text-lg col-sm-3">
+                                                    施工（工作）负责人
+                                                </td>
+                                                <td class="center table-text-lg col-sm-3">
+                                                    {$record['kaishishijianqianming']}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="center table-text-lg col-sm-2">
+                                                    工作结束时间
+                                                </td>
+                                                <td class="center table-text-lg col-sm-4">
+                                                    <empty name="record['gongzuojieshushijian'][0]">&nbsp;&nbsp;</empty>{$record['gongzuojieshushijian'][0]}年
+                                                    <empty name="record['gongzuojieshushijian'][1]">&nbsp;&nbsp;</empty>{$record['gongzuojieshushijian'][1]}月
+                                                    <empty name="record['gongzuojieshushijian'][2]">&nbsp;&nbsp;</empty>{$record['gongzuojieshushijian'][2]}日
+                                                    <empty name="record['gongzuojieshushijian'][3]">&nbsp;&nbsp;</empty>{$record['gongzuojieshushijian'][3]}时
+                                                    <empty name="record['gongzuojieshushijian'][4]">&nbsp;&nbsp;</empty>{$record['gongzuojieshushijian'][4]}分
+                                                </td>
+                                                <td class="center table-text-lg col-sm-3">
+                                                    施工（工作）负责人
+                                                </td>
+                                                <td class="center table-text-lg col-sm-3">
+                                                    {$record['jieshushijianqianming']}
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div style="width: 100%">
+                            <table style="width: 100%;font-size:13px;" border="1">
+                                <tr>
+                                    <td class="col-sm-2">
+                                        填写人：
+                                    </td>
+                                    <td class="col-sm-2">
+                                        签发人：
+                                    </td>
+                                    <td class="col-sm-3">
+                                        签发时间：_____年____月____日____时____分
+                                    </td>
+                                    <td class="col-sm-2">
+                                        施工（工作）负责人：
+                                    </td>
+                                    <td class="col-sm-3">
+                                        收到时间：_____年____月____日____时____分
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="col-sm-12" style="width: 100%;">
+                                <small>
+                                    说明：1.根据工作内容选择安全注意事项，并在选择栏内“√”。<br/>
+                                    2.对已执行的安全注意事项在执行栏内“√”。<br/>
+                                    3.其他安全注意事项填写相应的空格内。
+                                </small>
+                                <div style="margin-top:-10px; float: right; width: 80px; ">
+                                    <p style="padding: 5px; border: 1px solid #000; width:70px; ">工作结束</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div><!-- /.page-content-area -->
+        </div><!-- /.page-content -->
+    </div><!-- /.main-content -->
+</div><!-- /.main-container -->
+<include file="Common:common_js" />
+    <script language="javascript" type="text/javascript">
+        var LODOP; //声明为全局变量
+        function prn1_preview() {
+            CreateOneFormPage();
+            LODOP.PREVIEW();
+        };
+        function CreateOneFormPage(){
+            LODOP=getLodop();
+            LODOP.PRINT_INIT("打印");
+            LODOP.SET_PRINT_STYLE("FontSize",10);
+            //LODOP.SET_PRINT_STYLE("Bold",1);
+            LODOP.ADD_PRINT_HTM(0,0,"100%","100%",document.getElementById("form1").innerHTML);
+        };
+    </script>
+<script>
+    jQuery(function($) {
+        $('.chosen-select').chosen({allow_single_deselect:true});
+        $(window).off('resize.chosen').on('resize.chosen', function() {
+            $('.chosen-select').each(function() {
+                var $this = $(this);
+                $this.next().css({'width': $this.parent().width()});
+            })
+        }).trigger('resize.chosen');
+        var setTime = setInterval(function(){
+            if(document.readyState == "complete"){
+                prn1_preview();
+                clearInterval(setTime);
+            }
+        },300);
+    });
+</script>
+</body>
+</html>

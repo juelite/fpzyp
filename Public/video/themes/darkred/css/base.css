@@ -1,0 +1,183 @@
+/*
+* DarkRed Style
+* author: Liufengchun
+* creat: 2013-06-26
+* update: 2013-06-30
+*/
+
+a { color: #333; }
+a:hover { color: #E83434; }
+
+/* # Top part
+================================================== */
+#top { left: auto; right: 0; background: none; border: none; box-shadow: none; width: auto; }
+#top .layout {min-width: 0;}
+/*=== Site navigation ===*/
+.topNav a,.userNav a { color: #9a9a9a; }
+.topNav a:hover, .userNav a:hover, .userNav li.hover a { color: #E83434; }
+.topNav li.active a { color: #E83434; }
+
+/*=== User navigation ===*/
+ul.userNav {margin-right: 10px;}
+
+/* # Header part
+================================================== */
+#header { background: #fff; filter: none; top: 0; }
+h1.title {margin: 6px 10px; padding-left: 60px; height: 48px; line-height: 48px; color: #393939; text-shadow: none; background: url(../images/logo.png) no-repeat 0 0; }
+
+/* === User Profile === */
+.uName, .userNav .uName a { color: #333; }
+
+/* === Sprite === */
+.sprite,.mainNav .nav li,#footer .copyright .logo,.topSearch .searchBtn,.hasDot li a,.continue li,.dashboard dd ol li a { background-image: url(../images/sprite.png);}
+
+#navbar {top:60px;}
+.mainNav { background: #393939; border: none; height: 35px; }
+.mainNav .nav li .ddmenu { border: none; }
+.mainNav .nav .ddmenu > ul { background:#FFF; border: 1px solid #EEE; }
+.mainNav .nav ul ul { background: #FFF; border-bottom: 1px solid #EEE; }
+.mainNav .nav ul > li:last-child ul {border: none; }
+.mainNav .nav > li > a { line-height: 35px; }
+.mainNav .nav > li.active > a,
+.mainNav .nav > li.hover > a,
+.mainNav .nav > li:hover > a { background: #E83434; color: #FFF; }
+.mainNav .nav li li > a { background: none; color: #333; }
+.mainNav .nav li li a:hover { color: #E83434; }
+.mainNav .nav li li li > a { background: none; color: #666; }
+ 
+/* === Second navigation === */
+.secNav { height: 33px; background: #f6f6f6; border-bottom: 1px solid #d2d2d2; }
+.secNav .nav { position: relative; z-index: 2; }
+.secNav .nav li { margin-right: 2px; padding: 0; }
+.secNav .nav li:hover,
+.secNav .nav li.active { border-bottom: 2px solid #E83434; }
+.secNav .nav li a { color: #333; text-shadow: none; }
+.secNav .nav li a:hover { color: #E83434; }
+.secNav .nav li.active a { color: #E83434; }
+/* === Sidebar widgets === */
+.subNav dd li.active { background: #E83434; color: #fff; }
+
+#content {top:129px;}
+#content .grid-m {top:0;}
+
+.breadLine { border-bottom: 1px solid #d2d2d2; background: #f6f6f6; }
+ul.breadcrumbs li { font-weight:normal; color: #E83434; }
+ul.breadcrumbs li a { color: #333; }
+ul.breadcrumbs li a:hover { color: #E83434; }
+
+/* === Buttons === */
+/*
+.buttonS, .buttonM, .buttonL, .buttonH, .buttonW, .ui-dialog .ui-dialog-buttonpane button { background: transparent url(../images/buttons.png) repeat-x 0 -9999px; border: 1px solid transparent; color: #333; }
+.buttonS:hover, .buttonM:hover, .buttonL:hover, .buttonH:hover, .buttonW:hover, .ui-dialog .ui-dialog-buttonpane button:hover { border-color: #C1C0C0; color: #333;
+    background-color: #ECE8E8;
+    background-position: 0 0;
+}
+.buttonS.active, .buttonM.active, .buttonL.active, .buttonH.active, .buttonW.active, .ui-dialog .ui-dialog-buttonpane button.active,
+.buttonS:active, .buttonM:active, .buttonL:active, .buttonH:active, .buttonW:active, .ui-dialog .ui-dialog-buttonpane button:active, .btn-group.open .buttonS {
+    background-color: #FAF8F8;
+    background-position: 0 -100px;
+    border-color: #A3A0A0;
+}
+
+.bDefault,.dualBtn,.searchLine button, .searchBox button, .bBlue, .bGreyish, .bLightBlue, .bWarning, .bError, .bSuccess, .ui-dialog .ui-dialog-buttonpane button.bPrimary { color: #fff !important; }
+.bDefault:hover, .bBlue:hover, .bGreyish:hover, .bLightBlue:hover, .bWarning:hover, .bError:hover, .bSuccess:hover, .ui-dialog .ui-dialog-buttonpane button.bPrimary:hover { color: #fff !important; }
+
+.bDefault, .dualBtn, .searchLine button, .searchBox button, .ui-dialog .ui-dialog-buttonpane button { border: 1px solid #C1C0C0 !important; color: #333 !important;
+    background-color: #E4E0E0;
+    background-position: 0 0;
+}
+
+.bDefault:hover, .dualBtn:hover, .searchLine button:hover, .searchBox button:hover, .ui-dialog .ui-dialog-buttonpane button:hover { color: #333 !important;
+    background-color: #ECE8E8;
+    background-position: 0 -50px;
+}
+.bDefault.active, .dualBtn.active, .searchLine button.active, .searchBox button:active, .ui-dialog .ui-dialog-buttonpane button.active,
+.bDefault:active, .dualBtn:active, .searchLine button:active, .searchBox button:active, .ui-dialog .ui-dialog-buttonpane button:active, .btn-group.open .bDefault {
+    background-color: #FAF8F8;
+    background-position: 0 -100px;
+    border-color: #A3A0A0;
+}
+.bBack { margin-left: 20px; padding: 0; color: #3063B0; border: none; }
+.bBack:hover, .bBack:active { padding: 0; color: #ff6600; text-decoration: underline; background: none; box-shadow: none; }
+*/
+
+/* === Btngroup === */
+.btn-group .buttonS,
+.btn-toolbar .buttonS,
+.input-append .buttonS { background-image: url(../images/buttons.png); }
+
+.btn-group .bBlue,
+.input-append .bBlue { border: 1px solid #7D0909 !important;
+    background-color: #E83434;
+    background-position: 0 -450px;
+}
+
+.btn-group .bBlue:hover,
+.input-append .bBlue:hover {
+    background-color: #E83434;
+    background-position: 0 -500px;
+}
+
+.btn-group .bBlue.active,
+.input-append .bBlue.active,
+.btn-group .bBlue:active,
+.input-append .bBlue:active,
+.btn-group.open .bBlue {
+    background-color: #7D0909;
+    background-position: 0 -550px;
+    border-color: #7D0909 !important;
+}
+
+/* # Tables
+================================================== */
+table thead td { background: #E5E5DD url(../images/repeat.png) repeat-x 0 -9999px; }
+table thead td.sortCol:hover { background-position: 0 -300px; color: #E83434; }
+table thead td.sortCol div span { background-image: url(../images/tables/sort.png); }
+table tbody td.sortCol { background: #F8F8F8; }
+table tbody tr.thisRow td, table tbody tr.thisRow td.sortCol { background: #E83434 !important; color: #fff; }
+table tbody tr.thisRow td a:link { color: #fff; }
+table tbody tr:hover td { background: #FCF1F1; }
+
+.tLight tbody tr:hover td.sortCol, .tLight tbody tr.hover td.sortCol { background: #FCF1F1; }
+.tLight tbody tr:nth-child(even) { background: #f8f8f8; }
+.tLight tbody tr.even { background: #F8F8F8; }
+.tLight tbody td.sortCol { background: #FCF1F1; }
+.tLight tbody tr:nth-child(even) td.sortCol { background: #F7D7D7; }
+.tLight tbody tr.even td.sortCol { background: #F7D7D7; }
+
+table a { color: #E83434; }
+table a:hover { color: #ff6600; }
+
+/*
+fieldset { border-top: 2px solid #FFE7CE; }
+fieldset legend { color: #E83434; }
+fieldset.blueLegend legend { background: #F7D7D7; }
+*/
+
+/* === Tabs === */
+/* Content tabs */
+ul.tabs { color: #333; border-bottom: 2px solid #E83434; }
+
+ul.tabs li, ul.tabs li.ui-state-default { background: #fff; border: 1px solid #cacaca; }
+ul.tabs li a, ul.tabs li.ui-state-default a { color: #9a9a9a; }
+ul.tabs li a:hover { color: #333; }
+ul.tabs li:hover { background: #fff; }
+html ul.tabs li.active, html ul.tabs li.ui-state-active  { background: #E83434; border-color: #E83434; }
+html ul.tabs li.active a, html ul.tabs li.ui-state-active a { color: #fff; }
+
+.pageTitle a { color: #333; }
+.pageTitle a:hover { color: #f60; }
+
+.browser .main-wrap { border-color: #E83434; }
+.folder li.active a { background-color: #E83434; }
+
+/* === Icons === */
+.ico, .assigned i, .unassigned i, .added i, .status-open i, .status-closed i, .status-cluster i, .status-node i, .status-enable i, .status-disable i, .role-normal i, .role-general i, .role-admin i, .extraline i, .treeview .ztree li span.ico.fun_ico_docu, .treeview .ztree li span.ico.fun_ico_open, .treeview .ztree li span.ico.fun_ico_close, .treeview .ztree li span.ico.fun-group_ico_docu, .treeview .ztree li span.ico.fun-group_ico_open, .treeview .ztree li span.ico.fun-group_ico_close, .treeview .ztree li span.ico.fun-link_ico_docu, .treeview .ztree li span.ico.fun-link_ico_open, .treeview .ztree li span.ico.fun-link_ico_close, .treeview .ztree li span.ico.fun-btn_ico_docu, .treeview .ztree li span.ico.fun-btn_ico_open, .treeview .ztree li span.ico.fun-btn_ico_close { background-image: url(../images/icons.png); }
+
+
+/* === Dashboard === */
+.dashboard dd ol li { background-image: url(../images/arrow_red.gif); }
+.dashboard dd ol li a { color: #E83434; }
+
+/* === Personal Page === */
+.personal #header, .topics #header { border-bottom: 2px solid #E83434; }

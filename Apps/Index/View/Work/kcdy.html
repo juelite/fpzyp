@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include file="Common:header" />
+    <style>
+        .table-text-lg {vertical-align: middle !important;}
+        body {
+            font-size: 15px !important;
+        }
+        .table {
+            margin-bottom: 0px !important;
+        }
+        .table-bordered {
+            border: 2px solid #000 !important;
+        }
+        .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
+            border: 2px solid #000 !important;
+        }
+    </style>
+    <script>
+        function myprint() {
+            window.print();
+        }
+    </script>
+</head>
+<body class="no-skin" onload="myprint();">
+
+    <div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+    </script>
+
+    <div class="main-content">
+        <div class="page-content">
+            <div class="page-content-area">
+                <form action="__SELF__" method="post">
+                    <div class="col-sm-12 text-center">
+                        <h2>温岭市非普电气有限公司配电工程现场勘查记录</h2>
+                    </div>
+                    <table class="table table-striped table-bordered table-hover no-footer">
+                        <tbody>
+                        <tr role="row" class="odd">
+                            <td colspan="3">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tr>
+                                        <td class="center table-text-lg">工作名称或工作地点</td>
+                                        <td class="center table-text-lg">工作内容</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <empty name="record['gongzuomingcheng1']">&nbsp;</empty>
+                                            {$record['gongzuomingcheng1']}
+                                        </td>
+                                        <td>
+                                            {$record['gongzuoneirong1']}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <empty name="record['gongzuomingcheng2']">&nbsp;</empty>
+                                            {$record['gongzuomingcheng2']}
+                                        </td>
+                                        <td>
+                                            {$record['gongzuoneirong2']}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <empty name="record['gongzuomingcheng3']">&nbsp;</empty>
+                                            {$record['gongzuomingcheng3']}
+                                        </td>
+                                        <td>
+                                            {$record['gongzuoneirong3']}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <empty name="record['gongzuomingcheng4']">&nbsp;</empty>
+                                            {$record['gongzuomingcheng4']}
+                                        </td>
+                                        <td>
+                                            {$record['gongzuoneirong4']}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <empty name="record['gongzuomingcheng5']">&nbsp;</empty>
+                                            {$record['gongzuomingcheng5']}
+                                        </td>
+                                        <td>
+                                            {$record['gongzuoneirong5']}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <empty name="record['gongzuomingcheng6']">&nbsp;</empty>
+                                            {$record['gongzuomingcheng6']}
+                                        </td>
+                                        <td>
+                                            {$record['gongzuoneirong6']}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg">工作条件（新装/增容/减容）</td>
+                                        <td class="center table-text-lg">
+                                            {$record['gongzuotiaojian']}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td class="center table-text-lg"> 计划工作时间 </td>
+                                                    <td> {$record['jihuagongzuoshijian_kaishi']} 到{$record['jihuagongzuoshijian_jieshu']} </td> </tr>
+                                            </table>
+                                        </td>
+                                        <td class="center table-text-lg">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td class="center table-text-lg">
+                                                        施工班组
+                                                    </td>
+                                                    <td>
+                                                        {$record['shigongbanzu']}
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="col-sm-4">
+                                <b>安全措施要求：</b>{$record['anquanshigongyaoqiu']}
+                            </td>
+                        </tr>
+                        <tr role="row" class="odd">
+                            <td class="center table-text-lg col-sm-4">
+                                <notempty name="record['gongzuofanwei']" >
+                                    <img src="/Uploads/{$record['gongzuofanwei']}" style="width: 550px;height: 275px;">
+                                <else />
+                                    未上传图片
+                                </notempty>
+
+                            </td>
+                            <td colspan="3">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tr>
+                                        <td class="center table-text-lg" colspan="3">涉及增容、减容或检修配合停电等情况</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg">
+                                            线路或设备名称
+                                        </td>
+                                        <td class="center table-text-lg">
+                                            管辖单位
+                                        </td>
+                                        <td class="center table-text-lg">
+                                            应采取的安全措施
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <empty name="record['xianluhuoshebeimingcheng1']">&nbsp;</empty>
+                                            {$record['xianluhuoshebeimingcheng1']}
+                                        </td>
+                                        <td>
+                                            {$record['guanxiadanwei1']}
+                                        </td>
+                                        <td>
+                                            {$record['yingcaidequanquancuoshi1']}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <empty name="record['xianluhuoshebeimingcheng2']">&nbsp;</empty>
+                                            {$record['xianluhuoshebeimingcheng2']}
+                                        </td>
+                                        <td>
+                                            {$record['guanxiadanwei2']}
+                                        </td>
+                                        <td>
+                                            {$record['yingcaidequanquancuoshi2']}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <empty name="record['xianluhuoshebeimingcheng3']">&nbsp;</empty>
+                                            {$record['xianluhuoshebeimingcheng3']}
+                                        </td>
+                                        <td>
+                                            {$record['guanxiadanwei3']}
+                                        </td>
+                                        <td>
+                                            {$record['yingcaidequanquancuoshi3']}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <empty name="record['xianluhuoshebeimingcheng4']">&nbsp;</empty>
+                                            {$record['xianluhuoshebeimingcheng4']}
+                                        </td>
+                                        <td>
+                                            {$record['guanxiadanwei4']}
+                                        </td>
+                                        <td>
+                                            {$record['yingcaidequanquancuoshi4']}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <empty name="record['xianluhuoshebeimingcheng5']">&nbsp;</empty>
+                                            {$record['xianluhuoshebeimingcheng5']}
+                                        </td>
+                                        <td>
+                                            {$record['guanxiadanwei5']}
+                                        </td>
+                                        <td>
+                                            {$record['yingcaidequanquancuoshi5']}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg">
+                                            双电源、发电机等倒送电情况
+                                        </td>
+
+                                        <td class="center table-text-lg" colspan="2">
+                                            应采取的安全措施
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <empty name="record['shuangdianyuanfadianjisongdian1']">&nbsp;</empty>
+                                            {$record['shuangdianyuanfadianjisongdian1']}
+                                        </td>
+                                        <td colspan="2">
+                                            {$record['yingcaidequanquancuoshi6']}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <empty name="record['shuangdianyuanfadianjisongdian2']">&nbsp;</empty>
+                                            {$record['shuangdianyuanfadianjisongdian2']}
+                                        </td>
+                                        <td colspan="2">
+                                            {$record['yingcaidequanquancuoshi7']}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <empty name="record['shuangdianyuanfadianjisongdian3']">&nbsp;</empty>
+                                            {$record['shuangdianyuanfadianjisongdian3']}
+                                        </td>
+                                        <td colspan="2">
+                                            {$record['yingcaidequanquancuoshi8']}
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr role="row" class="odd">
+                            <td colspan="4">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tr>
+                                        <td class="center table-text-lg">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-6">
+                                                        配合线路停电状态
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-6">
+                                                        {$record['peihedianlutingdianzhuangtai']}
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-6">
+                                                        应采取的安全措施
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-6">
+                                                        {$record['yingcaidequanquancuoshi9']}
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-6">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td>
+                                                        {$record['qitaanquancuoshiyaoqiu']}
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        {$record['gongzuochengxu']}
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-6">
+                                                        <table class="table table-striped table-bordered table-hover no-footer">
+                                                            <tr>
+                                                                <td class="center table-text-lg">
+                                                                    现场勘察负责人
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    {$record['xianchangkaichafuzeren']}
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    参加勘察人员
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    {$record['canjiakancarenyuan']}
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="center table-text-lg">
+                                                                    勘察日期
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    {$record['kanchariqi']}
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    实际施工时间
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    {$record['shijishigongriqi']}
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="center table-text-lg">
+                                                                    作业票编号
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    {$record['gongdanbianhao']}
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    施工负责人
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    {$record['shigongfuzeren']}
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div><!-- /.page-content-area -->
+        </div><!-- /.page-content -->
+    </div><!-- /.main-content -->
+</div><!-- /.main-container -->
+<include file="Common:common_js" />
+
+<script>
+    jQuery(function($) {
+        $('.chosen-select').chosen({allow_single_deselect:true});
+        $(window).off('resize.chosen').on('resize.chosen', function() {
+            $('.chosen-select').each(function() {
+                var $this = $(this);
+                $this.next().css({'width': $this.parent().width()});
+            })
+        }).trigger('resize.chosen');
+    });
+</script>
+</body>
+</html>

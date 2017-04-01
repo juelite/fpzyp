@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include file="Common:header" />
+    <style>
+        .table-text-lg {vertical-align: middle !important;}
+        .underline-input {
+            border-top: none !important;
+            border-left: none !important;
+            border-right: none !important;
+            border-bottom: 1px solid #000 !important;
+            width: 40px;
+        }
+        .table {
+            margin-bottom: 0px !important;
+        }
+    </style>
+</head>
+<body class="no-skin">
+    <!-- #section:basics/navbar.layout -->
+    <include file="Common:top_maps" />
+    <!-- /section:basics/navbar.layout -->
+    <div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+    </script>
+    <!-- #section:basics/sidebar -->
+    <div id="sidebar" class="sidebar responsive">
+        <include file="Common:left_maps" />
+    </div>
+
+    <!-- /section:basics/sidebar -->
+    <div class="main-content">
+        <div class="page-content">
+            <div class="page-content-area">
+                <div class="page-header">
+                    <h1>
+                        作业票打印
+                        <small>
+                            <i class="ace-icon fa fa-angle-double-right"></i>
+                            电缆安全施工作业票
+                        </small>
+                    </h1>
+                </div><!-- /.page-header -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3 class="header smaller lighter green">打印列表</h3>
+                        <a class="btn btn-success" target="_blank" href="__SELF__&act=zyp1">
+                            <i class="ace-icon fa fa-print bigger-160"></i>
+                            作业票第一联
+                        </a>
+                        <a class="btn btn-success" target="_blank"  href="__SELF__&act=zyp2">
+                            <i class="ace-icon fa fa-print bigger-160"></i>
+                            作业票第二联
+                        </a>
+                        <a class="btn btn-success" target="_blank"  href="{:U('work/dy?act=kc&id='.$tmp['kcId'])}" <empty name="tmp['kcId']">disabled</empty>>
+                            <i class="ace-icon fa fa-print bigger-160"></i>
+                            现场勘察单
+                        </a>
+                        <a class="btn btn-success" target="_blank"  href="{:U('work/dy?act=hy&id='.$tmp['hyId'])}" <empty name="tmp['hyId']">disabled</empty>>
+                            <i class="ace-icon fa fa-print bigger-160"></i>
+                            班前班后会
+                        </a>
+
+                        <a class="btn btn-success" target="_blank"  href="{:U('work/dy?act=aqjy&id='.$tmp['aqjyId'])}" <empty name="tmp['aqjyId']">disabled</empty>>
+                        <i class="ace-icon fa fa-print bigger-160"></i>
+                        安全教育卡
+                        </a>
+                        <a class="btn btn-success" target="_blank"  href="{:U('work/dy?act=dg&cno='.$tmp['gongdanbianhao'])}">
+                            <i class="ace-icon fa fa-print bigger-160"></i>
+                            作业票附页
+                        </a>
+                        <a class="btn btn-success" target="_blank"  href="{:U('work/dy?act=lddg&cno='.$tmp['gongdanbianhao'])}">
+                            <i class="ace-icon fa fa-print bigger-160"></i>
+                            领导到岗确认单
+                        </a>
+                        <!-- /section:elements.button.app -->
+                    </div>
+                </div>
+            </div><!-- /.page-content-area -->
+        </div><!-- /.page-content -->
+    </div><!-- /.main-content -->
+</div><!-- /.main-container -->
+<include file="Common:common_js" />
+
+<script>
+    jQuery(function($) {
+        $('.chosen-select').chosen({allow_single_deselect:true});
+        $(window).off('resize.chosen').on('resize.chosen', function() {
+            $('.chosen-select').each(function() {
+                var $this = $(this);
+                $this.next().css({'width': $this.parent().width()});
+            })
+        }).trigger('resize.chosen');
+    });
+</script>
+</body>
+</html>

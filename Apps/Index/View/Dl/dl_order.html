@@ -1,0 +1,1766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include file="Common:header" />
+    <style>
+        .table-text-lg {vertical-align: middle !important;}
+        .underline-input {
+            border-top: none !important;
+            border-left: none !important;
+            border-right: none !important;
+            border-bottom: 1px solid #000 !important;
+            width: 40px;
+        }
+        .table{ margin-bottom:0px;!important;}
+    </style>
+</head>
+<body class="no-skin">
+    <!-- #section:basics/navbar.layout -->
+    <include file="Common:top_maps" />
+    <!-- /section:basics/navbar.layout -->
+    <div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+    </script>
+    <!-- #section:basics/sidebar -->
+    <div id="sidebar" class="sidebar responsive">
+        <include file="Common:left_maps" />
+    </div>
+
+    <!-- /section:basics/sidebar -->
+    <div class="main-content">
+        <!-- #section:basics/content.breadcrumbs -->
+        <div class="breadcrumbs" id="breadcrumbs">
+            <script type="text/javascript">
+                try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+            </script>
+
+            <ul class="breadcrumb">
+                <li>
+                    <i class="ace-icon fa fa-home home-icon"></i>
+                    <a href="{:U('main/index')}">首页</a>
+                </li>
+                <li class="active">作业票</li>
+                <li class="active">添加作业票</li>
+            </ul><!-- /.breadcrumb -->
+            <!-- /section:basics/content.searchbox -->
+        </div>
+        <!-- /section:basics/content.breadcrumbs -->
+        <div class="page-content">
+            <div class="page-content-area">
+                <div class="page-header">
+                    <h1>
+                        添加作业票
+                        <small>
+                            <i class="ace-icon fa fa-angle-double-right"></i>
+                            电路安全施工作业票
+                        </small>
+                    </h1>
+                </div><!-- /.page-header -->
+                <form action="__SELF__" method="post">
+                    <div class="tabbable">
+                        <ul class="nav nav-tabs" id="myTab" style="height: 35px;">
+                            <li class="active"> <a data-toggle="tab" href="#1"> 作业票信息 </a> </li>
+                            <li> <a data-toggle="tab" href="#2"> 注意事项一 </a> </li>
+                            <li> <a data-toggle="tab" href="#3"> 注意事项二 </a> </li>
+                            <li> <a data-toggle="tab" href="#4"> 注意事项三 </a> </li>
+                            <li> <a data-toggle="tab" href="#5"> 注意事项四 </a> </li>
+                            <li> <a data-toggle="tab" href="#6"> 注意事项五 </a> </li>
+                            <li> <a data-toggle="tab" href="#7"> 注意事项六 </a> </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div id="1" class="tab-pane fade in active">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tbody>
+                                        <tr role="row" class="odd">
+                                            <td class="center table-text-lg col-sm-2">
+                                                工作名称
+                                            </td>
+                                            <td class="col-sm-5" colspan="3">
+                                                <input type="text" name="gongchengmingcheng" class="col-xs-10 col-sm-12">
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td class="center table-text-lg col-sm-2">
+                                                工作班组
+                                            </td>
+                                            <td class="col-sm-4" >
+                                                <select name="gongzuobanzu"  class="col-xs-10 col-sm-12">
+                                                    <volist name="subGroup" id="subG">
+                                                        <option value="{$subG.index_code}">{$subG.name}</option>
+                                                    </volist>
+                                                </select>
+                                            </td>
+                                            <td class="center table-text-lg col-sm-2">
+                                                施工负责人
+                                            </td>
+                                            <td class="col-sm-4" >
+                                                <input type="text" name="shigongfuzeren" class="col-xs-10 col-sm-12">
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td class="center table-text-lg col-sm-2">
+                                                施工人员（除负责人）
+                                            </td>
+                                            <td class="col-sm-5" colspan="3">
+                                                职工<input type="text" name="zhigongrenshu" class="underline-input">人、
+                                                技工<input type="text" name="jigongrenshu" class="underline-input">人、
+                                                民工<input type="text" name="mingongrenshu" class="underline-input">人，
+                                                共<input type="text" name="renshuzonghe" class="underline-input">人
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td class="center table-text-lg col-sm-2">
+                                                计划工作时间
+                                            </td>
+                                            <td class="col-sm-5" colspan="3">
+                                                <div class="col-xs-8 col-sm-11">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="fa fa-calendar bigger-110"></i>
+                                                        </span>
+                                                        <input class="form-control" type="text" name="jihuagongzuoshijian_kaishi" id="jihuagongzuoshijian_kaishi"  value="{$record['jihuagongzuoshijian_kaishi']}" />
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="fa fa-calendar bigger-110"></i>
+                                                        </span>
+                                                        <input class="form-control" type="text" name="jihuagongzuoshijian_jieshu" id="jihuagongzuoshijian_jieshu"  value="{$record['jihuagongzuoshijian_jieshu']}" />
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td class="center table-text-lg" colspan="1">
+                                                分项作业项目
+                                            </td>
+                                            <td class="center table-text-lg" colspan="3">
+                                                岗位负责人
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td class="table-text-lg" colspan="1">
+                                                <label>
+                                                    <input name="dianlanyunshuhezhuangxie" type="checkbox" class="ace" value="1" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                                电缆井、基础开挖
+                                            </td>
+                                            <td class="center table-text-lg" colspan="3">
+                                                <input type="text" name="kaiwa" class="col-xs-10 col-sm-12">
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td class="table-text-lg" colspan="1">
+                                                <label>
+                                                    <input name="libagang" type="checkbox" class="ace" value="1" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                                立、拔杆塔
+                                            </td>
+                                            <td class="center table-text-lg" colspan="3">
+                                                <table class="table table-striped table-bordered table-hover no-footer">
+                                                    <tr>
+                                                        <td class="table-text-lg">
+                                                            指挥
+                                                        </td>
+                                                        <td class="table-text-lg">
+                                                            <input type="text" name="libagang_zh" class="col-xs-10 col-sm-12">
+                                                        </td>
+                                                        <td class="table-text-lg">
+                                                            根部
+                                                        </td>
+                                                        <td class="table-text-lg">
+                                                            <input type="text" name="libagang_gb" class="col-xs-10 col-sm-12">
+                                                        </td>
+                                                        <td class="table-text-lg">
+                                                            浪风
+                                                        </td>
+                                                        <td class="table-text-lg">
+                                                            <input type="text" name="libagang_lf" class="col-xs-10 col-sm-12">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td class="table-text-lg" colspan="1">
+                                                <label>
+                                                    <input name="fangxian" type="checkbox" class="ace" value="1" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                                放紧线、撤线
+                                            </td>
+                                            <td class="center table-text-lg" colspan="3">
+                                                <table class="table table-striped table-bordered table-hover no-footer">
+                                                    <tr>
+                                                        <td class="table-text-lg">
+                                                            领线
+                                                        </td>
+                                                        <td class="table-text-lg">
+                                                            <input type="text" name="fangxian_lx" class="col-xs-10 col-sm-12">
+                                                        </td>
+                                                        <td class="table-text-lg">
+                                                            放线
+                                                        </td>
+                                                        <td class="table-text-lg">
+                                                            <input type="text" name="libagang_fx" class="col-xs-10 col-sm-12">
+                                                        </td>
+                                                        <td class="table-text-lg">
+                                                            直线
+                                                        </td>
+                                                        <td class="table-text-lg">
+                                                            <input type="text" name="libagang_zx" class="col-xs-10 col-sm-12">
+                                                        </td>
+                                                        <td class="table-text-lg">
+                                                            耐张
+                                                        </td>
+                                                        <td class="table-text-lg">
+                                                            <input type="text" name="libagang_nz" class="col-xs-10 col-sm-12">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+
+                                            <td class="table-text-lg" colspan="1">
+                                                <label>
+                                                    <input name="dianlanshiyan" type="checkbox" class="ace" value="1" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                                吊装配变
+                                            </td>
+                                            <td class="center table-text-lg" colspan="3">
+                                                <input type="text" name="diaozhuanbianpei" class="col-xs-10 col-sm-12">
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+
+                                            <td class="table-text-lg" colspan="1">
+                                                <label>
+                                                    <input name="dinlantou" type="checkbox" class="ace" value="1" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                                工地运输
+                                            </td>
+                                            <td class="center table-text-lg" colspan="3">
+                                                <input type="text" name="gongdiyunshu" class="col-xs-10 col-sm-12">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <div id="2" class="tab-pane fade">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tr>
+                                        <!--TODO 基本安全注意事项-->
+                                        <td class="center table-text-lg" colspan="2">基本安全注意事项</td>
+                                        <td class="center table-text-lg">选择</td>
+                                        <td class="center table-text-lg">执行</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">1</td>
+                                        <td class="table-text-lg">
+                                            统一信号，服从指挥，不得擅自离岗，互相关心施工安全
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="1" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="1" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">2</td>
+                                        <td class="table-text-lg">
+                                            进入施工作业现场必须正确使用安全帽及其他安全劳保用品
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="2" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="2" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">3</td>
+                                        <td class="table-text-lg">
+                                            所有工器具使用前必须检查，严禁使用不合格工器具或超载使用
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="3" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="3" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">4</td>
+                                        <td class="table-text-lg">
+                                            停电作业时，发现有电立即停止工作，待查明原因并消除后，方可进行
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="4" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="4" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">5</td>
+                                        <td class="table-text-lg">
+                                            立、拆杆时，除指定人员外，其他人员必须离开杆高1.2倍以外
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="5" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="5" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">6</td>
+                                        <td class="table-text-lg">
+                                            用汽车吊起重时，重物及吊臂下，严禁有人行走或逗留
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="6" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="6" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">7</td>
+                                        <td class="table-text-lg">
+                                            登杆前，应先检查根部、基础和拉线是否牢固，高处作业必须系安全带
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="7" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="7" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">8</td>
+                                        <td class="table-text-lg">
+                                            杆塔上有人工作时，严禁调整或拆除拉线（包括临时拉线）
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="8" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="8" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">9</td>
+                                        <td class="table-text-lg">
+                                            高处作业所需工具、材料等均应使用绳索传递，不得抛扔
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="9" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="9" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">10</td>
+                                        <td class="table-text-lg">
+                                            高处作业人员在转移作业位置时不得失去保护，手扶的构件必须牢固
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="10" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="10" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">11</td>
+                                        <td class="table-text-lg">
+                                            地面人员应离开杆塔适当距离，防止杆塔上落物伤人
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="11" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="11" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">12</td>
+                                        <td class="table-text-lg">
+                                            紧线前，应全面检查导线有无被障碍物挂、卡住
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="12" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="12" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">13</td>
+                                        <td class="table-text-lg">
+                                            公跨公路，河流等设施应征得主管同意，并做好措施，并设专人看守
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="13" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="13" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">14</td>
+                                        <td class="table-text-lg">
+                                            10KV线路带电，上杆作业时保持安全距离0.7M，加强监护
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="14" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="14" />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <div id="3" class="tab-pane fade">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tr>
+                                        <!--TODO 杆根开挖岗位安全注意事项-->
+                                        <td class="center table-text-lg">岗位</td>
+                                        <td colspan="4">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td class="col-sm-1">序号</td>
+                                                    <td class="center table-text-lg">杆根开挖岗位安全注意事项</td>
+                                                    <td class="center table-text-lg col-sm-1">选择</td>
+                                                    <td class="center table-text-lg col-sm-1">执行</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-text-lg center">
+                                            定位指挥
+                                        </td>
+                                        <td colspan="4">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">1</td>
+                                                    <td class="table-text-lg">
+                                                        负责了解地线管线分布情况
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="ggkwxuanze[]" type="checkbox" class="ace" value="1" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="ggkwzhixing[]" type="checkbox" class="ace" value="1" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">2</td>
+                                                    <td class="table-text-lg">
+                                                        道路、居民区附近设警告标志或加盖，夜间设红灯
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="ggkwxuanze[]" type="checkbox" class="ace" value="2" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="ggkwzhixing[]" type="checkbox" class="ace" value="2" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">3</td>
+                                                    <td class="table-text-lg">
+                                                        在超过1.5米深的坑内作业时，抛土要特别注意防止土石回落坑内
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="ggkwxuanze[]" type="checkbox" class="ace" value="3" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="ggkwzhixing[]" type="checkbox" class="ace" value="3" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">4</td>
+                                                    <td class="table-text-lg">
+                                                        用人力在坑内安装预制构件，应用滑杆和绳索溜放，不得直接将其翻入坑内
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="ggkwxuanze[]" type="checkbox" class="ace" value="4" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="ggkwzhixing[]" type="checkbox" class="ace" value="4" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <div id="4" class="tab-pane fade">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tr>
+                                        <!--TODO 杆根开挖岗位安全注意事项-->
+                                        <td class="center table-text-lg">岗位</td>
+                                        <td colspan="4">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td class="col-sm-1">序号</td>
+                                                    <td class="center table-text-lg">立、拨杆岗位安全注意事项</td>
+                                                    <td class="center table-text-lg col-sm-1">选择</td>
+                                                    <td class="center table-text-lg col-sm-1">执行</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-text-lg center">
+                                            工作负责人
+                                        </td>
+                                        <td colspan="4">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">1</td>
+                                                    <td class="table-text-lg">
+                                                        1、在人口稠密及交通要道处，指定专人看守，并设禁告标志。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgxuanze[]" type="checkbox" class="ace" value="1" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgzhixing[]" type="checkbox" class="ace" value="1" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">2</td>
+                                                    <td class="table-text-lg">
+                                                        2、起吊前负责检查起重工器具及现场布置是否符合要求。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgxuanze[]" type="checkbox" class="ace" value="2" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgzhixing[]" type="checkbox" class="ace" value="2" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">3</td>
+                                                    <td class="table-text-lg">
+                                                        3、起吊过程中负责临时浪风、扒杆各部位受力检查。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgxuanze[]" type="checkbox" class="ace" value="3" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgzhixing[]" type="checkbox" class="ace" value="3" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">4</td>
+                                                    <td class="table-text-lg">
+                                                       4、电杆离地后，应进行冲击检查，确无问题方可继续起立。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgxuanze[]" type="checkbox" class="ace" value="4" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgzhixing[]" type="checkbox" class="ace" value="4" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">5</td>
+                                                    <td class="table-text-lg">
+                                                        5、严禁攀登起吊中的杆塔。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgxuanze[]" type="checkbox" class="ace" value="5" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgzhixing[]" type="checkbox" class="ace" value="5" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">6</td>
+                                                    <td class="table-text-lg">
+                                                        6、用汽车吊起重时，负责检查起重机臂长和额定载荷是否满足要求。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgxuanze[]" type="checkbox" class="ace" value="6" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgzhixing[]" type="checkbox" class="ace" value="6" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">7</td>
+                                                    <td class="table-text-lg">
+                                                       7、电杆离地后，负责检查制动装置是否灵活可靠。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgxuanze[]" type="checkbox" class="ace" value="7" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgzhixing[]" type="checkbox" class="ace" value="7" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">8</td>
+                                                    <td class="table-text-lg">
+                                                        8、电杆起立进洞后，回填土应填三分之二以上，才能调整电杆。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgxuanze[]" type="checkbox" class="ace" value="8" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgzhixing[]" type="checkbox" class="ace" value="8" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">9</td>
+                                                    <td class="table-text-lg">
+                                                        9、拨杆前，负责检查杆根开挖情况。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgxuanze[]" type="checkbox" class="ace" value="9" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgzhixing[]" type="checkbox" class="ace" value="9" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+
+                                            </table>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td class="table-text-lg center">
+                                            扒杆根部
+                                        </td>
+                                        <td colspan="4">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">1</td>
+                                                    <td class="table-text-lg">
+                                                        1、负责确定电杆吊点位置，拨杆时应有防止电杆突然掉头倾倒措施。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgxuanze[]" type="checkbox" class="ace" value="10" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgzhixing[]" type="checkbox" class="ace" value="10" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">2</td>
+                                                    <td class="table-text-lg">
+                                                        2、扒杆在起立或放下时，应用铁桩等工具顶住根部，防止扒杆脚滑移、倾倒。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgxuanze[]" type="checkbox" class="ace" value="11" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgzhixing[]" type="checkbox" class="ace" value="11" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">3</td>
+                                                    <td class="table-text-lg">
+                                                        3、负责检查扒杆脚间距是否在2.5-3米的要求，是否牢固坚固。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgxuanze[]" type="checkbox" class="ace" value="12" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgzhixing[]" type="checkbox" class="ace" value="12" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">4</td>
+                                                    <td class="table-text-lg">
+                                                       4、负责检查杆坑深度，电杆三米划线是否正确。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgxuanze[]" type="checkbox" class="ace" value="13" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgzhixing[]" type="checkbox" class="ace" value="13" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="table-text-lg center">
+                                            临时浪风
+                                        </td>
+                                        <td colspan="4">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">1</td>
+                                                    <td class="table-text-lg">
+                                                        1、负责检查杆洞中心和对侧浪风桩位是否在一条直线上。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgxuanze[]" type="checkbox" class="ace" value="14" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgzhixing[]" type="checkbox" class="ace" value="14" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">2</td>
+                                                    <td class="table-text-lg">
+                                                        2、负责检查布设的锚桩是否可靠、合理，临视锚桩有无松动，必要时进行加固。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgxuanze[]" type="checkbox" class="ace" value="15" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgzhixing[]" type="checkbox" class="ace" value="15" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">3</td>
+                                                    <td class="table-text-lg">
+                                                        3、负责观察电杆起立过程中扒杆偏移、变化情况，并立即报告。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgxuanze[]" type="checkbox" class="ace" value="16" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgzhixing[]" type="checkbox" class="ace" value="16" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">4</td>
+                                                    <td class="table-text-lg">
+                                                       4、电杆起立后，未经工作负责人许可，不得拆除或松动临进浪风绳。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgxuanze[]" type="checkbox" class="ace" value="17" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgzhixing[]" type="checkbox" class="ace" value="17" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-text-lg center">
+                                            总牵引
+                                        </td>
+                                        <td colspan="4">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">1</td>
+                                                    <td class="table-text-lg">
+                                                        1、负责检查牵引钢丝绳、铁桩等是否符合起吊要求。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgxuanze[]" type="checkbox" class="ace" value="18" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgzhixing[]" type="checkbox" class="ace" value="18" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">2</td>
+                                                    <td class="table-text-lg">
+                                                        2、磨芯中钢丝绳不得少于5圈，拉尾绳不得少于2人，距磨芯不得少于2.5米。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgxuanze[]" type="checkbox" class="ace" value="19" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgzhixing[]" type="checkbox" class="ace" value="19" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">3</td>
+                                                    <td class="table-text-lg">
+                                                        3、负责牵引速度均匀，当电杆起立到60°时，应减速并听从工作负责人指挥。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgxuanze[]" type="checkbox" class="ace" value="20" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgzhixing[]" type="checkbox" class="ace" value="20" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">4</td>
+                                                    <td class="table-text-lg">
+                                                       4、负责牵引过程中钢丝绳、固定锁等受力情况检查，发现问题应立即停止并报告。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgxuanze[]" type="checkbox" class="ace" value="21" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="lbgzhixing[]" type="checkbox" class="ace" value="21" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <div id="5" class="tab-pane fade">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tr>
+                                        <!--TODO 放紧线、撤线岗位安全注意事项-->
+                                        <td class="center table-text-lg">岗位</td>
+                                        <td colspan="4">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td class="col-sm-1">序号</td>
+                                                    <td class="center table-text-lg">放紧线、撤线岗位安全注意事项</td>
+                                                    <td class="center table-text-lg col-sm-1">选择</td>
+                                                    <td class="center table-text-lg col-sm-1">执行</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-text-lg center">
+                                            领线人
+                                        </td>
+                                        <td colspan="4">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">1</td>
+                                                    <td class="table-text-lg">
+                                                        1、领拉导线时，必须看到被交跨的电力线路挂有接地线等措施。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxxuanze[]" type="checkbox" class="ace" value="1" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxzhixing[]" type="checkbox" class="ace" value="1" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">2</td>
+                                                    <td class="table-text-lg">
+                                                        2、领线人应时刻注意信号，遇拉力突然加大应查明原因，方可牵引。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxxuanze[]" type="checkbox" class="ace" value="2" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxzhixing[]" type="checkbox" class="ace" value="2" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">3</td>
+                                                    <td class="table-text-lg">
+                                                        3、牵引应匀速进行，不得突然加速，并防止导线打金钩或卡住等措施。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxxuanze[]" type="checkbox" class="ace" value="3" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxzhixing[]" type="checkbox" class="ace" value="3" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td class="table-text-lg center">
+                                            放线人
+                                        </td>
+                                        <td colspan="4">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">1</td>
+                                                    <td class="table-text-lg">
+                                                        1、展放导线时应经常与领线人联系，并检查导线有无损伤、断股等现象。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxxuanze[]" type="checkbox" class="ace" value="4" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxzhixing[]" type="checkbox" class="ace" value="4" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">2</td>
+                                                    <td class="table-text-lg">
+                                                        2、当展放导线余量不多时，应通知减速牵引。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxxuanze[]" type="checkbox" class="ace" value="5" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxzhixing[]" type="checkbox" class="ace" value="5" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">3</td>
+                                                    <td class="table-text-lg">
+                                                        3、展放导线时，应防止导线打金钩。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxxuanze[]" type="checkbox" class="ace" value="6" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxzhixing[]" type="checkbox" class="ace" value="6" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">4</td>
+                                                    <td class="table-text-lg">
+                                                       4、放线人员不得站在线圈内或线弯的内角侧。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxxuanze[]" type="checkbox" class="ace" value="7" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxzhixing[]" type="checkbox" class="ace" value="7" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="table-text-lg center">
+                                            直线杆处作业人员
+                                        </td>
+                                        <td colspan="4">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">1</td>
+                                                    <td class="table-text-lg">
+                                                        1、被牵引的导线必须在放线滑轮上经过，滑轮安装应牢靠。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxxuanze[]" type="checkbox" class="ace" value="8" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxzhixing[]" type="checkbox" class="ace" value="8" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">2</td>
+                                                    <td class="table-text-lg">
+                                                        2、在紧线时，应有防止导线上跳的措施。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxxuanze[]" type="checkbox" class="ace" value="9" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxzhixing[]" type="checkbox" class="ace" value="9" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">3</td>
+                                                    <td class="table-text-lg">
+                                                        3、在紧线时，应有防止导线滑跑的措施。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxxuanze[]" type="checkbox" class="ace" value="10" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxzhixing[]" type="checkbox" class="ace" value="10" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">4</td>
+                                                    <td class="table-text-lg">
+                                                       4、认真监视，保证导线接头顺利通过滑车。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxxuanze[]" type="checkbox" class="ace" value="11" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxzhixing[]" type="checkbox" class="ace" value="11" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-text-lg center">
+                                            耐张终端处作业人员
+                                        </td>
+                                        <td colspan="4">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">1</td>
+                                                    <td class="table-text-lg">
+                                                        1、紧线前，应打好临时拉线；在紧线时，应设专人看守。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxxuanze[]" type="checkbox" class="ace" value="12" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxzhixing[]" type="checkbox" class="ace" value="12" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">2</td>
+                                                    <td class="table-text-lg">
+                                                        2、紧线前，应检查拉线、横担、金具等是否紧固可靠。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxxuanze[]" type="checkbox" class="ace" value="13" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxzhixing[]" type="checkbox" class="ace" value="13" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">3</td>
+                                                    <td class="table-text-lg">
+                                                        3、紧线时，工作人员不得跨在导线上或站在导线内角侧。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxxuanze[]" type="checkbox" class="ace" value="14" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxzhixing[]" type="checkbox" class="ace" value="14" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">4</td>
+                                                    <td class="table-text-lg">
+                                                       4、导线弧垂按设计要求，不能过紧或过松。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxxuanze[]" type="checkbox" class="ace" value="15" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxzhixing[]" type="checkbox" class="ace" value="15" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">5</td>
+                                                    <td class="table-text-lg">
+                                                       4、用绞磨牵引导线应缓慢进行，并保持信号畅通。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxxuanze[]" type="checkbox" class="ace" value="16" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxzhixing[]" type="checkbox" class="ace" value="16" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">6</td>
+                                                    <td class="table-text-lg">
+                                                       4、松拆线时，严禁采用突然剪断导线的方法松线。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxxuanze[]" type="checkbox" class="ace" value="17" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="fjxzhixing[]" type="checkbox" class="ace" value="17" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <div id="6" class="tab-pane fade">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tr>
+                                        <!--TODO 吊装配变岗位安全注意事项-->
+                                        <td class="center table-text-lg">岗位</td>
+                                        <td colspan="4">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td class="col-sm-1">序号</td>
+                                                    <td class="center table-text-lg">吊装配变岗位安全注意事项</td>
+                                                    <td class="center table-text-lg col-sm-1">选择</td>
+                                                    <td class="center table-text-lg col-sm-1">执行</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-text-lg center">
+                                            工作负责人
+                                        </td>
+                                        <td colspan="4">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">1</td>
+                                                    <td class="table-text-lg">
+                                                        1、吊装配变前，应用绳把木头固定有熔丝架上，防止拉弯角铁。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="dzpbxuanze[]" type="checkbox" class="ace" value="1" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="dzpbzhixing[]" type="checkbox" class="ace" value="1" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">2</td>
+                                                    <td class="table-text-lg">
+                                                        2、用钢丝索把葫芦固定在电杆上。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="dzpbxuanze[]" type="checkbox" class="ace" value="2" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="dzpbzhixing[]" type="checkbox" class="ace" value="2" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">3</td>
+                                                    <td class="table-text-lg">
+                                                        3、吊起或放落变压器前，检查变压器台架构是否牢固。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="dzpbxuanze[]" type="checkbox" class="ace" value="3" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="dzpbzhixing[]" type="checkbox" class="ace" value="3" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">4</td>
+                                                    <td class="table-text-lg">
+                                                        4、吊装时，严禁配变底下站人。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="dzpbxuanze[]" type="checkbox" class="ace" value="4" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="dzpbzhixing[]" type="checkbox" class="ace" value="4" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">5</td>
+                                                    <td class="table-text-lg">
+                                                        5、配变底部未用螺丝固定好，严禁松开葫芦。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="dzpbxuanze[]" type="checkbox" class="ace" value="5" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="dzpbzhixing[]" type="checkbox" class="ace" value="5" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <!--- ============================================== -->
+                            <div id="7" class="tab-pane fade">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tr>
+                                        <!--TODO 工地运输岗位安全注意事项-->
+                                        <td class="center table-text-lg">岗位</td>
+                                        <td colspan="4">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td class="col-sm-1">序号</td>
+                                                    <td class="center table-text-lg">工地运输岗位安全注意事项</td>
+                                                    <td class="center table-text-lg col-sm-1">选择</td>
+                                                    <td class="center table-text-lg col-sm-1">执行</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-text-lg center">
+                                            工作负责人
+                                        </td>
+                                        <td colspan="4">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">1</td>
+                                                    <td class="table-text-lg">
+                                                        1、电杆分散卸车时，每卸一根，其余的电杆都必须牢靠。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="gdysxuanze[]" type="checkbox" class="ace" value="1" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="gdyszhixing[]" type="checkbox" class="ace" value="1" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">2</td>
+                                                    <td class="table-text-lg">
+                                                        2、多人抬杆，必须同肩，步调一致，相互呼应。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="gdysxuanze[]" type="checkbox" class="ace" value="2" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="gdyszhixing[]" type="checkbox" class="ace" value="2" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">3</td>
+                                                    <td class="table-text-lg">
+                                                        3、杆塔运输到场后，负责摆放位置符合起吊条件。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="gdysxuanze[]" type="checkbox" class="ace" value="3" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="gdyszhixing[]" type="checkbox" class="ace" value="3" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">4</td>
+                                                    <td class="table-text-lg">
+                                                        4、载货机动车除押运和装卸人员外，不得搭乘其他人员，押运和装卸人员必须坐在安全位置上。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="gdysxuanze[]" type="checkbox" class="ace" value="4" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="gdyszhixing[]" type="checkbox" class="ace" value="4" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">5</td>
+                                                    <td class="table-text-lg">
+                                                        5、载物高度超过车厢拦板时货物上不得坐人。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="gdysxuanze[]" type="checkbox" class="ace" value="5" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="gdyszhixing[]" type="checkbox" class="ace" value="5" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-1">6</td>
+                                                    <td class="table-text-lg">
+                                                        6、用跳板或者圆木装卸滚动物件时，应用绳索控制物体，物体滚落前方严禁有人。
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="gdysxuanze[]" type="checkbox" class="ace" value="6" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="center table-text-lg col-sm-1">
+                                                        <label>
+                                                            <input name="gdyszhixing[]" type="checkbox" class="ace" value="6" />
+                                                            <span class="lbl"></span>
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                        <table class="table table-striped no-footer">
+                            <tbody>
+                                <tr>
+                                    <td class="center" colspan="4">
+                                        <button type="submit" class="btn btn-sm btn-success">
+                                            <i class="ace-icon fa fa-floppy-o bigger-110"></i>
+                                            保 存
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div><!-- /.page-content-area -->
+        </div><!-- /.page-content -->
+    </div><!-- /.main-content -->
+    <include file="Common:footer" />
+</div><!-- /.main-container -->
+<include file="Common:common_js" />
+
+<script>
+    jQuery(function($) {
+        $('.chosen-select').chosen({allow_single_deselect:true});
+        $(window).off('resize.chosen').on('resize.chosen', function() {
+            $('.chosen-select').each(function() {
+                var $this = $(this);
+                $this.next().css({'width': $this.parent().width()});
+            })
+        }).trigger('resize.chosen');
+    });
+    var gs = {
+        //locale: 'moment_zh-CN',
+        language:'zh-CN',
+        format:'YYYY-MM-DD HH:mm',
+        todayBtn:1,
+        autoclose:1,
+    };
+    $('#jihuagongzuoshijian_kaishi').datetimepicker(gs).next().on(ace.click_event, function(){
+        $(this).prev().focus();
+    });
+    $('#jihuagongzuoshijian_jieshu').datetimepicker(gs).next().on(ace.click_event, function(){
+        $(this).prev().focus();
+    });
+</script>
+</body>
+</html>

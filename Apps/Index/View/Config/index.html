@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include file="Common:header" />
+</head>
+	<body class="no-skin">
+		<!-- #section:basics/navbar.layout -->
+        <include file="Common:top_maps" />
+		<!-- /section:basics/navbar.layout -->
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+			<!-- #section:basics/sidebar -->
+            <div id="sidebar" class="sidebar responsive">
+                <include file="Common:left_maps" />
+            </div>
+			<!-- /section:basics/sidebar -->
+			<div class="main-content">
+				<!-- #section:basics/content.breadcrumbs -->
+				<div class="breadcrumbs" id="breadcrumbs">
+					<script type="text/javascript">
+						try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+					</script>
+					<ul class="breadcrumb">
+						<li>
+							<i class="ace-icon fa fa-home home-icon"></i>
+							<a href="{:U('main/index')}">首页</a>
+						</li>
+                        <li class="active">系统配置</li>
+					</ul><!-- /.breadcrumb -->
+				</div>
+				<!-- /section:basics/content.breadcrumbs -->
+				<div class="page-content">
+					<div class="page-content-area">
+						<div class="page-header">
+							<h1>
+                                系统配置
+							</h1>
+						</div><!-- /.page-header -->
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+								<form class="form-horizontal" role="form" method="post" action="{:U('config/index')}">
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label no-padding-right" for="sitename"> 名称 </label>
+                                        <div class="col-sm-9">
+                                            <input type="text" name="sitename" id="sitename" class="col-xs-10 col-sm-5" value="{$conf[sitename]}" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label no-padding-right" for="cloudUser"> 安防平台账号 </label>
+                                        <div class="col-sm-9">
+                                            <input type="text" name="cloudUser" id="cloudUser" class="col-xs-10 col-sm-5" value="{$conf[cloudUser]}" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label no-padding-right" for="cloudPwd"> 安防平台密码 </label>
+                                        <div class="col-sm-9">
+                                            <input type="password" name="cloudPwd" id="cloudPwd" class="col-xs-10 col-sm-5" value="{$conf[cloudPwd]}" />
+                                        </div>
+                                    </div>
+
+                                    <!--<div class="form-group">-->
+                                        <!--<label class="col-sm-3 control-label no-padding-right" for="tel"> 电话 </label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<input type="text" name="tel" id="tel" class="col-xs-10 col-sm-5" value="{$conf[tel]}" />-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="form-group">-->
+                                        <!--<label class="col-sm-3 control-label no-padding-right" for="email"> 邮箱 </label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<input type="text" name="email" id="email" class="col-xs-10 col-sm-5" value="{$conf[email]}" />-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="form-group">-->
+                                        <!--<label class="col-sm-3 control-label no-padding-right" for="form-field-tags"> 网站关键字 </label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--&lt;!&ndash; #section:plugins/input.tag-input &ndash;&gt;-->
+                                            <!--<div class="inline">-->
+                                                <!--<input type="text" name="keyword" id="form-field-tags"  class="col-xs-10 col-sm-5" value="" placeholder="输入关键词回车确认 ..." />-->
+                                            <!--</div>-->
+                                            <!--&lt;!&ndash; /section:plugins/input.tag-input &ndash;&gt;-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="form-group">-->
+                                        <!--<label class="col-sm-3 control-label no-padding-right" for="description"> 网站描述 </label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<textarea class="limited col-xs-10 col-sm-5" id="description" name="description" maxlength="200"> {$conf[description]}</textarea>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="form-group">-->
+                                        <!--<label class="col-sm-3 control-label no-padding-right" for="copyright"> 版权信息 </label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<textarea class="col-xs-10 col-sm-5" id="copyright" name="copyright" maxlength="200">{$conf[copyright]}</textarea>-->
+                                            <!--<span class="help-inline col-xs-12 col-sm-7">-->
+												<!--<span class="middle">支持HTML</span>-->
+											<!--</span>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="form-group">-->
+                                        <!--<label class="col-sm-3 control-label no-padding-right" for="copyright"> 统计代码 </label>-->
+                                        <!--<div class="col-sm-9">-->
+                                            <!--<textarea class="col-xs-10 col-sm-5" id="statistic" name="statistic" maxlength="200">{$conf[statistic]}</textarea>-->
+                                            <!--<span class="help-inline col-xs-12 col-sm-7">-->
+												<!--<span class="middle">支持HTML</span>-->
+											<!--</span>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label no-padding-right" for="sitename"> smtp地址 </label>
+                                        <div class="col-sm-9">
+                                            <input type="text" name="mail_host" id="mail_host" class="col-xs-10 col-sm-5" value="{$conf[mail_host]}" />
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">QQ邮箱可能会发送失败</span>
+											</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label no-padding-right" for="tel"> 用户名 </label>
+                                        <div class="col-sm-9">
+                                            <input type="text" name="mail_user" id="mail_user" class="col-xs-10 col-sm-5" value="{$conf[mail_user]}" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label no-padding-right" for="email"> 密码 </label>
+                                        <div class="col-sm-9">
+                                            <input type="password" name="mail_pwd" id="mail_pwd" class="col-xs-10 col-sm-5" value="{$conf[mail_pwd]}" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label no-padding-right" for="email">  </label>
+                                        <div class="col-sm-9">
+                                            <input type="email" name="TMA" id="TMA" class="col-xs-10 col-sm-2" value="" placeholder="请输入邮箱" />
+                                            <button class="btn btn-sm btn-primary" type="button" id="testMail" name="testMail">
+                                                <i class="ace-icon fa fa-share bigger-110"></i>
+                                                发信测试
+                                            </button>
+                                            <span class="middle">先保存再点击发信测试</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label no-padding-right" for="email">  </label>
+                                        <div class="col-sm-9" id="mailTestDiv">
+                                        </div>
+                                    </div>
+									<div class="space-4"></div>
+									<div class="clearfix form-actions">
+										<div class="col-md-offset-3 col-md-9">
+											<button class="btn btn-info" type="submit">
+												<i class="ace-icon fa fa-check bigger-110"></i>
+												保存
+											</button>
+										</div>
+									</div>
+									<div class="hr hr-24"></div>
+								</form>
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content-area -->
+				</div><!-- /.page-content -->
+			</div><!-- /.main-content -->
+            <include file="Common:footer" />
+        </div><!-- /.main-container -->
+        <include file="Common:common_js" />
+        <script type="text/javascript">
+            jQuery(function($){
+                $('#testMail').one("click",clickHandler);
+                function clickHandler(){
+                    $.ajax({
+                        url: "{:U('config/mailTest')}",
+                        dataType: "json",
+                        type: "POST",
+                        data: {email: $("#TMA").val()}
+                    }).done(function(json) {
+                        console.log("success",json);
+                        $("#mailTestDiv").html(json.msg);
+                        $('#testMail').one("click",clickHandler);
+                    })
+                }
+                $('textarea.limited').inputlimiter({
+                    remText: '还可输入%n字',
+                    limitText: '最多%n字'
+                });
+                var tag_input = $('#form-field-tags');
+                try{
+                    tag_input.tag(
+                        {
+                            placeholder:tag_input.attr('placeholder'),
+                            //enable typeahead by specifying the source array
+                            source: ace.vars['US_STATES'],//defined in ace.js >> ace.enable_search_ahead
+                        }
+                    )
+                    var $tag_obj = $('#form-field-tags').data('tag');
+                    //$tag_obj.add('');
+                }
+                catch(e) {
+                    //display a textarea for old IE, because it doesn't support this plugin or another one I tried!
+                    tag_input.after('<textarea id="'+tag_input.attr('id')+'" name="'+tag_input.attr('name')+'" rows="3">'+tag_input.val()+'</textarea>').remove();
+                    //$('#form-field-tags').autosize({append: "\n"});
+                }
+                var $tag_obj = $('#form-field-tags').data('tag');
+                <php>
+                    if($conf['keyword']){
+                        $keyword = explode(", ",$conf['keyword']);
+                        foreach($keyword as $v){
+                </php>
+                    $tag_obj.add("<php>echo $v;</php>");
+                <php>
+                        }
+                    }
+                </php>
+
+            });
+        </script>
+    </body>
+</html>

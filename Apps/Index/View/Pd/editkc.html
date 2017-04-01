@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include file="Common:header" />
+    <style>
+        .table-text-lg {vertical-align: middle !important;}
+        .underline-input {
+            border-top: none !important;
+            border-left: none !important;
+            border-right: none !important;
+            border-bottom: 1px solid #000 !important;
+            width: 40px;
+        }
+    </style>
+</head>
+<body class="no-skin">
+    <!-- #section:basics/navbar.layout -->
+    <include file="Common:top_maps" />
+    <!-- /section:basics/navbar.layout -->
+    <div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+    </script>
+    <!-- #section:basics/sidebar -->
+    <div id="sidebar" class="sidebar responsive">
+        <include file="Common:left_maps" />
+    </div>
+
+    <!-- /section:basics/sidebar -->
+    <div class="main-content">
+        <!-- #section:basics/content.breadcrumbs -->
+        <div class="breadcrumbs" id="breadcrumbs">
+            <script type="text/javascript">
+                try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+            </script>
+
+            <ul class="breadcrumb">
+                <li>
+                    <i class="ace-icon fa fa-home home-icon"></i>
+                    <a href="{:U('pd/kc')}">列表</a>
+                </li>
+                <li class="active">编辑</li>
+            </ul><!-- /.breadcrumb -->
+            <!-- /section:basics/content.searchbox -->
+        </div>
+        <!-- /section:basics/content.breadcrumbs -->
+        <div class="page-content">
+            <div class="page-content-area">
+                <div class="page-header">
+                    <h1>
+                        编辑
+                        <small>
+                            <i class="ace-icon fa fa-angle-double-right"></i>
+                            工程现场勘察记录
+                        </small>
+                    </h1>
+                </div><!-- /.page-header -->
+                <form action="__SELF__" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name='id' value="{$record['id']}">
+                    <table class="table table-striped table-bordered table-hover no-footer">
+                        <tbody>
+                        <tr role="row" class="odd">
+                            <td colspan="3">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tr>
+                                        <td class="center table-text-lg">工作名称或工作地点</td>
+                                        <td class="center table-text-lg">工作内容</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="gongzuomingcheng1" value="{$record['gongzuomingcheng1']}" class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="gongzuoneirong1" value="{$record['gongzuoneirong1']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="gongzuomingcheng2" value="{$record['gongzuomingcheng2']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="gongzuoneirong2"  value="{$record['gongzuoneirong2']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="gongzuomingcheng3" value="{$record['gongzuomingcheng3']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="gongzuoneirong3" value="{$record['gongzuoneirong3']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="gongzuomingcheng4"  value="{$record['gongzuomingcheng4']}" class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="gongzuoneirong4" value="{$record['gongzuoneirong4']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="gongzuomingcheng5"  value="{$record['gongzuomingcheng5']}" class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="gongzuoneirong5" value="{$record['gongzuoneirong5']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="gongzuomingcheng6"  value="{$record['gongzuomingcheng6']}" class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="gongzuoneirong6" value="{$record['gongzuoneirong6']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg">工作条件（新装/增容/减容）</td>
+                                        <td class="center table-text-lg">
+                                            <input type="text" name="gongzuotiaojian"  value="{$record['gongzuotiaojian']}" class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td class="center table-text-lg">
+                                                        计划工作时间
+                                                    </td>
+                                                    <td>
+                                                        <div class="col-xs-8 col-sm-11">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon">
+                                                                    <i class="fa fa-calendar bigger-110"></i>
+                                                                </span>
+                                                                <input class="form-control" type="text" name="jihuagongzuoshijian_kaishi" id="jihuagongzuoshijian_kaishi"  value="{$record['jihuagongzuoshijian_kaishi']}" />
+                                                            </div>
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon">
+                                                                    <i class="fa fa-calendar bigger-110"></i>
+                                                                </span>
+                                                                <input class="form-control" type="text" name="jihuagongzuoshijian_jieshu" id="jihuagongzuoshijian_jieshu"  value="{$record['jihuagongzuoshijian_jieshu']}" />
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td class="center table-text-lg">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td class="center table-text-lg">
+                                                        施工班组
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="shigongbanzu"  value="{$record['shigongbanzu']}" class="col-xs-10 col-sm-12">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="center table-text-lg col-sm-4">
+                                <textarea class="form-control" name="anquanshigongyaoqiu" style="width: 100%;height: 100%;" placeholder="安全措施要求">{$record['anquanshigongyaoqiu']}</textarea>
+                            </td>
+                        </tr>
+                        <tr role="row" class="odd">
+                            <td class="center table-text-lg col-sm-4">
+                                <input multiple="" name="gongzuofanwei" type="file" id="gongzuofanwei" style="" />
+                            </td>
+                            <td colspan="3">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tr>
+                                        <td class="center table-text-lg" colspan="3">涉及增容、减容或检修配合停电等情况</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg">
+                                            线路或设备名称
+                                        </td>
+                                        <td class="center table-text-lg">
+                                            管辖单位
+                                        </td>
+                                        <td class="center table-text-lg">
+                                            应采取的安全措施
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="xianluhuoshebeimingcheng1" value="{$record['xianluhuoshebeimingcheng1']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="guanxiadanwei1" value="{$record['guanxiadanwei1']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="yingcaidequanquancuoshi1" value="{$record['yingcaidequanquancuoshi1']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="xianluhuoshebeimingcheng2" value="{$record['xianluhuoshebeimingcheng2']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="guanxiadanwei2" value="{$record['guanxiadanwei2']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="yingcaidequanquancuoshi2" value="{$record['yingcaidequanquancuoshi2']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="xianluhuoshebeimingcheng3" value="{$record['xianluhuoshebeimingcheng3']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="guanxiadanwei3" value="{$record['guanxiadanwei3']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="yingcaidequanquancuoshi3" value="{$record['yingcaidequanquancuoshi3']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="xianluhuoshebeimingcheng4"  value="{$record['xianluhuoshebeimingcheng4']}" class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="guanxiadanwei4" value="{$record['guanxiadanwei4']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="yingcaidequanquancuoshi4"  value="{$record['yingcaidequanquancuoshi4']}" class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="xianluhuoshebeimingcheng5" value="{$record['xianluhuoshebeimingcheng5']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="guanxiadanwei5"  value="{$record['guanxiadanwei5']}" class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td>
+                                            <input type="text" name="yingcaidequanquancuoshi5" value="{$record['yingcaidequanquancuoshi5']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg">
+                                            双电源、发电机等倒送电情况
+                                        </td>
+
+                                        <td class="center table-text-lg" colspan="2">
+                                            应采取的安全措施
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="shuangdianyuanfadianjisongdian1" value="{$record['shuangdianyuanfadianjisongdian1']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td colspan="2">
+                                            <input type="text" name="yingcaidequanquancuoshi6" value="{$record['yingcaidequanquancuoshi6']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="shuangdianyuanfadianjisongdian2" value="{$record['shuangdianyuanfadianjisongdian2']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td colspan="2">
+                                            <input type="text" name="yingcaidequanquancuoshi7" value="{$record['yingcaidequanquancuoshi7']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="shuangdianyuanfadianjisongdian3" value="{$record['shuangdianyuanfadianjisongdian3']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                        <td colspan="2">
+                                            <input type="text" name="yingcaidequanquancuoshi8" value="{$record['yingcaidequanquancuoshi8']}"  class="col-xs-10 col-sm-12">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr role="row" class="odd">
+                            <td colspan="4">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tr>
+                                        <td class="center table-text-lg">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-6">
+                                                        配合线路停电状态
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-6">
+                                                        <textarea class="form-control" name="peihedianlutingdianzhuangtai" style="width: 100%;height: 100px;">{$record['peihedianlutingdianzhuangtai']}</textarea>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-6">
+                                                        应采取的安全措施
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-6">
+                                                        <textarea class="form-control" name="yingcaidequanquancuoshi9" style="width: 100%;height: 100px;">{$record['yingcaidequanquancuoshi9']}</textarea>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-6">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <tr>
+                                                    <td>
+                                                        <textarea class="form-control" name="qitaanquancuoshiyaoqiu" style="width: 100%;height: 100%;" placeholder="其他安全措施要求">{$record['qitaanquancuoshiyaoqiu']}</textarea>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <textarea class="form-control" name="gongzuochengxu" style="width: 100%;height: 100%;" placeholder="工作程序">{$record['gongzuochengxu']}</textarea>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center table-text-lg col-sm-6">
+                                                        <table class="table table-striped table-bordered table-hover no-footer">
+                                                            <tr>
+                                                                <td class="center table-text-lg">
+                                                                    现场勘察负责人
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    <input type="text" name="xianchangkaichafuzeren" value="{$record['xianchangkaichafuzeren']}"  class="col-xs-10 col-sm-12">
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    参加勘察人员
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    <input type="text" name="canjiakancarenyuan" value="{$record['canjiakancarenyuan']}"  class="col-xs-10 col-sm-12">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="center table-text-lg">
+                                                                    勘察日期
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    <input type="text" name="kanchariqi" value="{$record['kanchariqi']}"  class="col-xs-10 col-sm-12">
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    实际施工时间
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    <input type="text" name="shijishigongriqi" value="{$record['shijishigongriqi']}"  class="col-xs-10 col-sm-12">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="center table-text-lg">
+                                                                    作业票编号
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    <input type="text" value="{$record['gongdanbianhao']}" readonly name='gongdanbianhao'>
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    施工负责人
+                                                                </td>
+                                                                <td class="center table-text-lg">
+                                                                    <input type="text" name="shigongfuzeren" value="{$record['shigongfuzeren']}"  class="col-xs-10 col-sm-12">
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="center" colspan="4">
+                                <button type="submit" class="btn btn-sm btn-success">
+                                    <i class="ace-icon fa fa-floppy-o bigger-110"></i>
+                                    保 存
+                                </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div><!-- /.page-content-area -->
+        </div><!-- /.page-content -->
+    </div><!-- /.main-content -->
+    <include file="Common:footer" />
+</div><!-- /.main-container -->
+<include file="Common:common_js" />
+
+<script>
+    jQuery(function($) {
+        $('.chosen-select').chosen({allow_single_deselect:true});
+        $(window).off('resize.chosen').on('resize.chosen', function() {
+            $('.chosen-select').each(function() {
+                var $this = $(this);
+                $this.next().css({'width': $this.parent().width()});
+            })
+        }).trigger('resize.chosen');
+
+         $('#gongzuofanwei').ace_file_input({
+            style:'well',
+            btn_choose:'工作范围（简图）',
+            btn_change:null,
+            no_icon:'ace-icon fa fa-picture-o',
+            droppable:true,
+            thumbnail:'fit'//large | fit
+            ,
+            preview_error : function(filename, error_code) {
+            }
+
+        }).on('change', function(){
+
+        });
+        $('#gongzuofanwei').ace_file_input('show_file_list', [
+            {type: 'image', path: '/Uploads/{$record[gongzuofanwei]}', name: '<php>if($record['gongzuofanwei']){echo '工作范围（简图）';}else{echo '请上传工作范围（简图）';}</php>'},
+        ]);
+
+    });
+    // format:"Y-m-d",      //格式化日期
+    //   timepicker:false,    //关闭时间选项
+    //   yearStart：2000,     //设置最小年份
+    //   yearEnd:2050,        //设置最大年份
+    //   todayButton:false    //关闭选择今天按钮
+    var gs = {
+        //locale: 'moment_zh-CN',
+        language:'zh-CN',
+        format:'YYYY-MM-DD HH:mm',
+        todayBtn:1,
+        autoclose:1,
+    };
+    $('#jihuagongzuoshijian_kaishi').datetimepicker(gs).next().on(ace.click_event, function(){
+        $(this).prev().focus();
+    });
+    $('#jihuagongzuoshijian_jieshu').datetimepicker(gs).next().on(ace.click_event, function(){
+        $(this).prev().focus();
+    });
+
+</script>
+</body>
+</html>

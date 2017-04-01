@@ -1,0 +1,10 @@
+/*
+* green Style
+* author: Wanqiongyao
+* creat: 2014-04-15
+* update: 2014-04-15
+*/
+
+.btn {background:#0a97a4;}
+.btn:hover {background:#27b5c2;}
+.btn:active {background:#057781; color:#084f55;}

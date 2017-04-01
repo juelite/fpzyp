@@ -1,0 +1,126 @@
+.col-sub .block, .col-sub .block .bd { height: 100%; position: relative; z-index: 1; border-right: none; border-left: none; }
+.col-sub .block .hd { width: 100%; height: 30px; position: absolute; z-index: 2; }
+.col-sub .block .bd { padding: 30px 0 0; box-sizing: border-box; }
+.col-sub form { position: relative; z-index: 1; height: 100%; }
+.col-sub .form-horizontal .control-group { margin-bottom: 2px; }
+.col-sub .form-horizontal .control-label { width: 70px; }
+.col-sub .form-horizontal .controls { margin-left: 80px; }
+.tags .col-sub .form-horizontal { position: relative; padding: 170px 0 0; height: 100%; box-sizing: border-box; }
+.tags .col-sub .form-horizontal .control-label,
+.download .col-sub .form-horizontal .control-label { width: 65px; }
+.tags .col-sub .form-horizontal .controls,
+.download .col-sub .form-horizontal .controls { margin-left: 72px; }
+.tags .col-sub .form-horizontal .noLabel .control-label { display:none; }
+.tags .col-sub .form-horizontal .noLabel .controls,
+.download .col-sub .form-horizontal .noLabel .controls { margin-left: 0; margin-right: 0; }
+.tags .col-sub .form-horizontal .form-actions { margin: 0; padding-left: 72px; }
+.tags .col-sub .input-wide, .download .col-sub .input-wide { width: 155px !important; }
+.tags .col-sub .datetimepicker { width: 155px !important; }
+
+.tags .col-sub fieldset { padding: 5px 0; position: absolute; left: 10px; top: 0; right: 10px; z-index: 2; float: none; }
+.tags .col-sub fieldset p, .download .col-sub fieldset p { padding: 0; }
+.tags .col-sub .search-list { position: relative; margin: 0 2px; padding:30px 0; height: 100%; box-sizing: border-box; }
+.tags .col-sub .search-list .search-result { position: absolute; left: 0; top: 0; width: 100%; height: 30px; line-height: 20px; box-sizing: border-box; padding: 4px 10px; background: #4083EB; color: #fff; border-top-left-radius: 4px; border-top-right-radius: 4px; }
+.tags .col-sub .search-list .search-result h6 { display: inline; font-size: 12px; }
+.tags .col-sub .search-list .search-result span { float: right; color: #A0C8F9; }
+.tags .col-sub .treeview {  }
+.tags .col-sub .pagination-mini { padding: 3px 5px; position: absolute; left: 0; bottom: 0; width: 100%; height: 30px; z-index: 2; box-sizing: border-box; }
+
+.download #general-search .form-horizontal { padding: 139px 0 36px; box-sizing: border-box; }
+.download .col-sub .search-panel { padding: 10px 10px 6px !important; background: #F1F1F1; border-bottom: 1px solid #E1E5EE; }
+.download #general-search .search-panel { position: absolute; top: 0; left: 0; width: 100%; box-sizing: border-box; }
+.download #general-search .choose-spots { position: relative; margin: 0 !important; padding: 42px 0 0 !important; height: 100%; box-sizing: border-box; }
+.download #general-search .choose-spots .control-group { position: absolute; top: 5px; left: 0; width: 100%; }
+.download .col-sub .choose-spots { border: none; }
+.download .col-sub .choose-spots .spot-list { height: 100%; border-width: 0 0 1px 0; padding: 2px; box-sizing: border-box; }
+.download .col-sub .choose-spots .spot-list li { margin-bottom: 1px; }
+.download .col-sub .choose-spots .spot-list li a { padding: 4px 9px; display: block; border-radius: 2px; max-width: 230px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.download .col-sub .choose-spots .spot-list li a:hover { background: #DDEAFF; }
+.download .col-sub .choose-spots .spot-list li.active a { padding: 3px 8px; border: 1px solid #FFB951; background: #FFE6B0; color: #333; }
+.download .col-sub .choose-spots .spot-list li .ico { margin-right: 5px; }
+.download .col-sub .search-action { padding: 5px; }
+.download #general-search .search-action { position: absolute; bottom: 0; width: 100%; box-sizing: border-box; }
+
+/* Playing List */
+.dualBoxes .tab-grey, .download .tab-grey { padding-bottom: 0 !important; bottom: 0 !important; }
+.playing-container { margin: 0 2px; position: absolute; z-index: 3; bottom: 0; box-sizing: border-box; width: 246px; height: 30px; }
+.hasPanel .playing-container { height: 255px; }
+.playing-container .toggle-switch { background-position: -292px -148px;  }
+.playing-container .toggle-switch:hover { background-position: -292px -172px; }
+.hasPanel .playing-container .toggle-switch { background-position: -268px -148px; }
+.hasPanel .playing-container .toggle-switch:hover { background-position: -268px -172px; }
+.hasPanel .playing-container .block .bd { display: block; }
+
+.playing-container .block { border: none; position: relative; padding: 30px 0 0; box-sizing: border-box; }
+.playing-container .block .hd { position: absolute; top: 0; left: 0; width: 100%; background: #4083EB; border-top-right-radius: 4px; border-top-left-radius: 4px; }
+.playing-container .block .bd { position: relative; padding: 32px 2px 2px; height: 100%; border: 1px solid #C4C6C5; border-top: none; box-sizing: border-box; display: none; }
+.playing-container .block .bd .btn-toolbar { padding: 2px 5px; position: absolute; left: 0; top: 0; width: 100%; font-size: 0; }
+.playing-container .block .bd .btn-toolbar .buttonS { padding: 2px 5px; }
+.playing-list { height: 100%; overflow: auto; }
+.playing-list li { margin: 0 0 1px; }
+.playing-list li a { padding: 4px 9px; display: block; border-radius: 2px; }
+.playing-list li a:hover { background: #DDEAFF; }
+.playing-list li.active a { padding: 3px 8px; border: 1px solid #FFB951; background: #FFE6B0; color: #333; }
+.playing-list li a span.title { display: inline-block; *display: inline; *zoom: 1; width: 180px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; vertical-align: middle; }
+.playing-list li a .ico { margin-right: 5px; vertical-align: middle; }
+.playing-list li a .i-alarm { background-position: -291px -171px; }
+
+/* Tags Spot List */
+.tags .spot-list { padding: 1px 0 0; }
+.tags .spot-list .item { position: relative; z-index: 1; margin: -1px 0 0; padding: 5px 5px 5px 10px; *zoom: 1; border-top: 1px dashed #ccc; border-bottom: 1px dashed #ccc; }
+.tags .spot-list .item:before, .tags .spot-list .item:after { display: table; content: ""; }
+.tags .spot-list .item:after { clear: both; }
+.tags .spot-list .item:hover, .tags .spot-list .item.hover { background: #DDEAFF; }
+.tags .spot-list .item.active { padding: 5px 4px 5px 9px; border: 1px solid #FFB951; background: #FFE6B0; z-index: 2; }
+.tags .spot-list .item .thumb { position: relative; margin: 0 0 0 5px; float: right; background: url(../images/thumb_video.png) no-repeat 0 0; display: block; width: 82px; height: 62px; }
+.tags .spot-list .item .thumb img { margin: 8px 6px; width: 70px; height: 46px; }
+.tags .spot-list .item .thumb i { position: absolute; left: 50%; top: 50%; margin-top: -19px; margin-left: -19px; width: 38px; height: 38px; background-position: -170px -218px; display: none; opacity: .8; }
+.tags .spot-list .item.active .thumb i,
+.tags .spot-list .item .thumb:hover i { display: block; }
+.tags .spot-list .item h6 { float: left; max-width: 125px; font-size: 12px; word-wrap: break-word; word-break: break-all; }
+.tags .spot-list .item .more { margin-left: 5px; display: inline-block; *display: inline; *zoom: 1; font-weight: normal; }
+.tags .spot-list .item .detail { clear: left; word-wrap: break-word; word-break: break-all; }
+.tags .spot-list .item em { font-style: normal; color: #ff6600; }
+
+/**/
+.dualBoxes { padding: 10px; }
+.dualBoxes .leftBox { height: 410px; }
+.dualBoxes .leftBox .tab-grey { padding: 0; bottom: 0; }
+.dualBoxes .leftBox .tab-grey ul.tabs { width: 100%; }
+.dualBoxes .rightBox { height: 410px; border: 1px solid #C4C6C5; }
+.dualBoxes .rightBox h6 { padding: 6px 10px; font-size: 12px; }
+.dualBoxes .rightBox .datatable { height: 380px; overflow: auto; }
+
+/**/
+.replay-container { margin: 0 2px 2px; padding-top: 2px; box-sizing: border-box; height: 100%; }
+.download-container { margin: 0; padding-top: 0; box-sizing: border-box; height: 100%; }
+.download-container .download-result { display: none; position: relative; height: 100%; padding: 30px 0 0; box-sizing: border-box; }
+.download #general-search-result { padding: 0; }
+
+.download-result .pageTitle { padding: 0; background: #9299A3; color: #2C395C; height: 30px; line-height: 30px; text-indent: 15px; position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
+.download-result .pageTitle h3 { font-size: 12px; }
+.download-result .pageContent { padding: 40px 0 36px; height: 100%; box-sizing: border-box; position: relative; }
+.download-result .btn-toolbar { background: #B1BECE; color: #333; position: absolute; top: 0; left: 0; width: 100%; height: 40px; z-index: 2; overflow: hidden; }
+.download-result .pagination { padding: 6px 10px; position: absolute; bottom: 0; left: 0; width: 100%; height: 36px; z-index: 2; box-sizing: border-box; overflow: hidden; }
+.download-result .search-list { height: 100%; overflow: auto; }
+.download-result .i-download { background-position: -3px -242px; }
+.download-result .search-list ul { padding: 20px 10px; }
+.download-result .search-list li { margin: 10px 5px 20px; display: inline-block; *display: inline; *zoom: 1; position: relative; z-index: 1; vertical-align: top; }
+.download-result .search-list li .selector { position: absolute; left: 5px; top: 0; z-index: 2; }
+.download-result .search-list li .item { margin: 1px 1px 1px 31px; padding: 10px 10px 25px; border: 1px solid #C4C6C5; width: 200px; position: relative; overflow: hidden; }
+.download-result .search-list li .item:hover { margin: 0 0 0 30px; border: 2px solid #F3BB0E; }
+.download-result .search-list li.active .item { margin: 0 0 0 30px; border: 2px solid #F3BB0E; background: #E1E1E1; }
+.download-result .search-list li .item .thumb { display: block; }
+.download-result .search-list li .item .thumb img { width: 200px; height: 122px; }
+
+.download-result .search-list li .item p { *zoom: 1; }
+.download-result .search-list li .item p:before, .download-result .search-list li .item p:after { display: table; content: ""; }
+.download-result .search-list li .item p:after { clear: both; }
+
+.download-result .search-list li .item p label { width: 65px; float: left; text-align: right; }
+.download-result .search-list li .item p span { display: block; float: left; max-width: 135px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.download-result .search-list li .item .actions { position: absolute; bottom: 5px; right: 5px; }
+/* === Tag Search === */
+
+

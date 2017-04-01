@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+	<name>红色</name>
+    <description>该模板色系为灰色+红色，突显现代气息，又不乏警示、严肃，适用于公安、司法等行业</description>
+    <author>柳逢春</author>
+    <email>liufengchun@hikvision.com.cn</email>
+    <create>2013-06-26</create>
+    <update>2013-06-30</update>
+    <color>color.jpg</color>
+    <thumb>thumb.jpg</thumb>
+</template>

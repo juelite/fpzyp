@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include file="Common:header" />
+    <style>
+        .table-text-lg {vertical-align: middle !important;}
+        .underline-input {
+            border-top: none !important;
+            border-left: none !important;
+            border-right: none !important;
+            border-bottom: 1px solid #000 !important;
+            width: 40px;
+        }
+    </style>
+</head>
+<body class="no-skin">
+    <!-- #section:basics/navbar.layout -->
+    <include file="Common:top_maps" />
+    <!-- /section:basics/navbar.layout -->
+    <div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+    </script>
+    <!-- #section:basics/sidebar -->
+    <div id="sidebar" class="sidebar responsive">
+        <include file="Common:left_maps" />
+    </div>
+
+    <!-- /section:basics/sidebar -->
+    <div class="main-content">
+        <!-- #section:basics/content.breadcrumbs -->
+        <div class="breadcrumbs" id="breadcrumbs">
+            <script type="text/javascript">
+                try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+            </script>
+
+            <ul class="breadcrumb">
+                <li>
+                    <i class="ace-icon fa fa-home home-icon"></i>
+                    <a href="{:U('pd/zyp')}">首页</a>
+                </li>
+                <li class="active">作业票</li>
+            </ul><!-- /.breadcrumb -->
+            <!-- /section:basics/content.searchbox -->
+        </div>
+        <!-- /section:basics/content.breadcrumbs -->
+        <div class="page-content">
+            <div class="page-content-area">
+                <div class="page-header">
+                    <h1>
+                        添加作业票
+                        <small>
+                            <i class="ace-icon fa fa-angle-double-right"></i>
+                            配电安全施工作业票
+                        </small>
+                    </h1>
+                </div><!-- /.page-header -->
+                <form action="__SELF__" method="post">
+                    <input type="hidden" name="id" value="{$record['id']}">
+                    <div class="tabbable">
+                        <ul class="nav nav-tabs" id="myTab" style="height: 35px;">
+                            <li class="active">
+                                <a data-toggle="tab" href="#1">
+                                    作业票信息
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#2">
+                                    注意事项一
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#3">
+                                    注意事项二
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#4">
+                                    注意事项三
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#5">
+                                    注意事项四
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#6">
+                                    注意事项五
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#7">
+                                    注意事项六
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#8">
+                                    注意事项七
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#9">
+                                    注意事项八
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#b10">
+                                    其他注意事项
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div id="1" class="tab-pane fade in active">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tbody>
+                                        <tr role="row" class="odd">
+                                            <td class="center table-text-lg col-sm-2">
+                                                工程名称
+                                            </td>
+                                            <td class="col-sm-5" colspan="3">
+                                                <input type="text" name="gongchengmingcheng" class="col-xs-10 col-sm-12" value="{$record['gongchengmingcheng']}">
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td class="center table-text-lg col-sm-2">
+                                                工作班组
+                                            </td>
+                                            <td class="col-sm-4" >
+                                                <select name="gongzuobanzu"  class="col-xs-10 col-sm-12">
+                                                    <volist name="subGroup" id="subG">
+                                                        <option value="{$subG.index_code}" <eq name="subG.index_code" value="$record['gongzuobanzu']">selected</eq>>{$subG.name}</option>
+                                                    </volist>
+                                                </select>
+                                            </td>
+                                            <td class="center table-text-lg col-sm-2">
+                                                施工（工作）负责人
+                                            </td>
+                                            <td class="col-sm-4" >
+                                                <input type="text" name="shigongfuzeren" class="col-xs-10 col-sm-12" value="{$record['shigongfuzeren']}">
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td class="center table-text-lg col-sm-2">
+                                                施工人员（除负责人）
+                                            </td>
+                                            <td class="col-sm-5" colspan="3">
+                                                职工<input type="text" name="zhigongrenshu" class="underline-input" value="{$record['zhigongrenshu']}">人、
+                                                技工<input type="text" name="jigongrenshu" class="underline-input" value="{$record['jigongrenshu']}">人、
+                                                民工<input type="text" name="mingongrenshu" class="underline-input" value="{$record['mingongrenshu']}">人，
+                                                共<input type="text" name="renshuzonghe" class="underline-input" value="{$record['renshuzonghe']}">人
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td class="center table-text-lg col-sm-2">
+                                                计划工作时间
+                                            </td>
+                                            <td class="col-sm-5" colspan="3">
+                                                <div class="col-xs-8 col-sm-11">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="fa fa-calendar bigger-110"></i>
+                                                        </span>
+                                                        <input class="form-control" type="text" name="jihuagongzuoshijian_kaishi" id="jihuagongzuoshijian_kaishi"  value="{$record['jihuagongzuoshijian_kaishi']}" />
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="fa fa-calendar bigger-110"></i>
+                                                        </span>
+                                                        <input class="form-control" type="text" name="jihuagongzuoshijian_jieshu" id="jihuagongzuoshijian_jieshu"  value="{$record['jihuagongzuoshijian_jieshu']}" />
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td class="center table-text-lg" colspan="2">
+                                                分项作业内容
+                                            </td>
+                                            <td class="center table-text-lg" colspan="2">
+                                                岗位作业人员
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td class="center table-text-lg" colspan="2">
+                                                <input type="text" name="fenxiangzuoyeneirong1" class="col-xs-10 col-sm-12" value="{$record['fenxiangzuoyeneirong1']}">
+                                            </td>
+                                            <td class="center table-text-lg" colspan="2">
+                                                <input type="text" name="gangweizuoyerenyuan1" class="col-xs-10 col-sm-12" value="{$record['gangweizuoyerenyuan1']}">
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td class="center table-text-lg" colspan="2">
+                                                <input type="text" name="fenxiangzuoyeneirong2" class="col-xs-10 col-sm-12" value="{$record['fenxiangzuoyeneirong2']}">
+                                            </td>
+                                            <td class="center table-text-lg" colspan="2">
+                                                <input type="text" name="gangweizuoyerenyuan2" class="col-xs-10 col-sm-12" value="{$record['gangweizuoyerenyuan2']}">
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td class="center table-text-lg" colspan="2">
+                                                <input type="text" name="fenxiangzuoyeneirong3" class="col-xs-10 col-sm-12" value="{$record['fenxiangzuoyeneirong3']}">
+                                            </td>
+                                            <td class="center table-text-lg" colspan="2">
+                                                <input type="text" name="gangweizuoyerenyuan3" class="col-xs-10 col-sm-12" value="{$record['gangweizuoyerenyuan3']}">
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td class="center table-text-lg" colspan="2">
+                                                <input type="text" name="fenxiangzuoyeneirong4" class="col-xs-10 col-sm-12" value="{$record['fenxiangzuoyeneirong4']}">
+                                            </td>
+                                            <td class="center table-text-lg" colspan="2">
+                                                <input type="text" name="gangweizuoyerenyuan4" class="col-xs-10 col-sm-12" value="{$record['gangweizuoyerenyuan4']}">
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td class="center table-text-lg" colspan="2">
+                                                <input type="text" name="fenxiangzuoyeneirong5" class="col-xs-10 col-sm-12" value="{$record['fenxiangzuoyeneirong5']}">
+                                            </td>
+                                            <td class="center table-text-lg" colspan="2">
+                                                <input type="text" name="gangweizuoyerenyuan5" class="col-xs-10 col-sm-12" value="{$record['gangweizuoyerenyuan5']}">
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td class="center table-text-lg" colspan="2">
+                                                <input type="text" name="fenxiangzuoyeneirong6" class="col-xs-10 col-sm-12" value="{$record['fenxiangzuoyeneirong6']}">
+                                            </td>
+                                            <td class="center table-text-lg" colspan="2">
+                                                <input type="text" name="gangweizuoyerenyuan6" class="col-xs-10 col-sm-12" value="{$record['gangweizuoyerenyuan6']}">
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td class="center table-text-lg" colspan="2">
+                                                <input type="text" name="fenxiangzuoyeneirong7" class="col-xs-10 col-sm-12" value="{$record['fenxiangzuoyeneirong7']}">
+                                            </td>
+                                            <td class="center table-text-lg" colspan="2">
+                                                <input type="text" name="gangweizuoyerenyuan7" class="col-xs-10 col-sm-12" value="{$record['gangweizuoyerenyuan7']}">
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td class="center table-text-lg" colspan="2">
+                                                <input type="text" name="fenxiangzuoyeneirong8" class="col-xs-10 col-sm-12" value="{$record['fenxiangzuoyeneirong8']}">
+                                            </td>
+                                            <td class="center table-text-lg" colspan="2">
+                                                <input type="text" name="gangweizuoyerenyuan8" class="col-xs-10 col-sm-12" value="{$record['gangweizuoyerenyuan8']}">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="2" class="tab-pane fade">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tr>
+                                        <!--TODO 基本安全注意事项-->
+                                        <td class="center table-text-lg" colspan="2">基本安全注意事项</td>
+                                        <td class="center table-text-lg">选择</td>
+                                        <td class="center table-text-lg">执行</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">1</td>
+                                        <td class="table-text-lg">
+                                            施工现场、服从指挥、不得擅自离开岗位、互相关心施工安全
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="1"  <php> if(in_array( 1 ,$record['jibenzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="1"  <php> if(in_array( 1 ,$record['jibenzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">2</td>
+                                        <td class="table-text-lg">
+                                            进入施工作业现场必须遵守《安规》，正确使用安全帽、工作服统一着装及其他安全劳保用品
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="2"  <php> if(in_array( 2 ,$record['jibenzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="2"  <php> if(in_array( 2 ,$record['jibenzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">3</td>
+                                        <td class="table-text-lg">
+                                            所有电动机具使用前必须检查，严禁使用不合格工器具或超载使用
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="3"  <php> if(in_array( 3 ,$record['jibenzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="3" <php> if(in_array( 3 ,$record['jibenzhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">4</td>
+                                        <td class="table-text-lg">
+                                            理解工作任务，安装质量标准，安全措施，危险及控制措施
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="4"  <php> if(in_array( 4 ,$record['jibenzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="4"  <php> if(in_array( 4 ,$record['jibenzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">5</td>
+                                        <td class="table-text-lg">
+                                            规范安装根据标准设计图纸，确定配电设备安装结构要求是否一致
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="5"  <php> if(in_array( 5 ,$record['jibenzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="5"  <php> if(in_array( 5 ,$record['jibenzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">6</td>
+                                        <td class="table-text-lg">
+                                            施工场所悬挂标示牌和装设遮栏（围栏）
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="6"  <php> if(in_array( 6 ,$record['jibenzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="6"  <php> if(in_array( 6 ,$record['jibenzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">7</td>
+                                        <td class="table-text-lg">
+                                            手工锯、割、锉等工作时，力度要适度，防止过力而碰伤手臂
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="7"  <php> if(in_array( 7 ,$record['jibenzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="7"  <php> if(in_array( 7 ,$record['jibenzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">8</td>
+                                        <td class="table-text-lg">
+                                            掌握设计图纸平面布置基础结构，与配电室相关的防火、通风、防洪、防潮、防小动物等设完整
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="8" <php> if(in_array( 8 ,$record['jibenzhuyishixiangxuanze'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="8" <php> if(in_array( 8 ,$record['jibenzhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">9</td>
+                                        <td class="table-text-lg">
+                                            用汽车吊起重时，重物及吊臂下，严禁有人行走或逗留
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="9"  <php> if(in_array( 9 ,$record['jibenzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="9" <php> if(in_array( 9 ,$record['jibenzhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">10</td>
+                                        <td class="table-text-lg">
+                                            高处作业必须系安全带，系安全带后检查扣环是否牢固
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="10" <php> if(in_array( 10 ,$record['jibenzhuyishixiangxuanze'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="10"  <php> if(in_array( 10 ,$record['jibenzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">11</td>
+                                        <td class="table-text-lg">
+                                            吊装电缆头应固定好吊装工器具，认真检查吊装用的工具、绳索，防绳索断开
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="11"  <php> if(in_array( 11 ,$record['jibenzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="11"  <php> if(in_array( 11 ,$record['jibenzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">12</td>
+                                        <td class="table-text-lg">
+                                            进入施工现场携带“施工证”工作
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangxuanze[]" type="checkbox" class="ace" value="12"  <php> if(in_array( 12 ,$record['jibenzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jibenzhuyishixiangzhixing[]" type="checkbox" class="ace" value="12" <php> if(in_array( 12 ,$record['jibenzhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="3" class="tab-pane fade">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tr>
+                                        <!--TODO 施工临时电源安全注意事项-->
+                                        <td class="center table-text-lg" colspan="2">施工临时电源安全注意事项</td>
+                                        <td class="center table-text-lg">选择</td>
+                                        <td class="center table-text-lg">执行</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">1</td>
+                                        <td class="table-text-lg">
+                                            接入电源电压（220V）必须是合格标准电压
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="linshidianyuanzhuyishixiangxuanze[]" type="checkbox" class="ace" value="1"  <php> if(in_array( 1 ,$record['linshidianyuanzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="linshidianyuanzhuyishixiangzhixing[]" type="checkbox" class="ace" value="1"  <php> if(in_array( 1 ,$record['linshidianyuanzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">2</td>
+                                        <td class="table-text-lg">
+                                            单相线盘线径不得少于2.5mm及以上，带有可靠漏电保安器
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="linshidianyuanzhuyishixiangxuanze[]" type="checkbox" class="ace" value="2"  <php> if(in_array( 2 ,$record['linshidianyuanzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="linshidianyuanzhuyishixiangzhixing[]" type="checkbox" class="ace" value="2"  <php> if(in_array( 2 ,$record['linshidianyuanzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">3</td>
+                                        <td class="table-text-lg">
+                                            必须由安装人员搭接，搭接时严禁单人操作
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="linshidianyuanzhuyishixiangxuanze[]" type="checkbox" class="ace" value="3"  <php> if(in_array( 3 ,$record['linshidianyuanzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="linshidianyuanzhuyishixiangzhixing[]" type="checkbox" class="ace" value="3" <php> if(in_array( 3 ,$record['linshidianyuanzhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">4</td>
+                                        <td class="table-text-lg">
+                                            接入电源线前应先停电、验电，采用万用表确认电源电压等级和电源类型无误
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="linshidianyuanzhuyishixiangxuanze[]" type="checkbox" class="ace" value="4"  <php> if(in_array( 4 ,$record['linshidianyuanzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="linshidianyuanzhuyishixiangzhixing[]" type="checkbox" class="ace" value="4"  <php> if(in_array( 4 ,$record['linshidianyuanzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">5</td>
+                                        <td class="table-text-lg">
+                                            临时用电配电箱外壳接地连接可靠，接地性能良好
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="linshidianyuanzhuyishixiangxuanze[]" type="checkbox" class="ace" value="5"  <php> if(in_array( 5 ,$record['linshidianyuanzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="linshidianyuanzhuyishixiangzhixing[]" type="checkbox" class="ace" value="5"  <php> if(in_array( 5 ,$record['linshidianyuanzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">6</td>
+                                        <td class="table-text-lg">
+                                            避免重物和金属压、砸在电线上导致漏电而触电
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="linshidianyuanzhuyishixiangxuanze[]" type="checkbox" class="ace" value="6"  <php> if(in_array( 6 ,$record['linshidianyuanzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="linshidianyuanzhuyishixiangzhixing[]" type="checkbox" class="ace" value="6"  <php> if(in_array( 6 ,$record['linshidianyuanzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="4" class="tab-pane fade">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tr>
+                                        <!--TODO 高、低压柜拼拒工作安全注意事项-->
+                                        <td class="center table-text-lg" colspan="2">高、低压柜拼拒工作安全注意事项</td>
+                                        <td class="center table-text-lg">选择</td>
+                                        <td class="center table-text-lg">执行</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">1</td>
+                                        <td class="table-text-lg">
+                                            撬动盘、柜时，统一指挥，防止倾倒伤人或毁坏设备
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangxuanze[]" type="checkbox" class="ace" value="1"  <php> if(in_array( 1 ,$record['pinguizhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangzhixing[]" type="checkbox" class="ace" value="1"  <php> if(in_array( 1 ,$record['pinguizhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">2</td>
+                                        <td class="table-text-lg">
+                                            在盘、柜就位时，注意不得单面撬动或滚动柜体，以防柜体翻倒
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangxuanze[]" type="checkbox" class="ace" value="2"  <php> if(in_array( 2 ,$record['pinguizhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangzhixing[]" type="checkbox" class="ace" value="2"  <php> if(in_array( 2 ,$record['pinguizhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">3</td>
+                                        <td class="table-text-lg">
+                                            登高作业（柜顶、变压器头）时注意脚下不要踩空
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangxuanze[]" type="checkbox" class="ace" value="3"  <php> if(in_array( 3 ,$record['pinguizhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangzhixing[]" type="checkbox" class="ace" value="3"  <php> if(in_array( 3 ,$record['pinguizhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">4</td>
+                                        <td class="table-text-lg">
+                                            物件严禁抛上扔下，以免打伤人员
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangxuanze[]" type="checkbox" class="ace" value="4"  <php> if(in_array( 4 ,$record['pinguizhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangzhixing[]" type="checkbox" class="ace" value="4"  <php> if(in_array( 4 ,$record['pinguizhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">5</td>
+                                        <td class="table-text-lg">
+                                            在盘、柜就位时，注意不得直接敲打柜表面
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangxuanze[]" type="checkbox" class="ace" value="5"  <php> if(in_array( 5 ,$record['pinguizhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangzhixing[]" type="checkbox" class="ace" value="5"  <php> if(in_array( 5 ,$record['pinguizhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">6</td>
+                                        <td class="table-text-lg">
+                                            在盘、柜就位时，注意室内电缆沟、洞以防人体踩空损伤
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangxuanze[]" type="checkbox" class="ace" value="6"  <php> if(in_array( 6 ,$record['pinguizhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangzhixing[]" type="checkbox" class="ace" value="6"  <php> if(in_array( 6 ,$record['pinguizhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">7</td>
+                                        <td class="table-text-lg">
+                                            盘、柜固定焊接时，应有防火措施，避免烧坏电缆及设备，要有专人监护
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangxuanze[]" type="checkbox" class="ace" value="7"  <php> if(in_array( 7,$record['pinguizhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangzhixing[]" type="checkbox" class="ace" value="7"  <php> if(in_array( 7 ,$record['pinguizhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">8</td>
+                                        <td class="table-text-lg">
+                                            高、低压柜铜排连接时，按照设计图纸规范安装要求，连接处螺丝紧固可靠
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangxuanze[]" type="checkbox" class="ace" value="8"  <php> if(in_array( 8,$record['pinguizhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangzhixing[]" type="checkbox" class="ace" value="8" <php> if(in_array( 8 ,$record['pinguizhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">9</td>
+                                        <td class="table-text-lg">
+                                            盘、柜固定焊接后，焊缝应牢固并符合规范，及时涂上防锈漆
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangxuanze[]" type="checkbox" class="ace" value="9"  <php> if(in_array( 9 ,$record['pinguizhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangzhixing[]" type="checkbox" class="ace" value="9"  <php> if(in_array( 9 ,$record['pinguizhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">10</td>
+                                        <td class="table-text-lg">
+                                            使用梯子前必须检查是否牢固可靠
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangxuanze[]" type="checkbox" class="ace" value="10"  <php> if(in_array( 10 ,$record['pinguizhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangzhixing[]" type="checkbox" class="ace" value="10"  <php> if(in_array( 10 ,$record['pinguizhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">11</td>
+                                        <td class="table-text-lg">
+                                            拼柜时严禁扳手、螺丝开等工具乱抛乱扔，以免落入柜内开关或铜排上，造成短路
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangxuanze[]" type="checkbox" class="ace" value="11"  <php> if(in_array( 11 ,$record['pinguizhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangzhixing[]" type="checkbox" class="ace" value="11"  <php> if(in_array( 11 ,$record['pinguizhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">12</td>
+                                        <td class="table-text-lg">
+                                            高、低压柜体接地连接可靠，接地性能良好
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangxuanze[]" type="checkbox" class="ace" value="12"  <php> if(in_array( 12 ,$record['pinguizhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangzhixing[]" type="checkbox" class="ace" value="12"  <php> if(in_array( 12 ,$record['pinguizhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">13</td>
+                                        <td class="table-text-lg">
+                                            开关柜机械部件操作机构应灵活、可靠
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangxuanze[]" type="checkbox" class="ace" value="13"  <php> if(in_array( 13 ,$record['pinguizhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="pinguizhuyishixiangzhixing[]" type="checkbox" class="ace" value="13"  <php> if(in_array( 13 ,$record['pinguizhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="5" class="tab-pane fade">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tr>
+                                        <!--TODO 变压器就位工作安全注意事项-->
+                                        <td class="center table-text-lg" colspan="2">变压器就位工作安全注意事项</td>
+                                        <td class="center table-text-lg">选择</td>
+                                        <td class="center table-text-lg">执行</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">1</td>
+                                        <td class="table-text-lg">
+                                            变压器的外观检查是否完好，油位正常，容量符合要求
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jiuweizhuyishixiangxuanze[]" type="checkbox" class="ace" value="1"  <php> if(in_array( 1 ,$record['jiuweizhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jiuweizhuyishixiangzhixing[]" type="checkbox" class="ace" value="1"  <php> if(in_array( 1 ,$record['jiuweizhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">2</td>
+                                        <td class="table-text-lg">
+                                            变压器出厂“三证”和安装试验报告齐全
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jiuweizhuyishixiangxuanze[]" type="checkbox" class="ace" value="2"  <php> if(in_array( 2 ,$record['jiuweizhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jiuweizhuyishixiangzhixing[]" type="checkbox" class="ace" value="2"  <php> if(in_array( 2 ,$record['jiuweizhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">3</td>
+                                        <td class="table-text-lg">
+                                            分接头开关切换良好，分接头位置和油位正常
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jiuweizhuyishixiangxuanze[]" type="checkbox" class="ace" value="3"  <php> if(in_array( 3 ,$record['jiuweizhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jiuweizhuyishixiangzhixing[]" type="checkbox" class="ace" value="3" <php> if(in_array( 3 ,$record['jiuweizhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">4</td>
+                                        <td class="table-text-lg">
+                                            变压器吊装时不得强行抬拉散热管，瓷套管
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jiuweizhuyishixiangxuanze[]" type="checkbox" class="ace" value="4"  <php> if(in_array( 4 ,$record['jiuweizhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jiuweizhuyishixiangzhixing[]" type="checkbox" class="ace" value="4"  <php> if(in_array( 4 ,$record['jiuweizhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">5</td>
+                                        <td class="table-text-lg">
+                                            在变压器移位过程中，各作业人员应听从工作负责人的统一指挥，协调工作
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jiuweizhuyishixiangxuanze[]" type="checkbox" class="ace" value="5"  <php> if(in_array( 5 ,$record['jiuweizhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jiuweizhuyishixiangzhixing[]" type="checkbox" class="ace" value="5"  <php> if(in_array( 5 ,$record['jiuweizhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">6</td>
+                                        <td class="table-text-lg">
+                                            变压器移位速度不宜过快，着地要平稳
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jiuweizhuyishixiangxuanze[]" type="checkbox" class="ace" value="6"  <php> if(in_array( 6 ,$record['jiuweizhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jiuweizhuyishixiangzhixing[]" type="checkbox" class="ace" value="6"  <php> if(in_array( 6 ,$record['jiuweizhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">7</td>
+                                        <td class="table-text-lg">
+                                            配变的水平面倾斜度不大于1/100
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jiuweizhuyishixiangxuanze[]" type="checkbox" class="ace" value="7"  <php> if(in_array( 7 ,$record['jiuweizhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jiuweizhuyishixiangzhixing[]" type="checkbox" class="ace" value="7"  <php> if(in_array( 7 ,$record['jiuweizhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">8</td>
+                                        <td class="table-text-lg">
+                                            变压器低压桩头与低压控制柜桥架连接可靠，螺丝紧固良好
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jiuweizhuyishixiangxuanze[]" type="checkbox" class="ace" value="8"  <php> if(in_array( 8 ,$record['jiuweizhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jiuweizhuyishixiangzhixing[]" type="checkbox" class="ace" value="8" <php> if(in_array( 8 ,$record['jiuweizhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">9</td>
+                                        <td class="table-text-lg">
+                                            一、二次引接线应固定牢固，保证在正常运行状态下，变压器一、二次接线桩头不受强力牵扯
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jiuweizhuyishixiangxuanze[]" type="checkbox" class="ace" value="9"  <php> if(in_array( 9 ,$record['jiuweizhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jiuweizhuyishixiangzhixing[]" type="checkbox" class="ace" value="9" <php> if(in_array( 9 ,$record['jiuweizhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">10</td>
+                                        <td class="table-text-lg">
+                                            高、低压避雷器引下线应与配变低压中性点及外壳接地连接后共同接地，各接地引下线的连接应可靠牢固
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jiuweizhuyishixiangxuanze[]" type="checkbox" class="ace" value="10"  <php> if(in_array( 10 ,$record['jiuweizhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="jiuweizhuyishixiangzhixing[]" type="checkbox" class="ace" value="10" <php> if(in_array( 10 ,$record['jiuweizhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="6" class="tab-pane fade">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tr>
+                                        <!--TODO 电缆头制作安全注意事项-->
+                                        <td class="center table-text-lg" colspan="2">电缆头制作安全注意事项</td>
+                                        <td class="center table-text-lg">选择</td>
+                                        <td class="center table-text-lg">执行</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">1</td>
+                                        <td class="table-text-lg">
+                                            使用刀具时严禁对着人，以防划伤、割伤他人及自己
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="dianlantouzhuyishixiangxuanze[]" type="checkbox" class="ace" value="1"  <php> if(in_array( 1 ,$record['dianlantouzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="dianlantouzhuyishixiangzhixing[]" type="checkbox" class="ace" value="1"  <php> if(in_array( 1 ,$record['dianlantouzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">2</td>
+                                        <td class="table-text-lg">
+                                            电缆终端头制作用刀或其他工具时，不准对着人体
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="dianlantouzhuyishixiangxuanze[]" type="checkbox" class="ace" value="2" <php> if(in_array( 2 ,$record['dianlantouzhuyishixiangxuanze'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="dianlantouzhuyishixiangzhixing[]" type="checkbox" class="ace" value="2" <php> if(in_array( 2 ,$record['dianlantouzhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">3</td>
+                                        <td class="table-text-lg">
+                                            手锯锯割时，用力要适度，防止折断锯条和锯条断时而碰伤手臂
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="dianlantouzhuyishixiangxuanze[]" type="checkbox" class="ace" value="3"  <php> if(in_array( 3 ,$record['dianlantouzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="dianlantouzhuyishixiangzhixing[]" type="checkbox" class="ace" value="3" <php> if(in_array( 3 ,$record['dianlantouzhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">4</td>
+                                        <td class="table-text-lg">
+                                            锉削时防止过力锉空而碰伤手臂
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="dianlantouzhuyishixiangxuanze[]" type="checkbox" class="ace" value="4" <php> if(in_array( 4 ,$record['dianlantouzhuyishixiangxuanze'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="dianlantouzhuyishixiangzhixing[]" type="checkbox" class="ace" value="4" <php> if(in_array( 4 ,$record['dianlantouzhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">5</td>
+                                        <td class="table-text-lg">
+                                            工作人员应穿工作服、衣服和袖口应扣好，工作应戴手套
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="dianlantouzhuyishixiangxuanze[]" type="checkbox" class="ace" value="5" <php> if(in_array( 5 ,$record['dianlantouzhuyishixiangxuanze'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="dianlantouzhuyishixiangzhixing[]" type="checkbox" class="ace" value="5" <php> if(in_array( 5 ,$record['dianlantouzhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">6</td>
+                                        <td class="table-text-lg">
+                                            10KV交联电缆绝缘电阻应满足规定要求
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="dianlantouzhuyishixiangxuanze[]" type="checkbox" class="ace" value="6" <php> if(in_array( 6 ,$record['dianlantouzhuyishixiangxuanze'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="dianlantouzhuyishixiangzhixing[]" type="checkbox" class="ace" value="6"  <php> if(in_array( 6 ,$record['dianlantouzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">7</td>
+                                        <td class="table-text-lg">
+                                            电缆头装设地线必须逐相进行放电后再装设地线
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="dianlantouzhuyishixiangxuanze[]" type="checkbox" class="ace" value="7" <php> if(in_array( 7 ,$record['dianlantouzhuyishixiangxuanze'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="dianlantouzhuyishixiangzhixing[]" type="checkbox" class="ace" value="7" <php> if(in_array( 7 ,$record['dianlantouzhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">8</td>
+                                        <td class="table-text-lg">
+                                            电缆穿入保护管时，施工人员的手臂与管口保持一定距离
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="dianlantouzhuyishixiangxuanze[]" type="checkbox" class="ace" value="8" <php> if(in_array( 8 ,$record['dianlantouzhuyishixiangxuanze'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="dianlantouzhuyishixiangzhixing[]" type="checkbox" class="ace" value="8" <php> if(in_array( 8 ,$record['dianlantouzhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="7" class="tab-pane fade">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tr>
+                                        <!--TODO 高压试验工作安全注意事项-->
+                                        <td class="center table-text-lg" colspan="2">高压试验工作安全注意事项</td>
+                                        <td class="center table-text-lg">选择</td>
+                                        <td class="center table-text-lg">执行</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">1</td>
+                                        <td class="table-text-lg">
+                                            试验现场应装设遮栏，并向外悬挂“止步，高压危险”的标示牌，严禁非试验人员进入试验场地
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="gaoyashiyanzhuyishixiangxuanze[]" type="checkbox" class="ace" value="1" <php> if(in_array( 1 ,$record['gaoyashiyanzhuyishixiangxuanze'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="gaoyashiyanzhuyishixiangzhixing[]" type="checkbox" class="ace" value="1" <php> if(in_array( 1 ,$record['gaoyashiyanzhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">2</td>
+                                        <td class="table-text-lg">
+                                            工作负责人交待有电部位及安全措施，经危险点告知提问无误后，作业人员在工作票上全名确认
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="gaoyashiyanzhuyishixiangxuanze[]" type="checkbox" class="ace" value="2" <php> if(in_array( 2 ,$record['gaoyashiyanzhuyishixiangxuanze'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="gaoyashiyanzhuyishixiangzhixing[]" type="checkbox" class="ace" value="2"  <php> if(in_array( 2 ,$record['gaoyashiyanzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">3</td>
+                                        <td class="table-text-lg">
+                                            进入试验现场，试验人员必须戴安全帽，穿工作服，绝缘鞋
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="gaoyashiyanzhuyishixiangxuanze[]" type="checkbox" class="ace" value="3"  <php> if(in_array( 3 ,$record['gaoyashiyanzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="gaoyashiyanzhuyishixiangzhixing[]" type="checkbox" class="ace" value="3"  <php> if(in_array( 3 ,$record['gaoyashiyanzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">4</td>
+                                        <td class="table-text-lg">
+                                            现场试验作业必须执行工作票制度，工作监护制度
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="gaoyashiyanzhuyishixiangxuanze[]" type="checkbox" class="ace" value="4"  <php> if(in_array( 4 ,$record['gaoyashiyanzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="gaoyashiyanzhuyishixiangzhixing[]" type="checkbox" class="ace" value="4"  <php> if(in_array( 4 ,$record['gaoyashiyanzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">5</td>
+                                        <td class="table-text-lg">
+                                            保证人身和设备安全，在绝缘电阻测量后应对试品充分放电
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="gaoyashiyanzhuyishixiangxuanze[]" type="checkbox" class="ace" value="5"  <php> if(in_array( 5 ,$record['gaoyashiyanzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="gaoyashiyanzhuyishixiangzhixing[]" type="checkbox" class="ace" value="5"  <php> if(in_array( 5 ,$record['gaoyashiyanzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">6</td>
+                                        <td class="table-text-lg">
+                                            现场进行试验工作时，试验人员应注意保持与带电体的安全距离不应小于《安规》中规定的距离
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="gaoyashiyanzhuyishixiangxuanze[]" type="checkbox" class="ace" value="6"  <php> if(in_array( 6 ,$record['gaoyashiyanzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="gaoyashiyanzhuyishixiangzhixing[]" type="checkbox" class="ace" value="6"  <php> if(in_array( 6 ,$record['gaoyashiyanzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">7</td>
+                                        <td class="table-text-lg">
+                                            试验器具的金属外壳可靠接地，实验仪器与设备的接线应牢固可靠
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="gaoyashiyanzhuyishixiangxuanze[]" type="checkbox" class="ace" value="7"  <php> if(in_array( 7 ,$record['gaoyashiyanzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="gaoyashiyanzhuyishixiangzhixing[]" type="checkbox" class="ace" value="7"  <php> if(in_array( 7 ,$record['gaoyashiyanzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">8</td>
+                                        <td class="table-text-lg">
+                                            变更接线或试验结束，应首先将调压器回零，然后断开电源
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="gaoyashiyanzhuyishixiangxuanze[]" type="checkbox" class="ace" value="8"  <php> if(in_array( 8 ,$record['gaoyashiyanzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="gaoyashiyanzhuyishixiangzhixing[]" type="checkbox" class="ace" value="8"  <php> if(in_array( 8 ,$record['gaoyashiyanzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">9</td>
+                                        <td class="table-text-lg">
+                                            试验装置的电源开关，应使用具有明显断开点的双极刀闸，并有可靠的过载保护装置
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="gaoyashiyanzhuyishixiangxuanze[]" type="checkbox" class="ace" value="9"  <php> if(in_array( 9 ,$record['gaoyashiyanzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="gaoyashiyanzhuyishixiangzhixing[]" type="checkbox" class="ace" value="9"  <php> if(in_array( 9 ,$record['gaoyashiyanzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">10</td>
+                                        <td class="table-text-lg">
+                                            试验结束后，实验人员应拆除试验临时接地线，并对被试设备进行检查和清理现场
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="gaoyashiyanzhuyishixiangxuanze[]" type="checkbox" class="ace" value="10"  <php> if(in_array( 10 ,$record['gaoyashiyanzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="gaoyashiyanzhuyishixiangzhixing[]" type="checkbox" class="ace" value="10"  <php> if(in_array( 10 ,$record['gaoyashiyanzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">11</td>
+                                        <td class="table-text-lg">
+                                            试验应在天气良好的情况下进行，遇雷雨等天气应停止试验
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="gaoyashiyanzhuyishixiangxuanze[]" type="checkbox" class="ace" value="11" <php> if(in_array( 11 ,$record['gaoyashiyanzhuyishixiangxuanze'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="gaoyashiyanzhuyishixiangzhixing[]" type="checkbox" class="ace" value="11" <php> if(in_array( 11 ,$record['gaoyashiyanzhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="8" class="tab-pane fade">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tr>
+                                        <!--TODO 吊装配变岗位安全注意事项-->
+                                        <td class="center table-text-lg" colspan="2">吊装配变岗位安全注意事项</td>
+                                        <td class="center table-text-lg">选择</td>
+                                        <td class="center table-text-lg">执行</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">1</td>
+                                        <td class="table-text-lg">
+                                            配变吊上下过程中，各作业人员应听从工作负责人的统一指挥，协调工作，应设立专人监护
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="diaoxianzhuyishixiangxuanze[]" type="checkbox" class="ace" value="1"  <php> if(in_array( 1 ,$record['diaoxianzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="diaoxianzhuyishixiangzhixing[]" type="checkbox" class="ace" value="1" <php> if(in_array( 1 ,$record['diaoxianzhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">2</td>
+                                        <td class="table-text-lg">
+                                            在配变吊装过程中，和工作人员应密切配合，吊装应平稳
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="diaoxianzhuyishixiangxuanze[]" type="checkbox" class="ace" value="2"  <php> if(in_array( 2 ,$record['diaoxianzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="diaoxianzhuyishixiangzhixing[]" type="checkbox" class="ace" value="2"  <php> if(in_array( 2 ,$record['diaoxianzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">3</td>
+                                        <td class="table-text-lg">
+                                            作业人员不能在配电的垂直下方逗留
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="diaoxianzhuyishixiangxuanze[]" type="checkbox" class="ace" value="3" <php> if(in_array( 3 ,$record['diaoxianzhuyishixiangxuanze'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="diaoxianzhuyishixiangzhixing[]" type="checkbox" class="ace" value="3" <php> if(in_array( 3 ,$record['diaoxianzhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">4</td>
+                                        <td class="table-text-lg">
+                                            配变吊装时不得强行抬拉散热管、瓷套管
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="diaoxianzhuyishixiangxuanze[]" type="checkbox" class="ace" value="4"  <php> if(in_array( 4 ,$record['diaoxianzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="diaoxianzhuyishixiangzhixing[]" type="checkbox" class="ace" value="4" <php> if(in_array( 4 ,$record['diaoxianzhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">5</td>
+                                        <td class="table-text-lg">
+                                            在配变未安放牢固或底座紧固前不能松开起重钩子，吊机吊臂应保持在手里状态
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="diaoxianzhuyishixiangxuanze[]" type="checkbox" class="ace" value="5"  <php> if(in_array( 5 ,$record['diaoxianzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="diaoxianzhuyishixiangzhixing[]" type="checkbox" class="ace" value="5" <php> if(in_array( 5 ,$record['diaoxianzhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">6</td>
+                                        <td class="table-text-lg">
+                                            变压器下吊速度不宜过快，着地要平稳
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="diaoxianzhuyishixiangxuanze[]" type="checkbox" class="ace" value="6" <php> if(in_array( 6 ,$record['diaoxianzhuyishixiangxuanze'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="diaoxianzhuyishixiangzhixing[]" type="checkbox" class="ace" value="6" <php> if(in_array( 6 ,$record['diaoxianzhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="9" class="tab-pane fade">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tr>
+                                        <!--TODO 工地运输岗位安全注意事项-->
+                                        <td class="center table-text-lg" colspan="2">工地运输岗位安全注意事项</td>
+                                        <td class="center table-text-lg">选择</td>
+                                        <td class="center table-text-lg">执行</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">1</td>
+                                        <td class="table-text-lg">
+                                            搬运高、低压多人抬运，必须同肩，步调一致、互相呼应
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="yunshuzhuyishixiangxuanze[]" type="checkbox" class="ace" value="1" <php> if(in_array( 1 ,$record['yunshuzhuyishixiangxuanze'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="yunshuzhuyishixiangzhixing[]" type="checkbox" class="ace" value="1" <php> if(in_array( 1 ,$record['yunshuzhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">2</td>
+                                        <td class="table-text-lg">
+                                            高、低压柜运输到场后，负责摆放位置符合起吊条件
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="yunshuzhuyishixiangxuanze[]" type="checkbox" class="ace" value="2"  <php> if(in_array( 2 ,$record['yunshuzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="yunshuzhuyishixiangzhixing[]" type="checkbox" class="ace" value="2" <php> if(in_array( 2 ,$record['yunshuzhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">3</td>
+                                        <td class="table-text-lg">
+                                            载物高度超过车厢拦板时货物上不得坐人
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="yunshuzhuyishixiangxuanze[]" type="checkbox" class="ace" value="3"  <php> if(in_array( 3 ,$record['yunshuzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="yunshuzhuyishixiangzhixing[]" type="checkbox" class="ace" value="3"  <php> if(in_array( 3 ,$record['yunshuzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">4</td>
+                                        <td class="table-text-lg">
+                                            载货机动车除押运和装卸人员外，不得搭乘其他人员，押运和装卸人员必须坐在安全位置上
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="yunshuzhuyishixiangxuanze[]" type="checkbox" class="ace" value="4"  <php> if(in_array( 4 ,$record['yunshuzhuyishixiangxuanze'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="yunshuzhuyishixiangzhixing[]" type="checkbox" class="ace" value="4"  <php> if(in_array( 4 ,$record['yunshuzhuyishixiangzhixing'])){echo 'checked';}</php>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg col-sm-1">5</td>
+                                        <td class="table-text-lg">
+                                            用跳板或圆木装卸滚动物件时，应用绳索控制物体，物体滚落前方严禁有人站立
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="yunshuzhuyishixiangxuanze[]" type="checkbox" class="ace" value="5" <php> if(in_array( 5 ,$record['yunshuzhuyishixiangxuanze'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="yunshuzhuyishixiangzhixing[]" type="checkbox" class="ace" value="5"  <php> if(in_array( 5 ,$record['yunshuzhuyishixiangzhixing'])){echo 'checked';}</php> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="b10" class="tab-pane fade">
+                                <table class="table table-striped table-bordered table-hover no-footer">
+                                    <tr>
+                                        <!--TODO 其他安全注意事项-->
+                                        <td class="center table-text-lg" colspan="2">其他安全注意事项</td>
+                                        <td class="center table-text-lg">选择</td>
+                                        <td class="center table-text-lg">执行</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-text-lg" colspan="2">
+                                            <textarea class="form-control" name="qitazhuyishixiang" style="width: 100%;height: 200px;">{$record['qitazhuyishixiang']}</textarea>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="qitazhuyishixiangxuanze" type="checkbox" class="ace" value='1' <eq name="record['qitazhuyishixiangxuanze']" value='1'>checked</eq> />
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                        <td class="center table-text-lg col-sm-1">
+                                            <label>
+                                                <input name="qitazhuyishixiangzhixing" type="checkbox" class="ace"  value='1' <eq name="record['qitazhuyishixiangzhixing']" value='1'>checked</eq>/>
+                                                <span class="lbl"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg" colspan="4">
+                                            受安全技术交底人员签名
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center table-text-lg" colspan="4">
+                                            <textarea name="renyuanqianming" class="form-control" style="width: 100%;height: 100px;">{$record['renyuanqianming']}</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <td class="center table-text-lg col-sm-2">
+                                                    工作开始时间
+                                                </td>
+                                                <td class="center table-text-lg col-sm-4">
+                                                    <input type="text" name="gongzuokaishishijian[]" class="underline-input" value="{$record['gongzuokaishishijian'][0]}">年
+                                                    <input type="text" name="gongzuokaishishijian[]" class="underline-input" value="{$record['gongzuokaishishijian'][1]}">月
+                                                    <input type="text" name="gongzuokaishishijian[]" class="underline-input" value="{$record['gongzuokaishishijian'][2]}">日
+                                                    <input type="text" name="gongzuokaishishijian[]" class="underline-input" value="{$record['gongzuokaishishijian'][3]}">时
+                                                    <input type="text" name="gongzuokaishishijian[]" class="underline-input" value="{$record['gongzuokaishishijian'][4]}">分
+                                                </td>
+                                                <td class="center table-text-lg col-sm-3">
+                                                    施工（工作）负责人
+                                                </td>
+                                                <td class="center table-text-lg col-sm-3">
+                                                    <input type="text" name="kaishishijianqianming" class="col-xs-10 col-sm-12" value="{$record['kaishishijianqianming']}">
+                                                </td>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">
+                                            <table class="table table-striped table-bordered table-hover no-footer">
+                                                <td class="center table-text-lg col-sm-2">
+                                                    工作结束时间
+                                                </td>
+                                                <td class="center table-text-lg col-sm-4">
+                                                    <input type="text" name="gongzuojieshushijian[]" class="underline-input" value="{$record['gongzuojieshushijian'][0]}">年
+                                                    <input type="text" name="gongzuojieshushijian[]" class="underline-input" value="{$record['gongzuojieshushijian'][1]}">月
+                                                    <input type="text" name="gongzuojieshushijian[]" class="underline-input" value="{$record['gongzuojieshushijian'][2]}">日
+                                                    <input type="text" name="gongzuojieshushijian[]" class="underline-input" value="{$record['gongzuojieshushijian'][3]}">时
+                                                    <input type="text" name="gongzuojieshushijian[]" class="underline-input" value="{$record['gongzuojieshushijian'][4]}">分
+                                                </td>
+                                                <td class="center table-text-lg col-sm-3">
+                                                    施工（工作）负责人
+                                                </td>
+                                                <td class="center table-text-lg col-sm-3">
+                                                    <input type="text" name="jieshushijianqianming" class="col-xs-10 col-sm-12" value="{$record['jieshushijianqianming']}">
+                                                </td>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                        <table class="table table-striped no-footer">
+                            <tbody>
+                                <tr>
+                                    <td class="center" colspan="4">
+                                        <button type="submit" class="btn btn-sm btn-success">
+                                            <i class="ace-icon fa fa-floppy-o bigger-110"></i>
+                                            保 存
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div><!-- /.page-content-area -->
+        </div><!-- /.page-content -->
+    </div><!-- /.main-content -->
+    <include file="Common:footer" />
+</div><!-- /.main-container -->
+<include file="Common:common_js" />
+
+<script>
+    jQuery(function($) {
+        $('.chosen-select').chosen({allow_single_deselect:true});
+        $(window).off('resize.chosen').on('resize.chosen', function() {
+            $('.chosen-select').each(function() {
+                var $this = $(this);
+                $this.next().css({'width': $this.parent().width()});
+            })
+        }).trigger('resize.chosen');
+    });
+    var gs = {
+        //locale: 'moment_zh-CN',
+        language:'zh-CN',
+        format:'YYYY-MM-DD HH:mm',
+        todayBtn:1,
+        autoclose:1,
+    };
+    $('#jihuagongzuoshijian_kaishi').datetimepicker(gs).next().on(ace.click_event, function(){
+        $(this).prev().focus();
+    });
+    $('#jihuagongzuoshijian_jieshu').datetimepicker(gs).next().on(ace.click_event, function(){
+        $(this).prev().focus();
+    });
+</script>
+</body>
+</html>

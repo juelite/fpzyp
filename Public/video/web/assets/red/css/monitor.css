@@ -1,0 +1,9 @@
+html ul.tabs li.active a, html ul.tabs li.ui-state-active a,
+html ul.tabs li.active a:hover, html ul.tabs li.ui-state-active a:hover { color: #C61F19; }
+
+.tab-large .btn-toolbar .buttonS { padding: 0 5px; color: #C61F19; }
+
+html ul.tabs li.active a, html ul.tabs li.ui-state-active a,
+html ul.tabs li.active a:hover, html ul.tabs li.ui-state-active a:hover { color: #D62D28; }
+
+.tab-large .breadLine { margin: 0; }

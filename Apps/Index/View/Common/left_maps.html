@@ -1,0 +1,37 @@
+<script type="text/javascript">
+    try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+</script>
+<ul class="nav nav-list">
+    <li class="open">
+        <a href="{:U('main/index')}">
+            <i class="menu-icon fa fa-laptop"></i>
+            <span class="menu-text"> 后台首页 </span>
+        </a>
+        <b class="arrow"></b>
+    </li>
+    <volist name="allowModule" id="allowModule">
+        <li class="open">
+            <a class="dropdown-toggle">
+                <i class="{$allowModule.code}"></i>
+                <span class="menu-text"> {$allowModule.name} </span>
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+            <b class="arrow"></b>
+            <ul class="submenu">
+                <volist name="allowModule[sub]" id="sub">
+                    <li class="">
+                        <a href="{:U($sub[code])}">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            {$sub[name]}
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                </volist>
+            </ul>
+        </li>
+    </volist>
+</ul>
+<!-- /.nav-list -->
+<script type="text/javascript">
+    try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+</script>

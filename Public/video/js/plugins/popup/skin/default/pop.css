@@ -1,0 +1,83 @@
+* {margin: 0px; padding: 0px;}
+
+.pop_overlay { background: #000000; position: absolute; top: 0px; left: 0px; }
+
+/*fixme ie8下不配置position，在子iframe里会出现多余滚动条的一列，没有滚动条，但滚动条的位置出现了*/
+.popWrap { position:absolute;background: #fff; border: 1px solid #e4e4e4; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+.ui-draggable .popTitle { cursor: move; }
+.popWrap .popClose { width: 19px; height: 19px; background: url(images/close.png) no-repeat 1px 1px;position: absolute; right: 10px; top: 10px; text-indent: 999px; overflow: hidden; }
+
+.popWin .popTitle,.popPrompt .popTitle { position: relative; height: 40px; padding: 0 14px; font-size: 14px; line-height: 40px; border-bottom: 1px solid #e4e4e4;}
+.popWin .popContent, .popPrompt .popContent {overflow:auto; padding: 10px; }
+.popWin .popButton,.popPrompt .popButton { border-top: 1px solid #f0f0f0; padding: 10px 0; background: #F7F7F7; text-align: right; }
+.popWin .popButton button,.popPrompt .popButton button { margin-right: 10px;padding:5px 30px;border:none;border-bottom: 2px solid transparent;font-size:14px;
+    border-color: #B1B1B1;color: #333;background-color: #E2E2E2}
+.popWin .popButton button:hover,.popPrompt .popButton button:hover {color: #757575;background-color: #f1f1f1;}
+.popWin .popButton button:active,.popPrompt .popButton button:active {  color: #FFF;border-color: #464646; background-color: #737373;}
+.popWin .popButton button.bPrimary {border-color: #15366D !important;background-color: #3C7CD5; color: #fff;}
+.popWin .popButton button.bPrimary:hover  {background-color: #5197F9;}
+.popWin .popButton button.bPrimary:active  {background-color: #2B63B0;}
+.popWrap .popButton button.bBlue {background-color: #3C7CD5;}
+.popWrap .popButton button.bBlue:hover {background-color: #5197F9;}
+.popWrap .popButton button.bBlue:active {background-color: #2B63B0;}
+
+.popPrompt .popMsg {margin: 0 0 10px; padding: 10px 10px 10px 68px;}
+.pop_icon {margin-top: 0; margin-left: -50px; width: 40px; height: 40px; display: inline; float: left; background: url(images/msg_bg.png) no-repeat 100% -560px;}
+.popMsg .attention  {background-position: -48px -118px;}
+.popMsg .question {background-position: -48px -78px;}
+.popMsg .ok {background-position:-48px -198px;}
+.popMsg .error {background-position:-48px 2px;}
+.popMsg .notice {background-position:-48px -236px;}
+.popMsg .alarm {background-position:-48px -278px;}
+.popMsg .stop {background-position:-48px -39px;}
+
+.popPrompt .popMsgContent { padding-top: 10px; }
+.popPrompt .popPromptMsg { text-align: center}
+
+.popTips { padding: 5px 10px; opacity: .8;  background: #fff; border: 1px solid #ccc; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+.popTips .tips {position: absolute; height: 0; border-width: 5px; border-style: solid;}
+.popTips .tips b { height: 0;border-width: 5px;border-style: solid; position: absolute}
+
+.popTips-top .tips {border-color: #ccc transparent transparent transparent; left: 10px; bottom: -10px; }
+.popTips-top .tips b {border-color: #fff transparent transparent transparent; left:  -5px; top:  -6px;}
+.popTips-bottom .tips {border-color: transparent transparent #ccc transparent; top: -10px; }
+.popTips-bottom .tips b {border-color: transparent transparent  #fff transparent; left:  -5px; top:  -4px;}
+.popTips-right .tips {border-color: transparent #ccc transparent transparent; left: -11px; top: 6px; }
+.popTips-right .tips b {border-color: transparent #fff transparent transparent; left:  -4px; top:  -5px;}
+.popTips-left .tips {border-color: transparent transparent transparent #ccc ; right: -10px; top: 6px; }
+.popTips-left .tips b {border-color: transparent transparent transparent #fff; left:  -6px; top:  -5px;}
+
+.popSticky .popMsg { padding: 15px 10px 10px 20px; }
+.popSticky .popMsg p { font-size: 14px; line-height: 18px;}
+.popSticky .popMsgContent { padding-top: 10px;}
+.popSticky .popSticky-icon { padding: 20px 10px 20px 88px;}
+
+/*实时预览，录像回放抓图提示*/
+.popSticky.st-msg { margin-left: auto; border-radius: 5px; width: 300px; }
+.popSticky.st-msg div.sticky-note { padding: 0; }
+.popSticky.st-msg div.sticky-note p a { font-weight: normal; }
+.popSticky.st-msg .block-msg { border: none; background: none; }
+.popSticky.st-msg .block-msg .msg-cnt { line-height: 1; }
+.popSticky.st-msg .block-msg .info { font-weight: normal; font-size: 12px; }
+.popSticky.st-msg .block-msg .bd { padding: 0; position: static; background: none; }
+.popSticky.st-msg .block-msg .bd h6 { white-space: nowrap; text-overflow: ellipsis; overflow: hidden; width: 210px; }
+.popSticky.st-msg .pagination { border: none; padding: 0; }
+.popSticky.st-msg .pagination .pages { width: auto; }
+.popSticky.st-msg .pagination li { margin: 0 5px; font-weight: normal; letter-spacing: 3px; }
+.popSticky.st-msg .pagination a { border: none; padding: 0; background: none; box-shadow: none; }
+.popSticky.st-msg .pagination a .ico { margin: 0; }
+.popSticky.st-video, .popSticky.st-picture { background: #fff url(../../../../../themes/default/images/sticky_bg.png) no-repeat 0 0; }
+.popSticky.st-video .block-msg .bd, .popSticky.st-picture .block-msg .bd { margin-left: 60px; }
+.popSticky.st-picture { background-position: 0 -150px; }
+/* Icons */
+.popSticky.st-msg .ico { margin-right: 5px; }
+.popSticky.st-msg .ico.i-folder-open { background-position: -171px -171px; }
+.popSticky.st-msg .ico.i-video-play { background-position: -243px -267px; }
+.popSticky.st-msg .ico.i-pic-edit { background-position: -219px -267px; }
+.popSticky.st-msg .ico.i-video-police { background-position: -171px -291px; }
+.popSticky.st-msg .ico.i-prev { background-position: -99px -315px; }
+.popSticky.st-msg a:active .i-prev { background-position: -99px -339px; }
+.popSticky.st-msg a.disabled .i-prev { background-position: -99px -363px; }
+.popSticky.st-msg .ico.i-next { background-position: -123px -315px; }
+.popSticky.st-msg a:active .i-next { background-position: -123px -339px; }
+.popSticky.st-msg a.disabled .i-next { background-position: -123px -363px; }
